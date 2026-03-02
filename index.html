@@ -6,6 +6,24 @@
 <title>Α ΟΠΩΣ ΑΓΑΠΗ — ΑΜΚΕ</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+   /* Περιστροφή και Μέγεθος Λογοτύπου στο Intro */
+#icirc {
+    transform-origin: center;
+    animation: rotateDisk 12s linear infinite;
+    width: 250px !important; /* Μεγαλώνει το λογότυπο */
+    height: auto !important;
+}
+
+@keyframes rotateDisk {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Μεγαλύτερο κείμενο στο μήνυμα */
+#iname {
+    font-size: 3.5rem !important; /* Κάνει το "Α ΟΠΩΣ ΑΓΑΠΗ" πολύ πιο έντονο */
+    margin-top: 20px;
+}
 /* ════════════════════════════════
    INTRO OVERLAY
 ════════════════════════════════ */
