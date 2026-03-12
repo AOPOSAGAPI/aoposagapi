@@ -827,20 +827,26 @@ footer {
       * Η ΑΜΚΕ βρίσκεται υπό οργάνωση. Η δήλωσή σας αποτελεί καταγραφή ενδιαφέροντος για μελλοντική επικοινωνία και συμμετοχή σε δράσεις.
     </p>
 
-    <form action="https://formspree.io/f/mvzwaddw" method="POST" style="display: flex; flex-direction: column; gap: 15px; text-align: left; padding: 0 20px;">
-      <div style="display: flex; flex-direction: column; gap: 5px;">
-        <label style="color: var(--gold); font-size: 0.8rem; margin-left: 5px;">Ονοματεπώνυμο</label>
-        <input type="text" name="name" required style="padding: 15px; border-radius: 8px; background: #1a1a1c; color: white; border: 1px solid #333;">
-      </div>
+<form action="https://formspree.io/f/mvzwaddw" method="POST" style="display: flex; flex-direction: column; gap: 15px; text-align: left; padding: 0 20px;">
       
       <div style="display: flex; flex-direction: column; gap: 5px;">
-        <label style="color: var(--gold); font-size: 0.8rem; margin-left: 5px;">Email Επικοινωνίας</label>
-        <input type="email" name="email" required style="padding: 15px; border-radius: 8px; background: #1a1a1c; color: white; border: 1px solid #333;">
+        <label style="color: var(--gold); font-size: 0.85rem; font-weight: bold;">Ονοματεπώνυμο / Full Name</label>
+        <input type="text" name="name" required placeholder="π.χ. Γιάννης Παπαδόπουλος" style="padding: 12px; border-radius: 5px; background: #1a1a1c; color: white; border: 1px solid #333;">
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 5px;">
-        <label style="color: var(--gold); font-size: 0.8rem; margin-left: 5px;">Τομέας Ενδιαφέροντος</label>
-        <select name="interest" style="padding: 15px; border-radius: 8px; background: #1a1a1c; color: white; border: 1px solid #333; cursor: pointer;">
+        <label style="color: var(--gold); font-size: 0.85rem; font-weight: bold;">Email</label>
+        <input type="email" name="email" required placeholder="your@email.com" style="padding: 12px; border-radius: 5px; background: #1a1a1c; color: white; border: 1px solid #333;">
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 5px;">
+        <label style="color: var(--gold); font-size: 0.85rem; font-weight: bold;">Τηλέφωνο Επικοινωνίας / Phone</label>
+        <input type="tel" name="phone" required placeholder="π.χ. 6970000000" style="padding: 12px; border-radius: 5px; background: #1a1a1c; color: white; border: 1px solid #333;">
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 5px;">
+        <label style="color: var(--gold); font-size: 0.85rem; font-weight: bold;">Τομέας Ενδιαφέροντος / Interest</label>
+        <select name="interest" style="padding: 12px; border-radius: 5px; background: #1a1a1c; color: white; border: 1px solid #333; cursor: pointer;">
           <option value="general">Γενικό Ενδιαφέρον</option>
           <option value="animals">Αδέσποτα Ζώα</option>
           <option value="disability">Άτομα με Αναπηρία (ΑμεΑ)</option>
