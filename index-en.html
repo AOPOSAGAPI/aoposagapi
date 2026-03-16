@@ -1333,12 +1333,28 @@ function setLang(lang) {
   });
 }
 </script>
-   <style>
-    /* Εμφάνιση όλων των αγγλικών και απόκρυψη ελληνικών */
-    [data-lang="en"] { display: block !important; opacity: 1 !important; visibility: visible !important; }
-    [data-lang="el"] { display: none !important; }
-    /* Διόρθωση για τους τίτλους που κάνουν reveal */
-    h2.rv, p.rv, .rv { opacity: 1 !important; transform: none !important; visibility: visible !important; }
+<style>
+    /* 1. ΕΞΑΦΑΝΙΣΗ ΕΛΛΗΝΙΚΩΝ: Σβήνουμε οτιδήποτε έχει ταμπελάκι "el" */
+    [data-lang="el"], .lang-el, .el-text { 
+        display: none !important; 
+    }
+
+    /* 2. ΕΜΦΑΝΙΣΗ ΑΓΓΛΙΚΩΝ: Αναγκάζουμε τα αγγλικά να φαίνονται παντού */
+    [data-lang="en"], .lang-en, .en-text { 
+        display: block !important; 
+        opacity: 1 !important; 
+        visibility: visible !important; 
+    }
+
+    /* 3. ΦΩΤΙΣΜΑ ΚΕΙΜΕΝΩΝ: Διορθώνουμε τους τίτλους που έμεναν αχνοί (Our Path κλπ) */
+    h2, h3, p, span, .rv, .lbl { 
+        opacity: 1 !important; 
+        visibility: visible !important; 
+        transform: none !important; 
+    }
+
+    /* 4. ΕΞΑΙΡΕΣΗ ΓΙΑ SPAN: Για να μη χαλάνε οι προτάσεις */
+    span[data-lang="en"] { display: inline !important; }
 </style>
 </body>
 </html>
