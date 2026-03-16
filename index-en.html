@@ -688,26 +688,22 @@ footer {
         <li><a href="#contact">Contact</a></li>
       </ul>
 </ul>
-    <div class="lang-sw">
-      <button id="btn-el" class="active" onclick="setLang('el')">ΕΛ</button>
-      <button id="btn-en" onclick="setLang('en')">EN</button>
-    </div>
-    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+<div class="language-switcher" style="display: flex; gap: 10px; margin-left: 15px;">
+    <a href="index.html" style="color: #fff; text-decoration: none; font-size: 0.9rem;">Ελληνικά</a>
+    <span style="color: #ff8c00; font-weight: bold;">EN</span>
+</div>
+   <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <!-- Mobile menu -->
 <div id="mobnav">
-  <a data-lang="el" href="#about"   onclick="closeMob()">Ποιοι είμαστε</a>
-  <a data-lang="el" href="#mission" onclick="closeMob()">Αποστολή</a>
-  <a data-lang="el" href="#team"    onclick="closeMob()">Ομάδα</a>
-  <a data-lang="el" href="#actions" onclick="closeMob()">Δράσεις</a>
-  <a data-lang="el" href="#contact" onclick="closeMob()">Επικοινωνία</a>
   <a data-lang="en" href="#about"   onclick="closeMob()">About</a>
   <a data-lang="en" href="#mission" onclick="closeMob()">Mission</a>
   <a data-lang="en" href="#team"    onclick="closeMob()">Team</a>
   <a data-lang="en" href="#actions" onclick="closeMob()">Actions</a>
   <a data-lang="en" href="#contact" onclick="closeMob()">Contact</a>
+   <a href="index.html" onclick="closeMob()" style="color: #ff8c00; font-weight: bold; border-top: 1px solid #333; padding-top: 10px;">Ελληνικά</a>
   <div class="mob-lang">
     <button id="mbl-el" class="active" onclick="setLang('el')">ΕΛ</button>
     <button id="mbl-en" onclick="setLang('en')">EN</button>
