@@ -4,52 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A OPOS AGAPI — Non-Profit Organization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --g: #3db54a; --o: #f7941d; --gold: #c5a47e; --bg: #f7f5f0; --txt: #1c1c1e; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Outfit', sans-serif; background-color: var(--bg); color: var(--txt); overflow-x: hidden; line-height: 1.6; }
-        
-        /* INTRO OVERLAY */
-        #intro { position: fixed; inset: 0; z-index: 9999; background: #f7f5f0; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1); }
-        #intro.hide { transform: translateY(-100%); }
-        #icirc { animation: rotateDisk 12s linear infinite; width: 250px; height: auto; }
-        @keyframes rotateDisk { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        :root {
+            --g: #3db54a;
+            --o: #f7941d;
+            --gold: #c5a47e;
+            --bg: #f7f5f0;
+            --txt: #1c1c1e;
+            --w: #ffffff;
+        }
 
-        /* NAVIGATION */
-        #nav { position: fixed; top: 0; width: 100%; height: 90px; display: flex; align-items: center; justify-content: space-between; padding: 0 6%; z-index: 1000; transition: 0.4s; opacity: 0; }
-        #nav.show { opacity: 1; }
-        #nav.scrolled { background: rgba(247,245,240,0.85); backdrop-filter: blur(15px); height: 75px; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .brand { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; text-decoration: none; color: var(--txt); }
-        .nav-links { display: flex; gap: 35px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--txt); font-weight: 600; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; position: relative; transition: 0.3s; }
-        
-        /* MOBILE NAV */
-        #mobnav { position: fixed; inset: 0; background: var(--bg); z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; transform: translateX(100%); transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1); }
-        #mobnav.open { transform: translateX(0); }
-        #mobnav a { font-size: 1.5rem; text-decoration: none; color: var(--txt); font-weight: 700; text-transform: uppercase; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* HERO */
-        .hero { height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #0d0d10; color: #fff; text-align: center; }
-        .hero-bg { position: absolute; inset: 0; background: url('https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/hero-bg.jpg') center/cover no-repeat; opacity: 0.4; }
-        .hero-content { position: relative; z-index: 10; max-width: 900px; padding: 0 20px; }
-        
-        /* SECTIONS */
-        .sec { padding: 140px 10%; position: relative; }
-        .h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 5rem); line-height: 1; margin-bottom: 40px; }
-        .h2 span { display: block; font-style: italic; font-size: 0.5em; color: var(--gold); }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .img-wrap { position: relative; border-radius: 5px; overflow: hidden; }
-        .img-wrap img { width: 100%; display: block; transition: 1.5s; }
-        .rv { opacity: 0; transform: translateY(40px); transition: 1s cubic-bezier(0.2, 0, 0.2, 1); }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--txt);
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ════ INTRO OVERLAY ════ */
+        #intro {
+            position: fixed;
+            inset: 0;
+            background: #f7f5f0;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        #intro.hide {
+            transform: translateY(-100%);
+        }
+
+        #icirc {
+            width: 250px;
+            height: auto;
+            transform-origin: center;
+            animation: rotateDisk 12s linear infinite;
+        }
+
+        @keyframes rotateDisk {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        #iname {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards 0.5s;
+        }
+
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ════ NAVIGATION ════ */
+        #nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            opacity: 0;
+        }
+
+        #nav.show {
+            opacity: 1;
+        }
+
+        #nav.scrolled {
+            background: rgba(247, 245, 240, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            height: 75px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--txt);
+            z-index: 2100;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--txt);
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--o);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        #burger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 2100;
+        }
+
+        #burger span {
+            width: 28px;
+            height: 2px;
+            background: var(--txt);
+            transition: 0.3s;
+        }
+
+        #mobnav {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            transform: translateX(100%);
+            transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        #mobnav.open {
+            transform: translateX(0);
+        }
+
+        #mobnav a {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--txt);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* ════ HERO ════ */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0d0d10;
+            color: var(--w);
+            text-align: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/hero-bg.jpg') center/cover no-repeat;
+            opacity: 0.4;
+            filter: grayscale(20%);
+            transform: scale(1.1);
+            transition: transform 10s ease-out;
+        }
+
+        .hero.in .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        #hl { letter-spacing: 5px; text-transform: uppercase; font-size: 1rem; margin-bottom: 15px; opacity: 0.8; }
+        #hh { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.85; margin-bottom: 25px; }
+        #hln { width: 60px; height: 2px; background: var(--o); margin: 0 auto 30px; }
+        #htg { font-size: 1.2rem; font-style: italic; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; }
+
+        /* ════ SECTIONS ════ */
+        .sec {
+            padding: 140px 10%;
+            position: relative;
+        }
+
+        .h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 7vw, 5rem);
+            line-height: 1;
+            margin-bottom: 40px;
+        }
+
+        .h2 span {
+            display: block;
+            font-style: italic;
+            font-size: 0.5em;
+            color: var(--gold);
+            margin-top: 10px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .img-wrap {
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .img-wrap img {
+            width: 100%;
+            display: block;
+            transition: transform 1.5s cubic-bezier(0.2, 0, 0.2, 1);
+        }
+
+        .img-wrap:hover img {
+            transform: scale(1.08);
+        }
+
+        /* ════ UTILS ════ */
+        .rv { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.2, 0, 0.2, 1); }
         .rv.in { opacity: 1; transform: translateY(0); }
         .o-txt { color: var(--o); }
-        .g-txt { color: var(--g); }
-        
-        #burger { cursor: pointer; display: none; flex-direction: column; gap: 6px; z-index: 2100; }
-        #burger span { width: 28px; height: 2px; background: var(--txt); transition: 0.3s; }
-
-        @media (max-width: 992px) {
+        .g-txt { color: var(--g); }@media (max-width: 992px) {
             #burger { display: flex; }
             .nav-links { display: none; }
             .grid-2 { grid-template-columns: 1fr; gap: 50px; }
@@ -59,140 +285,137 @@
 </head>
 <body>
 
-<div id="intro">
-    <img id="icirc" src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/disk.png" alt="Logo">
-    <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; margin-top: 20px;">A OPOS AGAPI</h1>
-</div>
-
-<div id="mobnav">
-    <a href="#about" onclick="closeMob()">About</a>
-    <a href="#path" onclick="closeMob()">Our Path</a>
-    <a href="#blackboard" onclick="closeMob()">Blackboard</a>
-    <a href="#vision" onclick="closeMob()">Our Vision</a>
-    <a href="#contact" onclick="closeMob()">Contact</a>
-    <a href="index.html" onclick="closeMob()" style="color: var(--o);">ΕΛΛΗΝΙΚΑ</a>
-</div>
-
-<nav id="nav">
-    <a href="#" class="brand">A OPOS <span class="o-txt">AGAPI</span></a>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#path">Our Path</a></li>
-        <li><a href="#blackboard">Blackboard</a></li>
-        <li><a href="#vision">Our Vision</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="index.html" style="color: var(--o); border: 1px solid var(--o); padding: 5px 12px; border-radius: 20px;">EL</a></li>
-    </ul>
-    <div id="burger" onclick="toggleMob()">
-        <span></span><span></span><span></span>
+    <div id="intro">
+        <img id="icirc" src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/disk.png" alt="Logo">
+        <h1 id="iname">A OPOS AGAPI</h1>
     </div>
-</nav>
 
-<section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-        <p class="rv" style="letter-spacing: 5px; text-transform: uppercase; opacity: 0.8;">Non-Profit Organization</p>
-        <h1 class="rv" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.85; margin: 25px 0;">A OPOS <span class="o-txt">AGAPI</span></h1>
-        <p class="rv" style="font-style: italic; letter-spacing: 2px; font-size: 1.2rem;">"Give Love, Receive Light"</p>
+    <div id="mobnav">
+        <a href="#about" onclick="closeMob()">ABOUT</a>
+        <a href="#path" onclick="closeMob()">OUR PATH</a>
+        <a href="#blackboard" onclick="closeMob()">BLACKBOARD</a>
+        <a href="#vision" onclick="closeMob()">OUR VISION</a>
+        <a href="#contact" onclick="closeMob()">CONTACT</a>
+        <a href="index.html" onclick="closeMob()" style="color: var(--o);">EL</a>
     </div>
-</section>
 
-<section id="about" class="sec">
-    <div class="grid-2">
+    <nav id="nav">
+        <a href="#" class="brand">A OPOS <span class="o-txt">AGAPI</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#path">OUR PATH</a></li>
+            <li><a href="#blackboard">BLACKBOARD</a></li>
+            <li><a href="#vision">OUR VISION</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li style="margin-left: 20px;"><a href="index.html" style="color: var(--o); border: 1px solid var(--o); padding: 5px 12px; border-radius: 20px;">EL</a></li>
+        </ul>
+        <div id="burger" onclick="toggleMob()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p id="hl" class="rv">Non-Profit Organization</p>
+            <h1 id="hh" class="rv">A OPOS <span class="o-txt">AGAPI</span></h1>
+            <div id="hln" class="rv"></div>
+            <p id="htg" class="rv" style="font-style: italic; letter-spacing: 2px;">"Give Love, Receive Light"</p>
+        </div>
+    </section>
+
+    <section id="about" class="sec">
+        <div class="grid-2">
+            <div class="rv">
+                <h2 class="h2">Giving is our core <span class="g-txt">Value</span> <span>Who we are</span></h2>
+                <p>The Non-Profit Organization <b>"A OPOS AGAPI"</b> (A as Love) was created with the aim of selfless offering and social contribution. We stand by those in need, creating a chain of love and hope for a better tomorrow.</p>
+            </div>
+            <div class="img-wrap rv">
+                <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/about-img.jpg" alt="About">
+            </div>
+        </div>
+    </section>
+
+    <section id="path" class="sec" style="background-color: var(--w);">
+        <div class="grid-2">
+            <div class="img-wrap rv">
+                <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/path-img.jpg" alt="Our Path">
+            </div>
+            <div class="rv">
+                <h2 class="h2">Our <span class="o-txt">Path</span> <span>Solidarity in Action</span></h2>
+                <p>Every step we take is focused on human dignity. Through targeted actions and social programs, we strive to make a substantial difference in the lives of our fellow citizens, offering support where it is needed most.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blackboard" class="sec" style="background-color: #1c1c1e; color: var(--w);">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 60px;" class="rv">
+            <h2 class="h2" style="color: var(--o);">Blackboard <span>Education & Knowledge</span></h2>
+            <p>Blackboard is our educational pillar. We believe that knowledge is the ultimate tool for personal development and social change. We support students and provide creative learning opportunities for all.</p>
+        </div>
+        <div class="img-wrap rv" style="max-width: 900px; margin: 0 auto;">
+            <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/blackboard-img.jpg" alt="Blackboard">
+        </div>
+    </section>
+
+    <section id="vision" class="sec">
+        <div class="grid-2">
+            <div class="rv">
+                <h2 class="h2">Our <span class="g-txt">Vision</span> <span>For a better world</span></h2>
+                <p>Our vision is a society where love and solidarity are the foundations of every human relationship. A world where everyone has the opportunity to dream, create, and build a better future with dignity.</p>
+            </div>
+            <div class="img-wrap rv">
+                <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/vision-img.jpg" alt="Vision">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="sec" style="text-align: center;">
         <div class="rv">
-            <h2 class="h2">Giving is our core <span class="g-txt">Value</span> <span>Who we are</span></h2>
-            <p>The Non-Profit Organization <b>"A OPOS AGAPI"</b> (A as Love) was created with the aim of selfless offering and social contribution. We stand by those in need, creating a chain of love and hope for a better tomorrow.</p>
+            <h2 class="h2">Contact <span class="o-txt">Us</span></h2>
+            <p style="margin-bottom: 40px;">Join our mission. We are here to listen to you and collaborate.</p>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--txt); letter-spacing: 1px;">info@aoposagapi.org</div>
         </div>
-        <div class="img-wrap rv">
-            <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/about-img.jpg" alt="About Us">
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="path" class="sec" style="background: #fff;">
-    <div class="grid-2">
-        <div class="img-wrap rv">
-            <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/path-img.jpg" alt="Our Path">
-        </div>
-        <div class="rv">
-            <h2 class="h2">Our <span class="o-txt">Path</span> <span>Solidarity in Action</span></h2>
-            <p>Every step we take is focused on human dignity. Through targeted actions and social programs, we strive to make a substantial difference in the lives of our fellow citizens, offering support where it is needed most.</p>
-        </div>
-    </div>
-</section>
+    <footer style="padding: 80px 10%; background: #0d0d10; color: #fff; text-align: center; font-size: 0.9rem; opacity: 0.7;">
+        <div style="margin-bottom: 20px; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;">A OPOS AGAPI</div>
+        <p>&copy; 2026 Non-Profit Organization. All Rights Reserved.</p>
+    </footer>
 
-<section id="blackboard" class="sec" style="background: #1c1c1e; color: #fff;">
-    <div style="text-align: center; max-width: 800px; margin: 0 auto 60px;" class="rv">
-        <h2 class="h2" style="color: var(--o);">Blackboard <span>Education & Knowledge</span></h2>
-        <p>Blackboard is our educational pillar. We believe that knowledge is the ultimate tool for personal development and social change. We support students and provide creative learning opportunities for all, regardless of their circumstances.</p>
-    </div>
-    <div class="img-wrap rv" style="max-width: 900px; margin: 0 auto;">
-        <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/blackboard-img.jpg" alt="Blackboard Project">
-    </div>
-</section>
-
-<section id="vision" class="sec">
-    <div class="grid-2">
-        <div class="rv">
-            <h2 class="h2">Our <span class="g-txt">Vision</span> <span>For a better world</span></h2>
-            <p>Our vision is a society where love and solidarity are the foundations of every human relationship. A world where everyone has the opportunity to dream, create, and build a better future with dignity and hope.</p>
-        </div>
-        <div class="img-wrap rv">
-            <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/vision-img.jpg" alt="Our Vision">
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="sec" style="text-align: center;">
-    <div class="rv">
-        <h2 class="h2">Contact <span class="o-txt">Us</span></h2>
-        <p style="margin-bottom: 40px; font-size: 1.1rem;">Join our mission. We are here to listen, collaborate, and grow together.</p>
-        <div style="font-size: 2rem; font-weight: 600; color: var(--txt); letter-spacing: 1px;">info@aoposagapi.org</div>
-    </div>
-</section>
-
-<footer style="padding: 80px 10%; background: #0d0d10; color: #fff; text-align: center; font-size: 0.9rem; opacity: 0.7;">
-    <div style="margin-bottom: 20px; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;">A OPOS AGAPI</div>
-    <p>&copy; 2026 Non-Profit Organization. All Rights Reserved.</p>
-</footer>
-
-<script>
-    // Intro & Hero Animation
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            const intro = document.getElementById('intro');
-            intro.classList.add('hide');
+    <script>
+        window.addEventListener('load', () => {
             setTimeout(() => {
-                document.getElementById('nav').classList.add('show');
-                document.querySelectorAll('.hero .rv').forEach((el, i) => {
-                    setTimeout(() => el.classList.add('in'), i * 300);
-                });
-            }, 600);
-        }, 2000);
-    });
-
-    // Scroll Reveal
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in');
-            }
+                const intro = document.getElementById('intro');
+                intro.classList.add('hide');
+                setTimeout(() => {
+                    document.getElementById('nav').classList.add('show');
+                    document.querySelector('.hero').classList.add('in');
+                    document.querySelectorAll('.hero .rv').forEach((el, i) => {
+                        setTimeout(() => el.classList.add('in'), i * 200);
+                    });
+                }, 600);
+            }, 2000);
         });
-    }, { threshold: 0.15 });
 
-    document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                }
+            });
+        }, { threshold: 0.15 });
 
-    // Nav Background on Scroll
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('nav');
-        if (window.scrollY > 60) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-    });
+        document.querySelectorAll('.rv').forEach(el => observer.observe(el));
 
-    // Mobile Menu Toggle
-    function toggleMob() { document.getElementById('mobnav').classList.toggle('open'); }
-    function closeMob() { document.getElementById('mobnav').classList.remove('open'); }
-</script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 60) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
 
+        function toggleMob() { document.getElementById('mobnav').classList.toggle('open'); }
+        function closeMob() { document.getElementById('mobnav').classList.remove('open'); }
+    </script>
 </body>
 </html>
