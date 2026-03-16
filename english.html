@@ -1,117 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A OPOS AGAPI — Giving Love</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --g: #3db54a; --o: #f7941d; --cream: #f7f5f0; --text: #1c1c1e; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; line-height: 1.6; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A OPOS AGAPI — Non-Profit Organization</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Rotation and Logo Size in Intro */
+#icirc {
+    transform-origin: center;
+    animation: rotateDisk 12s linear infinite;
+    width: 250px !important;
+    height: auto !important;
+}
+@keyframes rotateDisk {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+#iname {
+    font-size: 3.5rem !important;
+    margin-top: 20px;
+}
+/* ════════════════════════════════
+   INTRO OVERLAY
+════════════════════════════════ */
+#intro {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #f7f5f0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+#intro.hide { transform: translateY(-100%); }
 
-        /* Loading Intro */
-        #intro { position: fixed; inset: 0; z-index: 9999; background: var(--cream); display: flex; flex-direction: column; align-items: center; justify-content: center; transition: 1.2s cubic-bezier(0.85, 0, 0.15, 1); }
-        #icirc { animation: rotateDisk 15s linear infinite; width: 220px; }
-        @keyframes rotateDisk { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        
-        /* Nav */
-        #nav { position: fixed; top: 0; width: 100%; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 6%; z-index: 1000; transition: 0.4s; background: rgba(247,245,240,0.8); backdrop-filter: blur(10px); }
-        .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
-        .lang-btn { color: var(--o) !important; border: 1px solid var(--o); padding: 5px 12px; border-radius: 20px; }
+/* ════════════════════════════════
+   VARIABLES & BASE
+════════════════════════════════ */
+:root {
+  --g: #3db54a; --o: #f7941d; --gold: #c5a47e;
+  --bg: #f7f5f0; --txt: #1c1c1e;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg); color: var(--txt);
+  overflow-x: hidden; line-height: 1.6;
+}
 
-        /* Sections */
-        .sec { padding: 120px 10%; min-height: 60vh; }
-        .h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 25px; }
-        .o-txt { color: var(--o); } .g-txt { color: var(--g); }
-        
-        .hero { height: 100vh; background: #0d0d10; color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
-        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 10vw, 6rem); }
+/* ════════════════════════════════
+   NAVIGATION
+════════════════════════════════ */
+#nav {
+  position: fixed; top: 0; width: 100%; height: 90px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 6%; z-index: 1000; transition: 0.4s; opacity: 0;
+}
+#nav.show { opacity: 1; }
+#nav.scrolled {
+  background: rgba(247,245,240,0.85);
+  backdrop-filter: blur(15px); height: 75px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 700; text-decoration: none; color: var(--txt);
+}
+.nav-links { display: flex; gap: 35px; list-style: none; }
+.nav-links a {
+  text-decoration: none; color: var(--txt); font-weight: 600;
+  font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase;
+  position: relative; transition: 0.3s;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -5px; left: 0;
+  width: 0; height: 2px; background: var(--o); transition: 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
 
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { padding: 40px; border: 1px solid rgba(0,0,0,0.05); border-radius: 20px; background: white; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+/* Mobile Menu Button */
+#burger { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+#burger span { width: 28px; height: 2px; background: var(--txt); transition: 0.3s; }
 
-        #contact-form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; }
-        input, textarea { padding: 18px; border: 1px solid #ddd; border-radius: 12px; font-family: inherit; }
-        button { padding: 20px; background: var(--o); color: white; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; }
-    </style>
-</head>
-<body>
+/* ════════════════════════════════
+   HERO SECTION
+════════════════════════════════ */
+.hero {
+  height: 100vh; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: #0d0d10; color: #fff; text-align: center;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/hero-bg.jpg') center/cover no-repeat;
+  opacity: 0.4; filter: grayscale(20%);
+}
+.hero-content { position: relative; z-index: 10; max-width: 900px; padding: 0 20px; }
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.85; margin-bottom: 25px;
+}
+.hero p { font-size: 1rem; letter-spacing: 5px; text-transform: uppercase; opacity: 0.8; }
 
-    <div id="intro">
-        <img id="icirc" src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/disk.png">
-        <h1 style="font-family: 'Cormorant Garamond', serif; margin-top:20px;">A OPOS AGAPI</h1>
+/* ════════════════════════════════
+   COMMON STYLES
+════════════════════════════════ */
+.sec { padding: 140px 10%; position: relative; }
+.h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7vw, 5rem); line-height: 1; margin-bottom: 40px;
+}
+.h2 span { display: block; font-style: italic; font-size: 0.5em; color: var(--gold); }
+.o-txt { color: var(--o); }
+.g-txt { color: var(--g); }
+
+/* Reveal Animations */
+.rv { opacity: 0; transform: translateY(40px); transition: 1s cubic-bezier(0.2, 0, 0.2, 1); }
+.rv.in { opacity: 1; transform: translateY(0); }
+
+/* Grid Layouts */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.img-wrap { position: relative; border-radius: 5px; overflow: hidden; }
+.img-wrap img { width: 100%; display: block; transition: 1.5s; }
+.img-wrap:hover img { transform: scale(1.05); }
+
+/* ════════════════════════════════
+   MOBILE RESPONSIVENESS
+════════════════════════════════ */
+@media (max-width: 992px) {
+  #burger { display: flex; }
+  .nav-links { display: none; }
+  .grid-2 { grid-template-columns: 1fr; gap: 50px; }
+  .sec { padding: 100px 6%; }
+}
+</style>
+</head><body>
+
+<div id="intro">
+  <img id="icirc" src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/disk.png" alt="Logo">
+  <h1 id="iname" style="font-family: 'Cormorant Garamond', serif; font-weight: 700; color: #1c1c1e;">A OPOS AGAPI</h1>
+</div>
+
+<nav id="nav">
+  <a href="#" class="brand">A OPOS <span class="o-txt">AGAPI</span></a>
+  
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#path">Our Path</a></li>
+    <li><a href="#blackboard">Blackboard</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html" style="color: var(--o); border: 1px solid var(--o); padding: 5px 12px; border-radius: 20px;">EL</a></li>
+  </ul>
+
+  <div id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p id="hl" class="rv">Non-Profit Organization</p>
+    <h1 id="hh" class="rv">A OPOS <span class="o-txt">AGAPI</span></h1>
+    <p id="htg" class="rv" style="font-style: italic; letter-spacing: 2px;">"Give Love, Receive Light"</p>
+  </div>
+</section>
+
+<section id="about" class="sec">
+  <div class="grid-2">
+    <div class="rv">
+      <h2 class="h2">Giving <span>is our core</span> <span class="g-txt">Value</span></h2>
+      <p>The Non-Profit Organization <b>"A OPOS AGAPI"</b> was created with the aim of selfless offering and social contribution. We stand by those in need, creating a chain of love and hope.</p>
     </div>
+    <div class="img-wrap rv">
+      <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/about-img.jpg" alt="About Us">
+    </div>
+  </div>
+</section>
 
-    <nav id="nav">
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;">A OPOS <span class="o-txt">AGAPI</span></div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#blackboard">Blackboard</a></li>
-            <li><a href="#volunteer">Volunteer</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="index.html" class="lang-btn">EL</a></li>
-        </ul>
-    </nav>
+<section id="path" class="sec" style="background: #fff;">
+  <div class="grid-2">
+    <div class="img-wrap rv">
+      <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/path-img.jpg" alt="Our Path">
+    </div>
+    <div class="rv">
+      <h2 class="h2">Our <span class="o-txt">Path</span> <span>Solidarity in Action</span></h2>
+      <p>Every step we take is focused on human dignity. Through targeted actions and social programs, we strive to make a substantial difference in the lives of our fellow citizens.</p>
+    </div>
+  </div>
+</section>
 
-    <section class="hero">
-        <div>
-            <h1>A OPOS <span class="o-txt">AGAPI</span></h1>
-            <p style="letter-spacing: 3px; opacity: 0.7; margin-top: 20px;">GIVE LOVE, RECEIVE LIGHT</p>
-        </div>
-    </section>
+<section id="blackboard" class="sec" style="background: #1c1c1e; color: #fff;">
+  <div class="rv" style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
+    <h2 class="h2" style="color: var(--o);">Blackboard <span>Education & Knowledge</span></h2>
+    <p>Blackboard is our educational pillar. We believe that knowledge is the ultimate tool for personal development and social change. We support students and provide creative learning opportunities for all.</p>
+  </div>
+  <div class="img-wrap rv" style="max-width: 900px; margin: 0 auto;">
+    <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/blackboard-img.jpg" alt="Blackboard">
+  </div>
+</section>
 
-    <section id="about" class="sec">
-        <h2 class="h2">Our <span class="g-txt">Mission</span></h2>
-        <p style="font-size: 1.2rem; max-width: 800px; color: #555;">Founded on the principles of selfless offering, "A OPOS AGAPI" (A as in Love) serves as a bridge for social solidarity. We support vulnerable groups and individuals, fostering a community where no one is left behind.</p>
-    </section>
+<section id="vision" class="sec">
+  <div class="grid-2">
+    <div class="rv">
+      <h2 class="h2">Our <span class="g-txt">Vision</span> <span>For a better world</span></h2>
+      <p>Our vision is a society where love and solidarity are the foundations of every human relationship. A world where everyone has the opportunity to dream and create a better future.</p>
+    </div>
+    <div class="img-wrap rv">
+      <img src="https://raw.githubusercontent.com/Anestis-L/A-OS-AGAPI/main/vision-img.jpg" alt="Vision">
+    </div>
+  </div>
+</section>
 
-    <section id="blackboard" class="sec" style="background: #1c1c1e; color: white;">
-        <h2 class="h2" style="color: var(--o);">Blackboard</h2>
-        <p style="max-width: 700px; margin-bottom: 40px;">Our educational pillar dedicated to empowering youth and adults through knowledge.</p>
-        <div class="card-grid">
-            <div class="card" style="color: black;">
-                <h3 class="g-txt">Educational Support</h3>
-                <p>Providing tools and guidance for students to excel in their academic journey.</p>
-            </div>
-            <div class="card" style="color: black;">
-                <h3 class="o-txt">Skill Workshops</h3>
-                <p>Developing practical skills and fostering creativity through specialized sessions.</p>
-            </div>
-        </div>
-    </section>
+<section id="contact" class="sec" style="text-align: center;">
+  <div class="rv">
+    <h2 class="h2">Contact <span class="o-txt">Us</span></h2>
+    <p style="margin-bottom: 40px;">Join our mission. We are here to listen to you.</p>
+    <div style="font-size: 1.5rem; font-weight: 600; color: var(--txt);">
+      info@aoposagapi.org
+    </div>
+  </div>
+</section>
 
-    <section id="volunteer" class="sec">
-        <h2 class="h2">Become a <span class="g-txt">Volunteer</span></h2>
-        <p style="font-size: 1.1rem; margin-bottom: 30px;">Your time and love can change lives. Join our growing team of volunteers.</p>
-        <div style="background: var(--o); color: white; padding: 40px; border-radius: 20px; display: inline-block;">
-            <h3>Join the Chain of Love</h3>
-            <p>Email us at your-email@example.com to learn how you can help.</p>
-        </div>
-    </section>
+<footer style="padding: 50px 10%; background: #0d0d10; color: #fff; text-align: center; font-size: 0.9rem; opacity: 0.6;">
+  <p>&copy; 2026 A OPOS AGAPI. All Rights Reserved.</p>
+</footer><script>
+// 1. INTRO & HERO ANIMATION
+window.addEventListener('load', () => {
+    // Περιμένουμε 2 δευτερόλεπτα για να δει ο χρήστης το λογότυπο να γυρίζει
+    setTimeout(() => {
+        const intro = document.getElementById('intro');
+        intro.classList.add('hide');
+        
+        // Μόλις φύγει το intro, εμφάνισε το Nav και το Hero κείμενο
+        setTimeout(() => {
+            document.getElementById('nav').classList.add('show');
+            document.querySelectorAll('.hero .rv').forEach((el, i) => {
+                setTimeout(() => el.classList.add('in'), i * 300);
+            });
+        }, 600);
+    }, 2000);
+});
 
-    <section id="contact" class="sec">
-        <h2 class="h2">Contact <span class="g-txt">Us</span></h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">SEND MESSAGE</button>
-        </form>
-    </section>
+// 2. SCROLL REVEAL (Εμφάνιση στοιχείων καθώς σκρολάρεις)
+const observerOptions = {
+    threshold: 0.15
+};
 
-    <footer style="padding: 60px 10%; background: #0d0d10; color: white; text-align: center;">
-        <p>&copy; 2026 A OPOS AGAPI. All rights reserved.</p>
-    </footer>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target); // Το τρέχουμε μόνο μία φορά
+        }
+    });
+}, observerOptions);
 
-    <script>
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('intro').style.transform = 'translateY(-100%)';
-            }, 2000);
-        });
-    </script>
+document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+
+// 3. NAVIGATION SCROLL EFFECT
+window.addEventListener('scroll', () => {
+    const nav = document.getElementById('nav');
+    if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// 4. MOBILE MENU (Basic Toggle)
+const burger = document.getElementById('burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+    // Απλό toggle για το κινητό
+    if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '90px';
+        navLinks.style.left = '0';
+        navLinks.style.width = '100%';
+        navLinks.style.background = '#f7f5f0';
+        navLinks.style.padding = '20px';
+    }
+});
+</script>
+
 </body>
 </html>
