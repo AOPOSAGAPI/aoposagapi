@@ -1334,27 +1334,31 @@ function setLang(lang) {
 }
 </script>
 <style>
-    /* 1. ΕΞΑΦΑΝΙΣΗ ΕΛΛΗΝΙΚΩΝ: Σβήνουμε οτιδήποτε έχει ταμπελάκι "el" */
-    [data-lang="el"], .lang-el, .el-text { 
+    /* ΕΞΑΦΑΝΙΣΗ ΟΛΩΝ ΤΩΝ ΕΛΛΗΝΙΚΩΝ */
+    [data-lang="el"], .lang-el, .el-text, div:has(> p:contains("Μαύρος")) { 
         display: none !important; 
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* 2. ΕΜΦΑΝΙΣΗ ΑΓΓΛΙΚΩΝ: Αναγκάζουμε τα αγγλικά να φαίνονται παντού */
+    /* ΦΩΤΙΣΜΑ ΚΑΙ ΕΜΦΑΝΙΣΗ ΑΓΓΛΙΚΩΝ */
     [data-lang="en"], .lang-en, .en-text { 
         display: block !important; 
         opacity: 1 !important; 
         visibility: visible !important; 
     }
 
-    /* 3. ΦΩΤΙΣΜΑ ΚΕΙΜΕΝΩΝ: Διορθώνουμε τους τίτλους που έμεναν αχνοί (Our Path κλπ) */
-    h2, h3, p, span, .rv, .lbl { 
+    /* ΑΝΑΓΚΑΣΤΙΚΟ ΦΩΤΙΣΜΑ ΤΙΤΛΩΝ (Our Path, Blackboard κλπ) */
+    h2, h3, p, .rv, .lbl { 
         opacity: 1 !important; 
         visibility: visible !important; 
-        transform: none !important; 
+        transform: none !important;
+        color: inherit;
     }
 
-    /* 4. ΕΞΑΙΡΕΣΗ ΓΙΑ SPAN: Για να μη χαλάνε οι προτάσεις */
-    span[data-lang="en"] { display: inline !important; }
+    /* ΠΟΡΤΟΚΑΛΙ ΤΙΤΛΟΙ ΓΙΑ ΝΑ ΞΕΧΩΡΙΖΟΥΝ */
+    h2 { color: #ff8c00 !important; }
 </style>
 </body>
 </html>
