@@ -680,12 +680,12 @@ footer {
       </ul>
 
       <ul class="nav-links" data-lang="en">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#actions">Actions</a></li>
-        <li><a href="#volunteer" style="color:var(--gold); border:1px solid var(--gold); padding:5px 12px; border-radius:20px;">VOLUNTEER</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about-en">About Us</a></li>
+        <li><a href="#mission-en">Mission</a></li>
+        <li><a href="#team-en">Team</a></li>
+        <li><a href="#actions-en">Actions</a></li>
+        <li><a href="#volunteer-en" style="color:var(--gold); border:1px solid var(--gold); padding:5px 12px; border-radius:20px;">VOLUNTEER</a></li>
+        <li><a href="#contact-en">Contact</a></li>
       </ul>
 </ul>
 <div class="language-switcher" style="display: flex; gap: 10px; margin-right: 50px;">
@@ -1333,5 +1333,12 @@ function setLang(lang) {
   });
 }
 </script>
+   <style>
+    /* Εμφάνιση όλων των αγγλικών και απόκρυψη ελληνικών */
+    [data-lang="en"] { display: block !important; opacity: 1 !important; visibility: visible !important; }
+    [data-lang="el"] { display: none !important; }
+    /* Διόρθωση για τους τίτλους που κάνουν reveal */
+    h2.rv, p.rv, .rv { opacity: 1 !important; transform: none !important; visibility: visible !important; }
+</style>
 </body>
 </html>
