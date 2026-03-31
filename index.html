@@ -44,9 +44,9 @@
   }
   #heroCarousel .carousel-indicators .active { background: #ffc107; }
 
-  .lang-btn { background: none; border: 2px solid var(--main-blue); color: var(--main-blue);
+  .dg-btn { background: none; border: 2px solid var(--main-blue); color: var(--main-blue);
     padding: 8px 12px; margin: 0 3px; cursor: pointer; font-weight: bold; border-radius: 5px; }
-  .lang-btn.active { background: var(--main-blue); color: white; }
+  .dg-btn.dg-active { background: var(--main-blue); color: white; }
   .service-card { border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 10px; }
   .section-title { color: #003366; font-weight: 700; }
 
@@ -65,12 +65,12 @@
 <nav class="navbar sticky-top">
   <div class="container d-flex justify-content-between align-items-center">
     <a class="navbar-brand" href="#">
-      <img src="digecomm%20logo%20transparent.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="DIGECOMM" style="height:110px;width:auto;display:block;"><span style="display:none;font-size:1.8rem;font-weight:900;color:#003366;letter-spacing:1px;">DIGECOMM</span>
+      <img src="digecomm logo transparent.png" alt="DIGECOMM" style="height:110px;width:auto;display:block;">
     </a>
     <div class="d-flex align-items-center">
-      <button class="lang-btn active" data-lang="el">ΕΛ</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="tr">TR</button>
+      <button class="dg-btn dg-active" data-lang="el">ΕΛ</button>
+      <button class="dg-btn" data-lang="en">EN</button>
+      <button class="dg-btn" data-lang="tr">TR</button>
       <a href="tel:6948985340" id="nav-phone" class="fw-bold text-decoration-none ms-4" style="color:#003366;font-size:1.5rem;">📞 6948985340</a>
     </div>
   </div>
@@ -100,7 +100,7 @@
         <a href="tel:6948985340" id="s2b" class="btn btn-warning btn-lg px-5 fw-bold shadow">ΕΠΙΚΟΙΝΩΝΙΑ</a>
       </div>
     </div>
-    <div class="carousel-item" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=1350&q=80');">
+    <div class="carousel-item" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1350&q=80');">
       <div class="slide-content">
         <span class="icon">📞</span>
         <h1 id="s3t">Business Support</h1>
@@ -291,7 +291,7 @@
             <label class="form-label fw-bold" id="ev-fm">Μήνυμα</label>
             <textarea class="form-control" id="form-message" rows="5"></textarea>
           </div>
-          <button type="button" onclick="sendForm()" class="btn btn-lg fw-bold w-100" style="background:#003366;color:white;" id="ev-fb">
+          <button type="button" onclick="dgSendForm()" class="btn btn-lg fw-bold w-100" style="background:#003366;color:white;" id="ev-fb">
             Αποστολή Μηνύματος
           </button>
           <div id="form-feedback" class="mt-3 text-center fw-bold" style="display:none;"></div>
@@ -448,10 +448,10 @@ function dgSetLang(lg) {
   var cp = document.getElementById('contact-phone');
   if(cp){cp.textContent=t.ph; cp.href='tel:'+t.ph.replace(/\s/g,'');}
   sd('footer-phone',t.ph);
-  document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-lang')===lg); });
+  document.querySelectorAll('.dg-btn').forEach(function(b){ b.classList.toggle('dg-active', b.getAttribute('data-lang')===lg); });
 }
 
-function sendForm() {
+function dgSendForm() {
   var name=(document.getElementById('form-name').value||'').trim();
   var email=(document.getElementById('form-email').value||'').trim();
   var subj=(document.getElementById('form-subject').value||'').trim();
