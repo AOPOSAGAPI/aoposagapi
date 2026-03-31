@@ -23,6 +23,11 @@
     inset: 0;
     background: rgba(0,51,102,0.65);
     z-index: 1;
+    pointer-events: none;
+  }
+  #heroCarousel .carousel-control-prev,
+  #heroCarousel .carousel-control-next {
+    z-index: 10;
   }
   #heroCarousel .slide-content {
     position: relative;
@@ -60,7 +65,7 @@
 <nav class="navbar sticky-top">
   <div class="container d-flex justify-content-between align-items-center">
     <a class="navbar-brand" href="#">
-      <img src="digecomm logo transparent.png" alt="DIGECOMM" style="height:110px;width:auto;display:block;">
+      <img src="digecomm%20logo%20transparent.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="DIGECOMM" style="height:110px;width:auto;display:block;"><span style="display:none;font-size:1.8rem;font-weight:900;color:#003366;letter-spacing:1px;">DIGECOMM</span>
     </a>
     <div class="d-flex align-items-center">
       <button class="lang-btn active" data-lang="el">ΕΛ</button>
@@ -142,7 +147,7 @@
         <div class="team-avatar">Γ</div>
         <div class="text-center mb-3">
           <div class="team-role" id="ev-grole">Ιδρυτής &amp; Πρόεδρος</div>
-          <h4 class="fw-bold mb-1" style="color:#003366;">Γκόλιας Γεώργιος</h4>
+          <h4 class="fw-bold mb-1" style="color:#003366;" id="ev-gname">Γκόλιας Γεώργιος</h4>
         </div>
         <p class="text-muted" id="ev-gbio">Πτυχιούχος Μαθηματικών με μεταπτυχιακές σπουδές στην Αναλογιστική Επιστήμη και τα Οικονομικά. Μιλά 4 γλώσσες και είναι κάτοχος επάρκειας της Ελληνικής Νοηματικής Γλώσσας (ΕΝΓ).</p>
         <p class="text-muted" id="ev-gbio2">Έχει διατελέσει ανώτατο στέλεχος σε ελληνικές και πολυεθνικές επιχειρήσεις. Διευθύνει την Digicall SA και παρουσιάζει τηλεοπτική εκπομπή κοινωνικού ενδιαφέροντος. Την τελευταία δεκαετία δραστηριοποιείται ενεργά στον εθελοντισμό για ΑΜΕΑ, μετανάστες και αδέσποτα ζώα.</p>
@@ -155,7 +160,7 @@
         <div class="team-avatar" style="background:#cc4400;">Τ</div>
         <div class="text-center mb-3">
           <div class="team-role" id="ev-trole">Επικεφαλής Τεχνικών Έργων</div>
-          <h4 class="fw-bold mb-1" style="color:#003366;">Τζαν</h4>
+          <h4 class="fw-bold mb-1" style="color:#003366;" id="ev-tname">Τζαν</h4>
         </div>
         <p class="text-muted" id="ev-tbio">Έμπειρος τεχνικός με βαθιά γνώση κατασκευαστικών και οικοδομικών εργασιών. Διαθέτει πρόσβαση σε ένα εκτεταμένο δίκτυο συνεργατών που ξεχωρίζουν για το ήθος, την εργατικότητα και τη συνέπειά τους.</p>
         <p class="text-muted" id="ev-tbio2">Εθελοντής στο Καταφύγιο Αδέσποτων Ζώων του Δήμου Αθηναίων, όπου ανέλαβε την πλήρη ανακατασκευή και ηλεκτροσυγκόλληση μεταλλικής σκάλας — αντιπροσωπευτικό παράδειγμα του τρόπου που βλέπει τη δουλειά του: ως υποχρέωση απέναντι στην κοινωνία.</p>
@@ -253,7 +258,7 @@
           <h4 class="mb-4" style="color:#ffcc00;" id="ev-ctitle">Στοιχεία Επικοινωνίας</h4>
           <p class="mb-2">📍 <span id="ev-addr">Συντ. Δαβάκη 58, Καλλιθέα, 176 72</span></p>
           <p class="mb-2">📞 <a href="tel:6948985340" id="contact-phone" class="text-white text-decoration-none">6948985340</a></p>
-          <p class="mb-0">📧 <a href="mailto:info@digecomm.gr" class="text-white text-decoration-none">info@digecomm.gr</a></p>
+          <p class="mb-0">📧 <a href="/cdn-cgi/l/email-protection#abc2c5cdc4ebcfc2cccec8c4c6c685ccd9" class="text-white text-decoration-none"><span class="__cf_email__" data-cfemail="b6dfd8d0d9f6d2dfd1d3d5d9dbdb98d1c4">[email&#160;protected]</span></a></p>
         </div>
       </div>
     </div>
@@ -299,7 +304,7 @@
 <!-- FOOTER -->
 <footer class="py-5 bg-dark text-white text-center">
   <div class="container">
-    <p>📍 Συντ. Δαβάκη 58, Καλλιθέα | 📧 info@digecomm.gr | 📞 <span id="footer-phone">6948985340</span></p>
+    <p>📍 Συντ. Δαβάκη 58, Καλλιθέα | 📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4920272f26092d202e2c2a262424672e3b">[email&#160;protected]</a> | 📞 <span id="footer-phone">6948985340</span></p>
     <hr style="background:white;">
     <p class="mb-1 text-white-50" style="font-size:0.85rem;">
       <strong>ΑΦΜ:</strong> 802954493 &nbsp;|&nbsp;
@@ -310,7 +315,7 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 var T = {
   el: {
@@ -323,10 +328,10 @@ var T = {
     t2:"Facility Management", d2:"Εξειδικευμένοι αρχικοί καθαρισμοί μετά από κατασκευή ή ανακαίνιση και ολοκληρωμένη διαχείριση απορριμμάτων και μπαζών.",
     t3:"Business Support", d3:"Ολοκληρωμένη διαχείριση Call Center (inbound/outbound), γραμματειακή υποστήριξη και στρατηγικός σχεδιασμός Marketing.",
     abtitle:"Ποιοι Είμαστε", absub:"Μια ομάδα ανθρώπων με ήθος, εργατικότητα και συνέπεια — που φέρνουν κάθε έργο στο αποτέλεσμα που του αξίζει.",
-    grole:"Ιδρυτής & Πρόεδρος",
+    gname:"Γκόλιας Γεώργιος", grole:"Ιδρυτής & Πρόεδρος",
     gbio:"Πτυχιούχος Μαθηματικών με μεταπτυχιακές σπουδές στην Αναλογιστική Επιστήμη και τα Οικονομικά. Μιλά 4 γλώσσες και είναι κάτοχος επάρκειας της Ελληνικής Νοηματικής Γλώσσας (ΕΝΓ).",
     gbio2:"Έχει διατελέσει ανώτατο στέλεχος σε ελληνικές και πολυεθνικές επιχειρήσεις. Διευθύνει την Digicall SA και παρουσιάζει τηλεοπτική εκπομπή κοινωνικού ενδιαφέροντος. Την τελευταία δεκαετία δραστηριοποιείται ενεργά στον εθελοντισμό για ΑΜΕΑ, μετανάστες και αδέσποτα ζώα.",
-    trole:"Επικεφαλής Τεχνικών Έργων",
+    tname:"Τζαν", trole:"Επικεφαλής Τεχνικών Έργων",
     tbio:"Έμπειρος τεχνικός με βαθιά γνώση κατασκευαστικών και οικοδομικών εργασιών. Διαθέτει πρόσβαση σε ένα εκτεταμένο δίκτυο συνεργατών που ξεχωρίζουν για το ήθος, την εργατικότητα και τη συνέπειά τους.",
     tbio2:"Εθελοντής στο Καταφύγιο Αδέσποτων Ζώων του Δήμου Αθηναίων, όπου ανέλαβε την πλήρη ανακατασκευή και ηλεκτροσυγκόλληση μεταλλικής σκάλας — αντιπροσωπευτικό παράδειγμα του τρόπου που βλέπει τη δουλειά του: ως υποχρέωση απέναντι στην κοινωνία.",
     projt:"Πρόσφατα Έργα", loftt:"Ολική Ανακατασκευή Loft (AirBnb)",
@@ -356,10 +361,10 @@ var T = {
     t2:"Facility Management", d2:"Specialized initial cleaning after construction or renovation and comprehensive waste and debris management.",
     t3:"Business Support", d3:"Integrated Call Center management (inbound/outbound), secretarial support and strategic Marketing planning.",
     abtitle:"Who We Are", absub:"A team of people with integrity, work ethic and consistency — who bring every project to the result it deserves.",
-    grole:"Founder & President",
+    gname:"George Gkolias", grole:"Founder & President",
     gbio:"Graduate in Mathematics with postgraduate studies in Actuarial Science and Economics. Speaks 4 languages and holds proficiency in Greek Sign Language (GSL).",
     gbio2:"Has served as a senior executive in Greek and multinational companies. Manages Digicall SA and hosts a social interest TV programme. For the past decade, actively involved in volunteering for people with disabilities, migrants and stray animals.",
-    trole:"Head of Technical Works",
+    tname:"Can", trole:"Head of Technical Works",
     tbio:"Experienced technician with deep knowledge of construction and building works. Has access to an extensive network of collaborators distinguished by their integrity, work ethic and reliability.",
     tbio2:"Volunteer at the Athens Municipality Stray Animal Shelter, where he undertook the full reconstruction and welding of a metal staircase — a representative example of how he sees his work: as an obligation to society.",
     projt:"Recent Projects", loftt:"Complete Loft Renovation (AirBnb)",
@@ -389,10 +394,10 @@ var T = {
     t2:"Tesis Y\u00f6netimi", d2:"\u0130n\u015faat veya tadilat sonras\u0131 \u00f6zel ilk temizlik ve kapsaml\u0131 at\u0131k ve moloz y\u00f6netimi.",
     t3:"\u0130\u015f Deste\u011fi", d3:"Entegre \u00c7a\u011fr\u0131 Merkezi y\u00f6netimi (gelen/giden), sekreterlik deste\u011fi ve stratejik Pazarlama planlamas\u0131.",
     abtitle:"Biz Kimiz", absub:"Ahlak, \u00e7al\u0131\u015fkanl\u0131k ve tutarl\u0131l\u0131kla her projeyi hak etti\u011fi sonuca ula\u015ft\u0131ran bir ekip.",
-    grole:"Kurucu & Ba\u015fkan",
+    gname:"George Gkolias", grole:"Kurucu & Ba\u015fkan",
     gbio:"Matematik mezunu, Akt\u00fcerya Bilimi ve Ekonomi alan\u0131nda y\u00fcksek lisans. 4 dil konu\u015fuyor ve Yunan \u0130\u015faret Dili yeterlilik belgesi var.",
     gbio2:"Yunan ve \u00e7ok uluslu \u015firketlerde \u00fcst d\u00fczey y\u00f6netici olarak g\u00f6rev yapm\u0131\u015ft\u0131r. Digicall SA'\u0131 y\u00f6netiyor ve sosyal i\u00e7erikli bir TV program\u0131 sunuyor.",
-    trole:"Teknik \u0130\u015fler Direkt\u00f6r\u00fc",
+    tname:"Can", trole:"Teknik \u0130\u015fler Direkt\u00f6r\u00fc",
     tbio:"Yap\u0131 i\u015flerinde derin bilgiye sahip deneyimli teknisyen. Geni\u015f bir i\u015f ortaklar\u0131 a\u011f\u0131na sahip.",
     tbio2:"Atina Belediyesi Sokak Hayvanlar\u0131 Bar\u0131na\u011f\u0131'nda g\u00f6n\u00fcll\u00fc olarak metal merdiveni yeniden in\u015fa etti.",
     projt:"Son Projeler", loftt:"Komple Loft Yenileme (AirBnb)",
@@ -428,8 +433,8 @@ function dgSetLang(lg) {
   ['s1b','s2b','s3b'].forEach(function(id){ var el=document.getElementById(id); if(el){el.textContent=t.btn; el.href='tel:'+t.ph.replace(/\s/g,'');} });
   sd('ev-stitle',t.stitle); sd('ev-t1',t.t1); sd('ev-d1',t.d1); sd('ev-t2',t.t2); sd('ev-d2',t.d2); sd('ev-t3',t.t3); sd('ev-d3',t.d3);
   sd('ev-abtitle',t.abtitle); sd('ev-absub',t.absub);
-  sd('ev-grole',t.grole); sd('ev-gbio',t.gbio); sd('ev-gbio2',t.gbio2);
-  sd('ev-trole',t.trole); sd('ev-tbio',t.tbio); sd('ev-tbio2',t.tbio2);
+  sd('ev-gname',t.gname); sd('ev-grole',t.grole); sd('ev-gbio',t.gbio); sd('ev-gbio2',t.gbio2);
+  sd('ev-tname',t.tname); sd('ev-trole',t.trole); sd('ev-tbio',t.tbio); sd('ev-tbio2',t.tbio2);
   sd('ev-projt',t.projt); sd('ev-loftt',t.loftt); sd('ev-loftd',t.loftd);
   sd('ev-vidt',t.vidt); sd('ev-bef',t.bef); sd('ev-wk1',t.wk1); sd('ev-wk2',t.wk2); sd('ev-aft',t.aft);
   sd('ev-socbadge',t.socbadge); sd('ev-strayt',t.strayt); sd('ev-strays',t.strays);
@@ -456,15 +461,4 @@ function sendForm() {
   if(!name||!email||!msg){fb.style.display='block';fb.style.color='#cc0000';fb.textContent=t.ferr;return;}
   var body='Από: '+name+' <'+email+'>\n\n'+msg;
   window.location.href='mailto:info@digecomm.gr?subject='+encodeURIComponent(subj||'Επικοινωνία')+'&body='+encodeURIComponent(body);
-  fb.style.display='block'; fb.style.color='#006600'; fb.textContent=t.fok;
-}
-
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.lang-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){ dgSetLang(this.getAttribute('data-lang')); });
-  });
-  dgSetLang(localStorage.getItem('dg_lang')||'el');
-});
-</script>
-</body>
-</html>
+  fb.style.display='block'
