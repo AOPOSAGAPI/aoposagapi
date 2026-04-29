@@ -868,15 +868,14 @@ footer {
 </head>
 <body class="lang-el">
 
-   <div style="background: #111; text-align: center; padding: 10px 0; border-bottom: 2px solid #f7941d; position: relative; z-index: 999999;">
-    <span style="color: #f7941d; font-weight: bold; font-size: 0.8em; margin-right: 15px; letter-spacing: 1px;">Ο ΥΜΝΟΣ ΜΑΣ:</span>
-    <audio controls style="height: 28px; vertical-align: middle; filter: invert(100%);">
-        <source src="a-opos-agapi.mp3" type="audio/mpeg">
-    </audio>
-</div>
 <!-- ══════════════ INTRO ══════════════ -->
 <div id="intro">
   <canvas id="icv"></canvas>
+
+  <!-- Anthem audio plays automatically when intro is opened -->
+  <audio id="introAnthem" preload="none">
+    <source src="a-opos-agapi.mp3" type="audio/mpeg">
+  </audio>
 
   <!-- Scene 1: Words -->
   <div class="i-scene" id="is1">
@@ -1747,6 +1746,9 @@ function showIntro() {
   document.body.classList.add('locked');
   document.getElementById('skip-btn').style.display = 'block';
   startCanvasAnimation();
+  // Auto-play anthem
+  const anthem = document.getElementById('introAnthem');
+  if (anthem) { anthem.currentTime = 0; anthem.play().catch(()=>{}); }
   runIntroSequence();
 }
 
@@ -1759,6 +1761,10 @@ function endIntro() {
   // Clear all pending timers
   introTimers.forEach(t => clearTimeout(t));
   introTimers.length = 0;
+
+  // Stop anthem audio
+  const anthem = document.getElementById('introAnthem');
+  if (anthem) { anthem.pause(); anthem.currentTime = 0; }
 
   const overlay = document.getElementById('intro');
   const skipBtn = document.getElementById('skip-btn');
