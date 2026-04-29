@@ -1475,29 +1475,33 @@ footer {
       <span data-lang="en">give <span class="to">LOVE</span>, receive <span class="tg">LIGHT</span></span>
     </p>
 <div style="margin: 40px 0; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 600px;">
-                <h3 style="margin-bottom: 20px; color: #333; font-family: inherit;">Στείλτε μας μήνυμα</h3>
+                <h3 style="margin-bottom: 20px; color: #333; font-family: inherit;" data-lang="el">Στείλτε μας μήνυμα</h3>
+                <h3 style="margin-bottom: 20px; color: #333; font-family: inherit;" data-lang="en">Send us a message</h3>
                 <form action="https://formspree.io/f/xjgeqglb" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
                     <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;">Ονοματεπώνυμο</label>
+                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;" data-lang="el">Ονοματεπώνυμο</label>
+                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;" data-lang="en">Full Name</label>
                         <input type="text" name="name" required style="padding: 12px; border: 1px solid #eee; border-radius: 8px; background: #f9f9f9; outline: none;">
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;">Email Επικοινωνίας</label>
+                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;" data-lang="el">Email Επικοινωνίας</label>
+                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;" data-lang="en">Email Address</label>
                         <input type="email" name="email" required style="padding: 12px; border: 1px solid #eee; border-radius: 8px; background: #f9f9f9; outline: none;">
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;">Το μήνυμά σας</label>
+                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;" data-lang="el">Το μήνυμά σας</label>
+                        <label style="font-weight: 600; color: #666; font-size: 0.9rem;" data-lang="en">Your Message</label>
                         <textarea name="message" required style="padding: 12px; border: 1px solid #eee; border-radius: 8px; background: #f9f9f9; min-height: 150px; resize: vertical; outline: none;"></textarea>
                     </div>
-                    <button type="submit" style="padding: 15px; background: #28a745; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem;">ΑΠΟΣΤΟΛΗ</button>
+                    <button type="submit" style="padding: 15px; background: #28a745; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem;"><span data-lang="el">ΑΠΟΣΤΟΛΗ</span><span data-lang="en">SEND</span></button>
                 </form>
             </div>
 
 <div class="con-items rv" style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px; font-size: 1.1rem;">
-                <div class="con-item"><span>📍</span> <span>Ακαδημίας 25, 106 71, Αθήνα</span></div>
-                <div class="con-item"><span>📞</span> <span>210 3608948</span></div>
-                <div class="con-item"><span>📱</span> <span>+30 6948985340</span></div>
-                <div class="con-item"><span>✉️</span> <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80e9eee6efc0e1eff0eff3e1e7e1f0e9aeeff2e7">[email&#160;protected]</a></span></div>
+                <div class="con-item"><span>📍</span> <span data-lang="el">Ακαδημίας 25, 106 71, Αθήνα</span><span data-lang="en">25 Akadimias St., 106 71, Athens, Greece</span></div>
+                <div class="con-item"><span>📞</span> <span>+30 210 3608948</span></div>
+                <div class="con-item"><span>📱</span> <span>+30 694 8985340</span></div>
+                <div class="con-item"><span>✉️</span> <span><a id="contactEmail" href="#" style="color:#f7941d; text-decoration:none; font-weight:600;">info<span style="display:none;">no-spam</span>&#64;aoposagapi.org</a></span></div>
             </div>
         </div>
     </section>
@@ -1620,7 +1624,17 @@ footer {
   </div>
 </div>
 <!-- ══════════════ SCRIPTS ══════════════ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+// Set up the email link safely (anti-spam, no Cloudflare needed)
+(function() {
+  const emailLink = document.getElementById('contactEmail');
+  if (emailLink) {
+    const user = 'info';
+    const domain = 'aoposagapi.org';
+    emailLink.href = 'mailto:' + user + '@' + domain;
+    emailLink.textContent = user + '@' + domain;
+  }
+})();
 // ════ INTRO CANVAS PARTICLES (runs only when intro is active) ════
 let canvasAnimRunning = false;
 function startCanvasAnimation() {
