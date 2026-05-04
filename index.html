@@ -1063,25 +1063,97 @@ document.getElementById('emailDisplay').innerHTML=
   '<a href="mailto:info&#64;aoposagapi.org" style="color:inherit">info&#64;aoposagapi.org</a>';
 function submitForm(){ alert('Ευχαριστούμε για το μήνυμά σας! Θα επικοινωνήσουμε σύντομα.'); }
 
-function submitMemberForm(){
+const W3F_KEY = '61381c9f-32ae-4e39-9417-38b7d6b44988';
+
+async function submitMemberForm(){
   const name = document.getElementById('memberName').value.trim();
   const email = document.getElementById('memberEmail').value.trim();
   const phone = document.getElementById('memberPhone').value.trim();
   const message = document.getElementById('memberMessage').value.trim();
   if(!name || !email){ alert('Παρακαλώ συμπλήρωσε τουλάχιστον το ονοματεπώνυμο και το email σου.'); return; }
-  const body = `Γεια σας,%0D%0A%0D%0AΘα ήθελα να γίνω μέλος της ΑΜΚΕ "Α Όπως Αγάπη".%0D%0A%0D%0A--- Στοιχεία ---%0D%0AΟνοματεπώνυμο: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AΤηλέφωνο: ${encodeURIComponent(phone||'-')}%0D%0A%0D%0AΜήνυμα: ${encodeURIComponent(message||'-')}%0D%0A%0D%0AΕυχαριστώ,%0D%0A${encodeURIComponent(name)}`;
-  window.location.href = `mailto:info@aoposagapi.org?subject=${encodeURIComponent('Αίτηση Μέλους ΑΜΚΕ - '+name)}&body=${body}`;
+
+  const btn = event.target;
+  const originalText = btn.textContent;
+  btn.textContent = '⏳ Αποστολή...';
+  btn.disabled = true;
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: W3F_KEY,
+        subject: 'Αίτηση Μέλους ΑΜΚΕ - ' + name,
+        from_name: 'A Όπως Αγάπη - Φόρμα Μέλους',
+        name: name,
+        email: email,
+        phone: phone || '-',
+        message: 'ΑΙΤΗΣΗ ΜΕΛΟΥΣ\n\nΟνοματεπώνυμο: ' + name + '\nEmail: ' + email + '\nΤηλέφωνο: ' + (phone||'-') + '\n\nΜήνυμα: ' + (message||'-')
+      })
+    });
+    const result = await response.json();
+    if(result.success){
+      alert('✅ Η αίτησή σου στάλθηκε επιτυχώς! Θα επικοινωνήσουμε σύντομα στο ' + email);
+      document.getElementById('memberName').value='';
+      document.getElementById('memberEmail').value='';
+      document.getElementById('memberPhone').value='';
+      document.getElementById('memberMessage').value='';
+      document.getElementById('memberModal').classList.remove('active');
+    } else {
+      alert('❌ Κάτι πήγε στραβά. Δοκίμασε ξανά ή στείλε email στο info@aoposagapi.org');
+    }
+  } catch(err){
+    alert('❌ Σφάλμα σύνδεσης. Έλεγξε τη σύνδεση internet και δοκίμασε ξανά.');
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }
 }
 
-function submitVolunteerForm(){
+async function submitVolunteerForm(){
   const name = document.getElementById('volName').value.trim();
   const email = document.getElementById('volEmail').value.trim();
   const phone = document.getElementById('volPhone').value.trim();
   const area = document.getElementById('volArea').value;
   const message = document.getElementById('volMessage').value.trim();
   if(!name || !email){ alert('Παρακαλώ συμπλήρωσε τουλάχιστον το ονοματεπώνυμο και το email σου.'); return; }
-  const body = `Γεια σας,%0D%0A%0D%0AΘα ήθελα να συμμετάσχω ως εθελοντής/ντρια στην ΑΜΚΕ "Α Όπως Αγάπη".%0D%0A%0D%0A--- Στοιχεία ---%0D%0AΟνοματεπώνυμο: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AΤηλέφωνο: ${encodeURIComponent(phone||'-')}%0D%0AΠεδίο ενδιαφέροντος: ${encodeURIComponent(area||'-')}%0D%0A%0D%0ADιαθεσιμότητα/εμπειρία: ${encodeURIComponent(message||'-')}%0D%0A%0D%0AΕυχαριστώ,%0D%0A${encodeURIComponent(name)}`;
-  window.location.href = `mailto:info@aoposagapi.org?subject=${encodeURIComponent('Εθελοντισμός - '+name)}&body=${body}`;
+
+  const btn = event.target;
+  const originalText = btn.textContent;
+  btn.textContent = '⏳ Αποστολή...';
+  btn.disabled = true;
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: W3F_KEY,
+        subject: 'Εθελοντισμός - ' + name,
+        from_name: 'A Όπως Αγάπη - Φόρμα Εθελοντή',
+        name: name,
+        email: email,
+        phone: phone || '-',
+        message: 'ΑΙΤΗΣΗ ΕΘΕΛΟΝΤΙΣΜΟΥ\n\nΟνοματεπώνυμο: ' + name + '\nEmail: ' + email + '\nΤηλέφωνο: ' + (phone||'-') + '\nΠεδίο ενδιαφέροντος: ' + (area||'-') + '\n\nΔιαθεσιμότητα/εμπειρία: ' + (message||'-')
+      })
+    });
+    const result = await response.json();
+    if(result.success){
+      alert('✅ Η αίτησή σου στάλθηκε επιτυχώς! Θα επικοινωνήσουμε σύντομα στο ' + email);
+      document.getElementById('volName').value='';
+      document.getElementById('volEmail').value='';
+      document.getElementById('volPhone').value='';
+      document.getElementById('volMessage').value='';
+      document.getElementById('volunteerModal').classList.remove('active');
+    } else {
+      alert('❌ Κάτι πήγε στραβά. Δοκίμασε ξανά ή στείλε email στο info@aoposagapi.org');
+    }
+  } catch(err){
+    alert('❌ Σφάλμα σύνδεσης. Έλεγξε τη σύνδεση internet και δοκίμασε ξανά.');
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }
 }
 </script>
 </body>
