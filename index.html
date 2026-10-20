@@ -24,6 +24,7 @@
     "foundingDate": "2023",
     "taxID": "996560907",
     "identifier": "192124501000",
+    "legalName": "Α ΟΠΩΣ ΑΓΑΠΗ ΑΣΤΙΚΗ ΜΗ ΚΕΡΔΟΣΚΟΠΙΚΗ ΕΤΑΙΡΕΙΑ",
     "areaServed": "GR"
   }
   </script>
@@ -179,6 +180,18 @@
     .btn-submit { background:var(--orange); color:#fff; border:none; padding:12px 28px; border-radius:24px; font-size:0.95rem; font-weight:700; cursor:pointer; width:100%; }
     .btn-submit:hover { background:#cf6a1a; }
 
+    /* TRUST & TRANSPARENCY */
+    .trust-strip { margin-top:34px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; }
+    .trust-chip { font-size:0.74rem; color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.22); border-radius:14px; padding:4px 11px; letter-spacing:0.3px; }
+    .trust-link { font-size:0.76rem; color:var(--orange); text-decoration:none; font-weight:600; margin-left:4px; }
+    .trust-link:hover { text-decoration:underline; }
+    .trust-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; }
+    .trust-card { background:var(--card-bg); border-radius:14px; padding:22px 24px; box-shadow:var(--shadow); border-top:3px solid var(--orange); }
+    .trust-card h4 { font-size:0.95rem; font-weight:700; color:var(--dark); margin-bottom:8px; }
+    .trust-card p { font-size:0.86rem; color:#555; line-height:1.6; }
+    .trust-card .trust-no { display:block; margin-top:8px; font-size:0.84rem; letter-spacing:0.2px; color:var(--dark); font-weight:700; }
+    .trust-note { text-align:center; font-size:0.85rem; color:var(--gray); margin-top:26px; }
+
     /* MODALS */
     .modal-overlay { display:none; position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; padding:16px; }
     .modal-overlay.active { display:flex; }
@@ -332,6 +345,13 @@
     <div class="hero-btns">
       <a href="#" class="btn-primary" onclick="document.getElementById('donateModal').classList.add('active');return false;">❤ Δωρεά</a>
       <a href="#participate" class="btn-secondary">🤝 Γίνε Μέλος / Εθελοντής</a>
+    </div>
+    <div class="trust-strip">
+      <span class="trust-chip">Κοινωφελής Φορέας · ΥΠΕΣ</span>
+      <span class="trust-chip">Μητρώο Κ.Α.Λ.Ο.</span>
+      <span class="trust-chip">Μητρώο Φιλοζωικών</span>
+      <span class="trust-chip">Επιτροπή ν. 4830/2021</span>
+      <a href="#transparency" class="trust-link">Τα στοιχεία μας →</a>
     </div>
   </div>
 </section>
@@ -511,6 +531,42 @@
         <p>Συμβάλλει ενεργά στις δράσεις και τις πρωτοβουλίες της ΑΜΚΕ, με συνεχή υποστήριξη στις καθημερινές ανάγκες και την υλοποίηση του οράματος.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- TRANSPARENCY -->
+<section id="transparency">
+  <div class="section-inner">
+    <h2 class="section-title">Διαφάνεια & <span>Θεσμική Λειτουργία</span></h2>
+    <p class="section-sub">Όποιος μας εμπιστεύεται τον χρόνο ή τη δωρεά του έχει δικαίωμα να ξέρει ποιοι είμαστε. Γι' αυτό παραθέτουμε τις επίσημες εγγραφές μας, ώστε να μπορεί ο καθένας να τις ελέγξει.</p>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <h4>⚖️ Νομική υπόσταση</h4>
+        <p>Αστική Μη Κερδοσκοπική Εταιρεία, με έτος ίδρυσης 2023. Καταχωρισμένη στα βιβλία εταιρειών του Πρωτοδικείου Αθηνών και στο ΓΕΜΗ.</p>
+        <span class="trust-no">Πρωτοδικείο Αθηνών Α.Μ. 489887 · ΓΕΜΗ 192124501000 · ΑΦΜ 996560907</span>
+      </div>
+      <div class="trust-card">
+        <h4>🏛️ Κοινωφελής Φορέας</h4>
+        <p>Καταχωρισμένη στη Δημόσια Βάση Δεδομένων Ο.Κοι.Π. και Κοινωφελών Φορέων του Υπουργείου Εσωτερικών.</p>
+        <span class="trust-no">Καταχώριση 31/03/2026</span>
+      </div>
+      <div class="trust-card">
+        <h4>🤝 Φορέας Κοινωνικής & Αλληλέγγυας Οικονομίας</h4>
+        <p>Εγγεγραμμένη στο Γενικό Μητρώο Φορέων Κ.Α.Λ.Ο. (ν. 4430/2016) του Υπουργείου Κοινωνικής Συνοχής και Οικογένειας.</p>
+        <span class="trust-no">Α.Γε.Μ.Κ.Ο. 000305512011</span>
+      </div>
+      <div class="trust-card">
+        <h4>🐾 Φιλοζωική Οργάνωση</h4>
+        <p>Εγγεγραμμένη στο Υπομητρώο Φιλοζωικών Σωματείων και Οργανώσεων του Εθνικού Μητρώου Ζώων Συντροφιάς (ν. 4830/2021).</p>
+        <span class="trust-no">Κωδικός 5341</span>
+      </div>
+      <div class="trust-card">
+        <h4>🏘️ Θεσμική συμμετοχή</h4>
+        <p>Μέλος της Επιτροπής Παρακολούθησης του Προγράμματος Διαχείρισης Αδέσποτων Ζώων Συντροφιάς του Δήμου Τριφυλίας (άρθρο 10 ν. 4830/2021).</p>
+        <span class="trust-no">Απόφαση Δημάρχου, αρ. πρωτ. 15909/19-10-2026</span>
+      </div>
+    </div>
+    <p class="trust-note">Τα σχετικά πιστοποιητικά διατίθενται κατόπιν αιτήματος στο info@aoposagapi.org</p>
   </div>
 </section>
 
@@ -785,11 +841,13 @@
 <footer>
   <p><strong style="color:#fff;">Α Όπως Αγάπη ΑΜΚΕ</strong></p>
 <p>Ακαδημίας 25, 106 71, Αθήνα · ΑΦΜ: 996560907 · ΓΕΜΗ: 192124501000</p>
+  <p style="font-size:0.8rem;opacity:0.75;">Κοινωφελής Φορέας ΥΠΕΣ · Μητρώο Κ.Α.Λ.Ο. 000305512011 · Μητρώο Φιλοζωικών κωδ. 5341</p>
   <p style="font-style:italic;opacity:0.6;font-size:0.82rem;">«Όλοι μαζί, κανένας μόνος. Όλοι διαφορετικοί, όλοι ίσοι.»</p>
   <div class="footer-links" style="margin-top:16px;">
     <a onclick="document.getElementById('memberModal').classList.add('active')">🤝 Γίνε Μέλος</a>
     <a onclick="document.getElementById('volunteerModal').classList.add('active')">💪 Εθελοντισμός</a>
     <a onclick="document.getElementById('donateModal').classList.add('active')">❤ Δωρεά</a>
+    <a href="#transparency">Διαφάνεια & Μητρώα</a>
     <a onclick="document.getElementById('privacyModal').classList.add('active')">Πολιτική Απορρήτου</a>
     <a onclick="document.getElementById('termsModal').classList.add('active')">Όροι Χρήσης</a>
     <a href="english.html">English</a>

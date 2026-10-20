@@ -25,6 +25,7 @@
     "foundingDate": "2023",
     "taxID": "996560907",
     "identifier": "192124501000",
+    "legalName": "Α ΟΠΩΣ ΑΓΑΠΗ ΑΣΤΙΚΗ ΜΗ ΚΕΡΔΟΣΚΟΠΙΚΗ ΕΤΑΙΡΕΙΑ",
     "areaServed": "GR"
   }
   </script>
@@ -161,6 +162,17 @@
     .form-group textarea { resize:vertical; min-height:100px; }
     .btn-submit { background:var(--orange); color:#fff; border:none; padding:12px 28px; border-radius:24px; font-size:0.95rem; font-weight:700; cursor:pointer; width:100%; }
     .btn-submit:hover { background:#cf6a1a; }
+    /* TRUST & TRANSPARENCY */
+    .trust-strip { margin-top:34px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; }
+    .trust-chip { font-size:0.74rem; color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.22); border-radius:14px; padding:4px 11px; letter-spacing:0.3px; }
+    .trust-link { font-size:0.76rem; color:var(--orange); text-decoration:none; font-weight:600; margin-left:4px; }
+    .trust-link:hover { text-decoration:underline; }
+    .trust-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; }
+    .trust-card { background:var(--card-bg); border-radius:14px; padding:22px 24px; box-shadow:var(--shadow); border-top:3px solid var(--orange); }
+    .trust-card h4 { font-size:0.95rem; font-weight:700; color:var(--dark); margin-bottom:8px; }
+    .trust-card p { font-size:0.86rem; color:#555; line-height:1.6; }
+    .trust-card .trust-no { display:block; margin-top:8px; font-size:0.84rem; letter-spacing:0.2px; color:var(--dark); font-weight:700; }
+    .trust-note { text-align:center; font-size:0.85rem; color:var(--gray); margin-top:26px; }
     .modal-overlay { display:none; position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; padding:16px; }
     .modal-overlay.active { display:flex; }
     .modal { background:#fff; border-radius:20px; padding:36px 32px; max-width:520px; width:100%; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-height:85vh; overflow-y:auto; }
@@ -309,6 +321,13 @@
     <div class="hero-btns">
       <a href="#" class="btn-primary" onclick="document.getElementById('donateModal').classList.add('active');return false;">❤ Donate</a>
       <a href="#participate" class="btn-secondary">🤝 Become Member / Volunteer</a>
+    </div>
+    <div class="trust-strip">
+      <span class="trust-chip">Public-Benefit Entity · Ministry of Interior</span>
+      <span class="trust-chip">Social Economy Register</span>
+      <span class="trust-chip">Animal Welfare Register</span>
+      <span class="trust-chip">Committee under Law 4830/2021</span>
+      <a href="#transparency" class="trust-link">Our credentials →</a>
     </div>
   </div>
 </section>
@@ -482,6 +501,42 @@
         <p>Actively contributes to the NGO's actions and initiatives, with continuous support for daily needs and the realization of the vision.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- TRANSPARENCY -->
+<section id="transparency">
+  <div class="section-inner">
+    <h2 class="section-title">Transparency & <span>Accountability</span></h2>
+    <p class="section-sub">Anyone who trusts us with their time or a donation has the right to know who we are. That is why we list our official registrations, so anyone can verify them.</p>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <h4>⚖️ Legal status</h4>
+        <p>Non-profit civil company (AMKE), founded in 2023. Registered with the Athens Court of First Instance and the General Commercial Registry (GEMI).</p>
+        <span class="trust-no">Athens Court Reg. No. 489887 · GEMI 192124501000 · VAT 996560907</span>
+      </div>
+      <div class="trust-card">
+        <h4>🏛️ Public-benefit entity</h4>
+        <p>Registered in the Public Database of Social Policy Organisations and Public-Benefit Entities (O.Koi.P.) of the Hellenic Ministry of Interior.</p>
+        <span class="trust-no">Registered 31/03/2026</span>
+      </div>
+      <div class="trust-card">
+        <h4>🤝 Social & Solidarity Economy entity</h4>
+        <p>Listed in the General Register of Social and Solidarity Economy Entities (Law 4430/2016), Ministry of Social Cohesion and Family.</p>
+        <span class="trust-no">Reg. No. 000305512011</span>
+      </div>
+      <div class="trust-card">
+        <h4>🐾 Animal welfare organisation</h4>
+        <p>Listed in the Sub-registry of Animal Welfare Associations and Organisations of the National Companion Animal Register (Law 4830/2021).</p>
+        <span class="trust-no">Code 5341</span>
+      </div>
+      <div class="trust-card">
+        <h4>🏘️ Institutional role</h4>
+        <p>Member of the Monitoring Committee for the Stray Companion Animal Management Programme of the Municipality of Trifylia (Art. 10, Law 4830/2021).</p>
+        <span class="trust-no">Mayoral decision ref. 15909/19-10-2026</span>
+      </div>
+    </div>
+    <p class="trust-note">Certificates are available on request at info@aoposagapi.org</p>
   </div>
 </section>
 
@@ -741,11 +796,13 @@
 <footer>
   <p><strong style="color:#fff;">A for Agapi NGO (Α Όπως Αγάπη ΑΜΚΕ)</strong></p>
 <p>25 Akadimias St., 106 71, Athens, Greece · VAT: 996560907 · GEMI: 192124501000</p>
+  <p style="font-size:0.8rem;opacity:0.75;">Public-Benefit Entity (Ministry of Interior) · Social Economy Reg. 000305512011 · Animal Welfare Register Code 5341</p>
   <p style="font-style:italic;opacity:0.6;font-size:0.82rem;">"All together, no one alone. All different, all equal."</p>
   <div class="footer-links" style="margin-top:16px;">
     <a onclick="document.getElementById('memberModal').classList.add('active')">🤝 Become Member</a>
     <a onclick="document.getElementById('volunteerModal').classList.add('active')">💪 Volunteer</a>
     <a onclick="document.getElementById('donateModal').classList.add('active')">❤ Donate</a>
+    <a href="#transparency">Transparency</a>
     <a onclick="document.getElementById('privacyModal').classList.add('active')">Privacy Policy</a>
     <a onclick="document.getElementById('termsModal').classList.add('active')">Terms of Use</a>
     <a href="index.html">Ελληνικά</a>
