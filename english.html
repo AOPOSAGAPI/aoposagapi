@@ -808,29 +808,67 @@ document.querySelectorAll('.fv-car').forEach(function(c){
   .nav-links a,.nav-logo span{white-space:nowrap}
   @media (max-width:1360px){.nav-links{gap:2px}.nav-links a{padding:6px 6px;font-size:.8rem}}
   @media (max-width:1180px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}}
-  @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
+  .nl-form{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25)}
+  .nl-form label.t{display:block;font-weight:700;font-size:.95rem;margin-bottom:10px}
+  .nl-row{display:flex;flex-wrap:wrap;gap:10px}
+  .nl-row input[type=text],.nl-row input[type=email]{flex:1 1 170px;min-width:0;padding:12px 16px;border-radius:30px;border:0;font:inherit;font-size:.92rem;color:#1a1a2e}
+  .nl-row button{padding:12px 24px;border-radius:30px;border:0;background:#FB5B1D;color:#fff;font:inherit;font-weight:700;font-size:.92rem;cursor:pointer}
+  .nl-row button:hover{background:#e04a10}
+  .nl-consent{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.8rem;opacity:.9;line-height:1.45;text-align:left}
+  .nl-consent input{margin-top:3px;flex:none}
+  .nl-err{margin-top:8px;font-size:.85rem;font-weight:700;color:#ffd2bf;min-height:1em}
+  .nl-thanks{display:none;margin-top:22px;padding:14px 18px;border-radius:12px;background:#fff;color:#3D5E40;font-weight:700}
+  #newsletter.ok .nl-thanks{display:block}#newsletter.ok .nl-form{display:none}
+  @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns,.nl-row{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
 </style>
     <div id="newsletter">
       <div class="nl-wrap">
-        <a class="nl-cover" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener" aria-label="Read the issue">
-          <img src="https://cdnm.heyzine.com/files/uploaded/bf983d5d1c33051767ece3cf67c47aeb854e6465.pdf-thumb.jpg" alt="Cover of the newsletter ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ… ΣΥΝΑΝΤΩ, issue 01" loading="lazy" onerror="this.parentNode.classList.add('noimg')">
-          <div class="nl-fallback"><b>ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ…</b><span>ΣΥΝΑΝΤΩ</span><small style="margin-top:10px">Issue 01 · November 2026</small></div>
+        <a class="nl-cover" href="https://heyzine.com/flip-book/50f76b5cad.html" target="_blank" rel="noopener" aria-label="Read the issue">
+          <img src="https://cdnm.heyzine.com/files/uploaded/50f76b5cadb2fafe615f94108d979ce4861f8958-1.pdf-thumb.jpg" alt="Cover of the newsletter To Love Means… To Meet, issue 01" loading="lazy" onerror="this.parentNode.classList.add('noimg')">
+          <div class="nl-fallback"><b>TO LOVE MEANS…</b><span>TO MEET</span><small style="margin-top:10px">Issue 01 · November 2026</small></div>
         </a>
         <div>
           <div class="nl-kicker">Newsletter</div>
-          <h3>ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ… <em>ΣΥΝΑΝΤΩ</em></h3>
-          <p class="nl-sub">The monthly letter of A for Agapi — every month, one verb of love. (In Greek)</p>
+          <h3>TO LOVE MEANS… <em>TO MEET</em></h3>
+          <p class="nl-sub">The monthly letter of A for Agapi — every month, one verb of love.</p>
           <p class="nl-issue">Issue 01 · November 2026</p>
           <p class="nl-text">Animals and people who meet and heal each other. In the first issue: the adoption walk at the Kypseli Municipal Market, the Shelter's new staircase built by our volunteer Mustafa, what research says about the power of a single day out for a shelter dog — and how you can become part of the story.</p>
           <div class="nl-btns">
-            <a class="nl-read" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">📖 Read the issue</a>
-            <a class="nl-sign" href="mailto:info@aoposagapi.org?subject=Newsletter%20subscription&amp;body=Please%20subscribe%20me%20to%20the%20%C2%AB%CE%91%CE%93%CE%91%CE%A0%CE%A9%20%CE%A3%CE%97%CE%9C%CE%91%CE%99%CE%9D%CE%95%CE%99%E2%80%A6%C2%BB%20newsletter.%0A%0AFull%20name%3A%20">✉ Subscribe</a>
+            <a class="nl-read" href="https://heyzine.com/flip-book/50f76b5cad.html" target="_blank" rel="noopener">📖 Read the issue</a>
           </div>
-          <div class="nl-archive">Archive: <a href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">01 · ΣΥΝΑΝΤΩ (Meet)</a></div>
+          <div class="nl-archive">Archive: <a href="https://heyzine.com/flip-book/50f76b5cad.html" target="_blank" rel="noopener">01 · TO MEET</a></div>
+          <form class="nl-form" id="nlForm" action="https://docs.google.com/forms/d/e/1FAIpQLScdTjiBY2t2ztjAVoD5k5PFioy-sVVsioPmHTt43vlp3AGjpA/formResponse" method="POST" target="nl_hidden" novalidate>
+            <label class="t">✉ Get the newsletter by email</label>
+            <input type="hidden" name="entry.1148654699" value="English">
+            <input type="hidden" name="entry.1127898672" value="">
+            <div class="nl-row">
+              <input type="text" name="entry.1192506440" placeholder="Full name" autocomplete="name" maxlength="120">
+              <input type="email" name="entry.1967585507" placeholder="Email" autocomplete="email" maxlength="160">
+              <button type="submit">Subscribe</button>
+            </div>
+            <label class="nl-consent"><input type="checkbox" id="nlConsent"> <span>I agree to receive the monthly A for Agapi newsletter by email. I can unsubscribe at any time by replying “UNSUBSCRIBE”.</span></label>
+            <div class="nl-err" id="nlErr" role="alert"></div>
+          </form>
+          <iframe name="nl_hidden" id="nl_hidden" title="newsletter" style="display:none" aria-hidden="true"></iframe>
+          <div class="nl-thanks">💚 Thank you! You're subscribed — the next issue will arrive in your inbox.</div>
         </div>
       </div>
     </div>
     <!-- /NEWSLETTER -->
+<script>(function(){
+  var f=document.getElementById('nlForm'); if(!f) return;
+  var err=document.getElementById('nlErr'), sent=false;
+  f.addEventListener('submit',function(e){
+    var n=f.elements['entry.1192506440'].value.trim(), m=f.elements['entry.1967585507'].value.trim(), c=document.getElementById('nlConsent');
+    if(!n || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){ e.preventDefault(); err.textContent='Please enter your full name and a valid email address.'; return; }
+    if(!c.checked){ e.preventDefault(); err.textContent='Please tick the consent box to complete your subscription.'; c.focus(); return; }
+    err.textContent=''; f.elements['entry.1127898672'].value='Yes — '+new Date().toISOString().slice(0,16).replace('T',' ');
+    sent=true;
+  });
+  document.getElementById('nl_hidden').addEventListener('load',function(){
+    if(sent){ document.getElementById('newsletter').classList.add('ok'); sent=false; }
+  });
+})();</script>
 </div>
 </section>
 
