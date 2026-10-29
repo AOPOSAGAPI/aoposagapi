@@ -592,6 +592,77 @@
     <h2 class="section-title">News & <span>Activities</span></h2>
     <p class="section-sub">Our founder participates as a volunteer at the Athens Municipal Shelter — and this experience fuels our vision.</p>
 
+<!-- ΦΕΣΤΙΒΑΛ ΕΘΕΛΟΝΤΙΣΜΟΥ 2026 — carousel -->
+<style>
+  .fv-card{background:var(--card-bg,#fff);border-radius:16px;overflow:hidden;box-shadow:var(--shadow,0 4px 20px rgba(0,0,0,.08));margin-bottom:28px}
+  .fv-car{position:relative;background:#22352a;aspect-ratio:4/3;max-height:560px;width:100%;overflow:hidden;touch-action:pan-y}
+  .fv-track{display:flex;height:100%;transition:transform .5s ease}
+  .fv-slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden}
+  .fv-bg{position:absolute;inset:-30px;background-size:cover;background-position:center;filter:blur(24px) brightness(.55)}
+  .fv-slide img{position:relative;display:block;width:100%;height:100%;object-fit:contain}
+  .fv-cap{position:absolute;left:0;right:0;bottom:0;padding:28px 20px 40px;color:#fff;font-size:.92rem;line-height:1.45;background:linear-gradient(transparent,rgba(0,0,0,.72));text-align:center}
+  .fv-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:#1a1a2e;font-size:1.5rem;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:2}
+  .fv-btn:hover{background:#fff}
+  .fv-prev{left:12px}.fv-next{right:12px}
+  .fv-dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:7px;z-index:2}
+  .fv-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.5);cursor:pointer}
+  .fv-dots button.on{background:var(--orange,#e87722);width:22px;border-radius:5px}
+  .fv-body{padding:24px 28px 28px}
+  .fv-body h3{font-size:1.25rem;font-weight:800;color:var(--dark,#1a1a2e);margin:0 0 12px;line-height:1.35}
+  .fv-body p{font-size:.95rem;color:#444;line-height:1.7;margin:0 0 12px}
+  .fv-date{font-size:.78rem;color:var(--orange,#e87722);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+  .fv-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+  .fv-links a{display:inline-block;padding:11px 20px;border-radius:30px;font-weight:700;font-size:.9rem;text-decoration:none}
+  .fv-cta{background:var(--orange,#e87722);color:#fff}
+  .fv-sec{border:2px solid var(--orange,#e87722);color:var(--orange,#e87722)}
+  @media (max-width:600px){.fv-car{aspect-ratio:4/5}.fv-body{padding:20px}.fv-btn{width:38px;height:38px;font-size:1.25rem}.fv-cap{font-size:.84rem}}
+</style>
+<div class="fv-card">
+  <div class="fv-car">
+    <div class="fv-track">
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-01-minnos-booth.jpg')"></div><img src="assets/gallery/fv-01-minnos-booth.jpg" alt="Photo from the 1st Volunteering Festival – Minnoş “guarding” our booth — give love, take light" loading="lazy"><div class="fv-cap">Minnoş “guarding” our booth — give love, take light</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-02-hall.jpg')"></div><img src="assets/gallery/fv-02-hall.jpg" alt="Photo from the 1st Volunteering Festival – The 1st Volunteering Festival of the Attica Region, at the Tae Kwon Do Arena in Faliro" loading="lazy"><div class="fv-cap">The 1st Volunteering Festival of the Attica Region, at the Tae Kwon Do Arena in Faliro</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-03-visitors.jpg')"></div><img src="assets/gallery/fv-03-visitors.jpg" alt="Photo from the 1st Volunteering Festival – Visitors, dogs and lots of talk about strays" loading="lazy"><div class="fv-cap">Visitors, dogs and lots of talk about strays</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-04-hug.jpg')"></div><img src="assets/gallery/fv-04-hug.jpg" alt="Photo from the 1st Volunteering Festival – A hug that says it all" loading="lazy"><div class="fv-cap">A hug that says it all</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-05-joy.jpg')"></div><img src="assets/gallery/fv-05-joy.jpg" alt="Photo from the 1st Volunteering Festival – The bond between people and animals needs no words" loading="lazy"><div class="fv-cap">The bond between people and animals needs no words</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-06-cuddle.jpg')"></div><img src="assets/gallery/fv-06-cuddle.jpg" alt="Photo from the 1st Volunteering Festival – Minnoş found his spot…" loading="lazy"><div class="fv-cap">Minnoş found his spot…</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-07-friends.jpg')"></div><img src="assets/gallery/fv-07-friends.jpg" alt="Photo from the 1st Volunteering Festival – Friends and partners stopped by the booth" loading="lazy"><div class="fv-cap">Friends and partners stopped by the booth</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-08-crowd.jpg')"></div><img src="assets/gallery/fv-08-crowd.jpg" alt="Photo from the 1st Volunteering Festival – Dozens of organisations and hundreds of visitors" loading="lazy"><div class="fv-cap">Dozens of organisations and hundreds of visitors</div></div>
+    </div>
+    <button class="fv-btn fv-prev" aria-label="Previous">&#8249;</button>
+    <button class="fv-btn fv-next" aria-label="Next">&#8250;</button>
+    <div class="fv-dots"></div>
+  </div>
+  <div class="fv-body">
+    <div class="fv-date">Saturday 24 October 2026 · Tae Kwon Do Arena, Faliro</div>
+    <h3>We were at the 1st Volunteering Festival of the Attica Region</h3>
+      <p>From 11 am to 5 pm, at our own booth, we talked with dozens of visitors about the three pillars of our work: caring for stray animals, integrating migrants and supporting people with disabilities. We handed out cards, explained our goals — and the chocolate bars were a big hit!</p>
+      <p>But the star of the day was Minnoş. The most moving moments were his cuddles with fellow citizens with disabilities — a reminder that the bond between people and animals opens hearts without words.</p>
+      <p>Warm thanks to Christos from the Shelter and to Jan for keeping us company all day, to the Attica Region for the initiative, and to everyone who visited our booth.</p>
+    <div class="fv-links">
+      <a class="fv-cta" href="https://forms.gle/q3dnbaDUQDnMTtkx8" target="_blank" rel="noopener">Become a volunteer</a>
+      <a class="fv-sec" href="https://www.patt.gov.gr/6-%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%83%CE%B7/6-1-%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%83%CE%B7-%CE%B3%CF%81%CE%B1%CF%86%CE%B5%CE%AF%CE%BF-%CF%84%CF%8D%CF%80%CE%BF%CF%85/dt-perifereiaw-attikhw/nikos-chardalias-apo-to-1o-festival-ethelontismou-tis-perifereias-attikis-ergazomaste-systimatika-gia-mia-attiki-anthropias-kai-allilengyis-opou-kaneis-den-perissevei-kai-kaneis-den-menei-mono/" target="_blank" rel="noopener">Attica Region press release (GR)</a>
+    </div>
+  </div>
+</div>
+<script>
+document.querySelectorAll('.fv-car').forEach(function(c){
+  if(c.dataset.fv)return;c.dataset.fv=1;
+  var t=c.querySelector('.fv-track'),n=t.children.length,i=0,d=c.querySelector('.fv-dots'),timer;
+  for(var k=0;k<n;k++){var b=document.createElement('button');b.setAttribute('aria-label',(k+1)+' / '+n);b.onclick=(function(k){return function(){go(k);rest()}})(k);d.appendChild(b)}
+  function go(k){i=(k+n)%n;t.style.transform='translateX('+(-100*i)+'%)';[].forEach.call(d.children,function(b,j){b.className=j===i?'on':''})}
+  function rest(){clearInterval(timer);timer=setInterval(function(){go(i+1)},5500)}
+  c.querySelector('.fv-prev').onclick=function(){go(i-1);rest()};
+  c.querySelector('.fv-next').onclick=function(){go(i+1);rest()};
+  var x0=null;c.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  c.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));rest()}x0=null});
+  c.addEventListener('mouseenter',function(){clearInterval(timer)});c.addEventListener('mouseleave',rest);
+  go(0);rest();
+});
+</script>
+<!-- /ΦΕΣΤΙΒΑΛ ΕΘΕΛΟΝΤΙΣΜΟΥ 2026 -->
+
+
     <div class="news-card" style="margin-bottom:28px;">
       <div class="news-card-body">
         <div class="news-date">September 2025</div>
