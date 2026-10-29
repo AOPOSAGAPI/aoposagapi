@@ -854,6 +854,7 @@ document.querySelectorAll('.fv-car').forEach(function(c){
   .nl-row button:hover{background:#e04a10}
   .nl-consent{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.8rem;opacity:.9;line-height:1.45;text-align:left}
   .nl-consent input{margin-top:3px;flex:none}
+  .nl-err{margin-top:8px;font-size:.85rem;font-weight:700;color:#ffd2bf;min-height:1em}
   .nl-thanks{display:none;margin-top:22px;padding:14px 18px;border-radius:12px;background:#fff;color:#3D5E40;font-weight:700}
   #newsletter.ok .nl-thanks{display:block}#newsletter.ok .nl-form{display:none}
   @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns,.nl-row{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
@@ -874,27 +875,38 @@ document.querySelectorAll('.fv-car').forEach(function(c){
             <a class="nl-read" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">📖 Διάβασε το τεύχος</a>
           </div>
           <div class="nl-archive">Αρχείο τευχών: <a href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">01 · ΣΥΝΑΝΤΩ</a></div>
-          <form class="nl-form" action="https://formsubmit.co/info@aoposagapi.org" method="POST">
+          <form class="nl-form" id="nlForm" action="https://docs.google.com/forms/d/e/1FAIpQLScdTjiBY2t2ztjAVoD5k5PFioy-sVVsioPmHTt43vlp3AGjpA/formResponse" method="POST" target="nl_hidden" novalidate>
             <label class="t">✉ Θέλω να λαμβάνω το newsletter</label>
-            <input type="hidden" name="_subject" value="Νέα εγγραφή στο newsletter">
-            <input type="hidden" name="_next" value="https://www.aoposagapi.org/index.html?nl=ok#newsletter">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="Γλώσσα / Language" value="Ελληνικά">
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="entry.1148654699" value="Ελληνικά">
+            <input type="hidden" name="entry.1127898672" value="">
             <div class="nl-row">
-              <input type="text" name="Ονοματεπώνυμο / Name" placeholder="Ονοματεπώνυμο" required autocomplete="name">
-              <input type="email" name="email" placeholder="Email" required autocomplete="email">
+              <input type="text" name="entry.1192506440" placeholder="Ονοματεπώνυμο" autocomplete="name" maxlength="120">
+              <input type="email" name="entry.1967585507" placeholder="Email" autocomplete="email" maxlength="160">
               <button type="submit">Εγγραφή</button>
             </div>
-            <label class="nl-consent"><input type="checkbox" name="Συγκατάθεση / Consent" value="Ναι" required> <span>Συμφωνώ να λαμβάνω το μηνιαίο newsletter της Α Όπως Αγάπη στο email μου. Μπορώ να διαγραφώ όποτε θέλω, απαντώντας «ΔΙΑΓΡΑΦΗ».</span></label>
+            <label class="nl-consent"><input type="checkbox" id="nlConsent"> <span>Συμφωνώ να λαμβάνω το μηνιαίο newsletter της Α Όπως Αγάπη στο email μου. Μπορώ να διαγραφώ όποτε θέλω, απαντώντας «ΔΙΑΓΡΑΦΗ».</span></label>
+            <div class="nl-err" id="nlErr" role="alert"></div>
           </form>
+          <iframe name="nl_hidden" id="nl_hidden" title="newsletter" style="display:none" aria-hidden="true"></iframe>
           <div class="nl-thanks">💚 Ευχαριστούμε! Η εγγραφή σου καταχωρίστηκε — το επόμενο τεύχος θα έρθει στο email σου.</div>
         </div>
       </div>
     </div>
     <!-- /NEWSLETTER -->
-<script>if(/[?&]nl=ok/.test(location.search)){var n=document.getElementById('newsletter');if(n)n.classList.add('ok');}</script>
+<script>(function(){
+  var f=document.getElementById('nlForm'); if(!f) return;
+  var err=document.getElementById('nlErr'), sent=false;
+  f.addEventListener('submit',function(e){
+    var n=f.elements['entry.1192506440'].value.trim(), m=f.elements['entry.1967585507'].value.trim(), c=document.getElementById('nlConsent');
+    if(!n || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){ e.preventDefault(); err.textContent='Συμπλήρωσε ονοματεπώνυμο και ένα σωστό email.'; return; }
+    if(!c.checked){ e.preventDefault(); err.textContent='Παρακαλώ επιβεβαίωσε τη συγκατάθεση για να ολοκληρωθεί η εγγραφή.'; c.focus(); return; }
+    err.textContent=''; f.elements['entry.1127898672'].value='Ναι — '+new Date().toISOString().slice(0,16).replace('T',' ');
+    sent=true;
+  });
+  document.getElementById('nl_hidden').addEventListener('load',function(){
+    if(sent){ document.getElementById('newsletter').classList.add('ok'); sent=false; }
+  });
+})();</script>
 </div>
 </section>
 
