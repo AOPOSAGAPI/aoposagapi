@@ -846,7 +846,17 @@ document.querySelectorAll('.fv-car').forEach(function(c){
   .nav-links a,.nav-logo span{white-space:nowrap}
   @media (max-width:1360px){.nav-links{gap:2px}.nav-links a{padding:6px 6px;font-size:.8rem}}
   @media (max-width:1180px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}}
-  @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
+  .nl-form{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25)}
+  .nl-form label.t{display:block;font-weight:700;font-size:.95rem;margin-bottom:10px}
+  .nl-row{display:flex;flex-wrap:wrap;gap:10px}
+  .nl-row input[type=text],.nl-row input[type=email]{flex:1 1 170px;min-width:0;padding:12px 16px;border-radius:30px;border:0;font:inherit;font-size:.92rem;color:#1a1a2e}
+  .nl-row button{padding:12px 24px;border-radius:30px;border:0;background:#FB5B1D;color:#fff;font:inherit;font-weight:700;font-size:.92rem;cursor:pointer}
+  .nl-row button:hover{background:#e04a10}
+  .nl-consent{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.8rem;opacity:.9;line-height:1.45;text-align:left}
+  .nl-consent input{margin-top:3px;flex:none}
+  .nl-thanks{display:none;margin-top:22px;padding:14px 18px;border-radius:12px;background:#fff;color:#3D5E40;font-weight:700}
+  #newsletter.ok .nl-thanks{display:block}#newsletter.ok .nl-form{display:none}
+  @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns,.nl-row{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
 </style>
     <div id="newsletter">
       <div class="nl-wrap">
@@ -862,13 +872,29 @@ document.querySelectorAll('.fv-car').forEach(function(c){
           <p class="nl-text">Ζώα και άνθρωποι που συναντιούνται και θεραπεύουν ο ένας τον άλλον. Στο πρώτο τεύχος: η βόλτα υιοθεσίας στη Δημοτική Αγορά Κυψέλης, η νέα σκάλα του Καταφυγίου από τον εθελοντή μας Mustafa, τι δείχνει η έρευνα για τη δύναμη μιας μέρας έξω για έναν σκύλο του καταφυγίου — και πώς μπορείς να γίνεις κι εσύ μέρος της ιστορίας.</p>
           <div class="nl-btns">
             <a class="nl-read" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">📖 Διάβασε το τεύχος</a>
-            <a class="nl-sign" href="mailto:info@aoposagapi.org?subject=%CE%95%CE%B3%CE%B3%CF%81%CE%B1%CF%86%CE%AE%20%CF%83%CF%84%CE%BF%20newsletter&amp;body=%CE%A0%CE%B1%CF%81%CE%B1%CE%BA%CE%B1%CE%BB%CF%8E%20%CE%BD%CE%B1%20%CE%BC%CE%B5%20%CE%B5%CE%B3%CE%B3%CF%81%CE%AC%CF%88%CE%B5%CF%84%CE%B5%20%CF%83%CF%84%CE%BF%20newsletter%20%C2%AB%CE%91%CE%93%CE%91%CE%A0%CE%A9%20%CE%A3%CE%97%CE%9C%CE%91%CE%99%CE%9D%CE%95%CE%99%E2%80%A6%C2%BB.%0A%0A%CE%9F%CE%BD%CE%BF%CE%BC%CE%B1%CF%84%CE%B5%CF%80%CF%8E%CE%BD%CF%85%CE%BC%CE%BF%3A%20">✉ Θέλω να το λαμβάνω</a>
           </div>
           <div class="nl-archive">Αρχείο τευχών: <a href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">01 · ΣΥΝΑΝΤΩ</a></div>
+          <form class="nl-form" action="https://formsubmit.co/info@aoposagapi.org" method="POST">
+            <label class="t">✉ Θέλω να λαμβάνω το newsletter</label>
+            <input type="hidden" name="_subject" value="Νέα εγγραφή στο newsletter">
+            <input type="hidden" name="_next" value="https://www.aoposagapi.org/index.html?nl=ok#newsletter">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="Γλώσσα / Language" value="Ελληνικά">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="nl-row">
+              <input type="text" name="Ονοματεπώνυμο / Name" placeholder="Ονοματεπώνυμο" required autocomplete="name">
+              <input type="email" name="email" placeholder="Email" required autocomplete="email">
+              <button type="submit">Εγγραφή</button>
+            </div>
+            <label class="nl-consent"><input type="checkbox" name="Συγκατάθεση / Consent" value="Ναι" required> <span>Συμφωνώ να λαμβάνω το μηνιαίο newsletter της Α Όπως Αγάπη στο email μου. Μπορώ να διαγραφώ όποτε θέλω, απαντώντας «ΔΙΑΓΡΑΦΗ».</span></label>
+          </form>
+          <div class="nl-thanks">💚 Ευχαριστούμε! Η εγγραφή σου καταχωρίστηκε — το επόμενο τεύχος θα έρθει στο email σου.</div>
         </div>
       </div>
     </div>
     <!-- /NEWSLETTER -->
+<script>if(/[?&]nl=ok/.test(location.search)){var n=document.getElementById('newsletter');if(n)n.classList.add('ok');}</script>
 </div>
 </section>
 
