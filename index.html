@@ -313,6 +313,7 @@
     <a href="#board">ΔΣ</a>
     <a href="#impact">Αντίκτυπος</a>
     <a href="#news">Νέα</a>
+    <a href="#newsletter">Newsletter</a>
     <a href="#transparency">Διαφάνεια</a>
     <a href="#participate">Συμμετοχή</a>
     <a href="#contact">Επικοινωνία</a>
@@ -331,6 +332,7 @@
   <a href="#board" onclick="toggleMobile()">ΔΣ</a>
   <a href="#impact" onclick="toggleMobile()">Αντίκτυπος</a>
   <a href="#news" onclick="toggleMobile()">Νέα</a>
+  <a href="#newsletter" onclick="toggleMobile()">Newsletter</a>
   <a href="#transparency" onclick="toggleMobile()">Διαφάνεια</a>
   <a href="#participate" onclick="toggleMobile()">Συμμετοχή</a>
   <a href="#contact" onclick="toggleMobile()">Επικοινωνία</a>
@@ -818,7 +820,56 @@ document.querySelectorAll('.fv-car').forEach(function(c){
         <p>Συμμετοχή σε θεατρική παράσταση με κοινωνικό μήνυμα και στο φεστιβάλ «Κατοικίδια εν Δράσει» υπό την αιγίδα Δήμου Αθηναίων.</p>
       </div>
     </div>
-  </div>
+  
+    <!-- NEWSLETTER -->
+<style>
+  #newsletter{scroll-margin-top:96px;margin-top:56px}
+  .nl-wrap{background:#3D5E40;border-radius:20px;color:#fff;padding:40px 36px;display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;box-shadow:var(--shadow,0 4px 20px rgba(0,0,0,.08))}
+  .nl-cover{display:block;position:relative;aspect-ratio:1/1.414;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.35);transform:rotate(-2deg);transition:transform .25s;text-decoration:none}
+  .nl-cover:hover{transform:rotate(0) scale(1.03)}
+  .nl-cover img{width:100%;height:100%;object-fit:cover;display:block}
+  .nl-fallback{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:#fff;color:#3D5E40}
+  .nl-fallback b{font-size:1.1rem;letter-spacing:1px}.nl-fallback span{font-size:2rem;font-weight:800;color:#FB5B1D;margin-top:8px}
+  .nl-cover.noimg img{display:none}.nl-cover.noimg .nl-fallback{display:flex}
+  .nl-kicker{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ffb38f;margin-bottom:10px}
+  .nl-wrap h3{font-size:2rem;font-weight:800;line-height:1.15;margin:0 0 6px;color:#fff}
+  .nl-wrap h3 em{font-style:normal;color:#FB5B1D;background:#fff;padding:0 8px;border-radius:6px}
+  .nl-sub{font-size:.95rem;opacity:.85;margin:0 0 18px}
+  .nl-issue{font-size:1rem;font-weight:700;margin:0 0 8px}
+  .nl-wrap p.nl-text{font-size:.95rem;line-height:1.7;opacity:.95;margin:0 0 22px}
+  .nl-btns{display:flex;flex-wrap:wrap;gap:12px}
+  .nl-btns a{display:inline-block;padding:12px 22px;border-radius:30px;font-weight:700;font-size:.92rem;text-decoration:none}
+  .nl-read{background:#FB5B1D;color:#fff}.nl-read:hover{background:#e04a10}
+  .nl-sign{border:2px solid #fff;color:#fff}.nl-sign:hover{background:#fff;color:#3D5E40}
+  .nl-archive{margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.25);font-size:.85rem;opacity:.85}
+  .nl-archive a{color:#fff;font-weight:700}
+  .nav-links a,.nav-logo span{white-space:nowrap}
+  @media (max-width:1360px){.nav-links{gap:2px}.nav-links a{padding:6px 6px;font-size:.8rem}}
+  @media (max-width:1180px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}}
+  @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
+</style>
+    <div id="newsletter">
+      <div class="nl-wrap">
+        <a class="nl-cover" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener" aria-label="Διάβασε το τεύχος">
+          <img src="https://cdnm.heyzine.com/files/uploaded/bf983d5d1c33051767ece3cf67c47aeb854e6465.pdf-thumb.jpg" alt="Εξώφυλλο newsletter ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ… ΣΥΝΑΝΤΩ, τεύχος 01" loading="lazy" onerror="this.parentNode.classList.add('noimg')">
+          <div class="nl-fallback"><b>ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ…</b><span>ΣΥΝΑΝΤΩ</span><small style="margin-top:10px">Τεύχος 01 · Νοέμβριος 2026</small></div>
+        </a>
+        <div>
+          <div class="nl-kicker">Newsletter</div>
+          <h3>ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ… <em>ΣΥΝΑΝΤΩ</em></h3>
+          <p class="nl-sub">Το μηνιαίο γράμμα του Α Όπως Αγάπη — κάθε μήνα, ένα ρήμα της αγάπης.</p>
+          <p class="nl-issue">Τεύχος 01 · Νοέμβριος 2026</p>
+          <p class="nl-text">Ζώα και άνθρωποι που συναντιούνται και θεραπεύουν ο ένας τον άλλον. Στο πρώτο τεύχος: η βόλτα υιοθεσίας στη Δημοτική Αγορά Κυψέλης, η νέα σκάλα του Καταφυγίου από τον εθελοντή μας Mustafa, τι δείχνει η έρευνα για τη δύναμη μιας μέρας έξω για έναν σκύλο του καταφυγίου — και πώς μπορείς να γίνεις κι εσύ μέρος της ιστορίας.</p>
+          <div class="nl-btns">
+            <a class="nl-read" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">📖 Διάβασε το τεύχος</a>
+            <a class="nl-sign" href="mailto:info@aoposagapi.org?subject=%CE%95%CE%B3%CE%B3%CF%81%CE%B1%CF%86%CE%AE%20%CF%83%CF%84%CE%BF%20newsletter&amp;body=%CE%A0%CE%B1%CF%81%CE%B1%CE%BA%CE%B1%CE%BB%CF%8E%20%CE%BD%CE%B1%20%CE%BC%CE%B5%20%CE%B5%CE%B3%CE%B3%CF%81%CE%AC%CF%88%CE%B5%CF%84%CE%B5%20%CF%83%CF%84%CE%BF%20newsletter%20%C2%AB%CE%91%CE%93%CE%91%CE%A0%CE%A9%20%CE%A3%CE%97%CE%9C%CE%91%CE%99%CE%9D%CE%95%CE%99%E2%80%A6%C2%BB.%0A%0A%CE%9F%CE%BD%CE%BF%CE%BC%CE%B1%CF%84%CE%B5%CF%80%CF%8E%CE%BD%CF%85%CE%BC%CE%BF%3A%20">✉ Θέλω να το λαμβάνω</a>
+          </div>
+          <div class="nl-archive">Αρχείο τευχών: <a href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">01 · ΣΥΝΑΝΤΩ</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- /NEWSLETTER -->
+</div>
 </section>
 
 <!-- PARTICIPATE: 3 tiers -->

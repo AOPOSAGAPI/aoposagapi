@@ -289,6 +289,7 @@
     <a href="#board">Board</a>
     <a href="#impact">Impact</a>
     <a href="#news">News</a>
+    <a href="#newsletter">Newsletter</a>
     <a href="#transparency">Transparency</a>
     <a href="#participate">Get Involved</a>
     <a href="#contact">Contact</a>
@@ -307,6 +308,7 @@
   <a href="#board" onclick="toggleMobile()">Board</a>
   <a href="#impact" onclick="toggleMobile()">Impact</a>
   <a href="#news" onclick="toggleMobile()">News</a>
+  <a href="#newsletter" onclick="toggleMobile()">Newsletter</a>
   <a href="#transparency" onclick="toggleMobile()">Transparency</a>
   <a href="#participate" onclick="toggleMobile()">Get Involved</a>
   <a href="#contact" onclick="toggleMobile()">Contact</a>
@@ -780,7 +782,56 @@ document.querySelectorAll('.fv-car').forEach(function(c){
         <p>Participation in a theatre piece with social message and the "Pets in Action" festival under the auspices of the City of Athens.</p>
       </div>
     </div>
-  </div>
+  
+    <!-- NEWSLETTER -->
+<style>
+  #newsletter{scroll-margin-top:96px;margin-top:56px}
+  .nl-wrap{background:#3D5E40;border-radius:20px;color:#fff;padding:40px 36px;display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;box-shadow:var(--shadow,0 4px 20px rgba(0,0,0,.08))}
+  .nl-cover{display:block;position:relative;aspect-ratio:1/1.414;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.35);transform:rotate(-2deg);transition:transform .25s;text-decoration:none}
+  .nl-cover:hover{transform:rotate(0) scale(1.03)}
+  .nl-cover img{width:100%;height:100%;object-fit:cover;display:block}
+  .nl-fallback{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:#fff;color:#3D5E40}
+  .nl-fallback b{font-size:1.1rem;letter-spacing:1px}.nl-fallback span{font-size:2rem;font-weight:800;color:#FB5B1D;margin-top:8px}
+  .nl-cover.noimg img{display:none}.nl-cover.noimg .nl-fallback{display:flex}
+  .nl-kicker{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ffb38f;margin-bottom:10px}
+  .nl-wrap h3{font-size:2rem;font-weight:800;line-height:1.15;margin:0 0 6px;color:#fff}
+  .nl-wrap h3 em{font-style:normal;color:#FB5B1D;background:#fff;padding:0 8px;border-radius:6px}
+  .nl-sub{font-size:.95rem;opacity:.85;margin:0 0 18px}
+  .nl-issue{font-size:1rem;font-weight:700;margin:0 0 8px}
+  .nl-wrap p.nl-text{font-size:.95rem;line-height:1.7;opacity:.95;margin:0 0 22px}
+  .nl-btns{display:flex;flex-wrap:wrap;gap:12px}
+  .nl-btns a{display:inline-block;padding:12px 22px;border-radius:30px;font-weight:700;font-size:.92rem;text-decoration:none}
+  .nl-read{background:#FB5B1D;color:#fff}.nl-read:hover{background:#e04a10}
+  .nl-sign{border:2px solid #fff;color:#fff}.nl-sign:hover{background:#fff;color:#3D5E40}
+  .nl-archive{margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.25);font-size:.85rem;opacity:.85}
+  .nl-archive a{color:#fff;font-weight:700}
+  .nav-links a,.nav-logo span{white-space:nowrap}
+  @media (max-width:1360px){.nav-links{gap:2px}.nav-links a{padding:6px 6px;font-size:.8rem}}
+  @media (max-width:1180px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}}
+  @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
+</style>
+    <div id="newsletter">
+      <div class="nl-wrap">
+        <a class="nl-cover" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener" aria-label="Read the issue">
+          <img src="https://cdnm.heyzine.com/files/uploaded/bf983d5d1c33051767ece3cf67c47aeb854e6465.pdf-thumb.jpg" alt="Cover of the newsletter ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ… ΣΥΝΑΝΤΩ, issue 01" loading="lazy" onerror="this.parentNode.classList.add('noimg')">
+          <div class="nl-fallback"><b>ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ…</b><span>ΣΥΝΑΝΤΩ</span><small style="margin-top:10px">Issue 01 · November 2026</small></div>
+        </a>
+        <div>
+          <div class="nl-kicker">Newsletter</div>
+          <h3>ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ… <em>ΣΥΝΑΝΤΩ</em></h3>
+          <p class="nl-sub">The monthly letter of A for Agapi — every month, one verb of love. (In Greek)</p>
+          <p class="nl-issue">Issue 01 · November 2026</p>
+          <p class="nl-text">Animals and people who meet and heal each other. In the first issue: the adoption walk at the Kypseli Municipal Market, the Shelter's new staircase built by our volunteer Mustafa, what research says about the power of a single day out for a shelter dog — and how you can become part of the story.</p>
+          <div class="nl-btns">
+            <a class="nl-read" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">📖 Read the issue</a>
+            <a class="nl-sign" href="mailto:info@aoposagapi.org?subject=Newsletter%20subscription&amp;body=Please%20subscribe%20me%20to%20the%20%C2%AB%CE%91%CE%93%CE%91%CE%A0%CE%A9%20%CE%A3%CE%97%CE%9C%CE%91%CE%99%CE%9D%CE%95%CE%99%E2%80%A6%C2%BB%20newsletter.%0A%0AFull%20name%3A%20">✉ Subscribe</a>
+          </div>
+          <div class="nl-archive">Archive: <a href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">01 · ΣΥΝΑΝΤΩ (Meet)</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- /NEWSLETTER -->
+</div>
 </section>
 
 <section id="participate">
