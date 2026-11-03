@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News &amp; Activities | A for Agapi</title>
+  <meta name="description" content="Latest news: Attica Region Volunteering Festival, school presentations, adoptions and our monthly newsletter.">
+  <meta property="og:title" content="News &amp; Activities | A for Agapi">
+  <meta property="og:description" content="Latest news: Attica Region Volunteering Festival, school presentations, adoptions and our monthly newsletter.">
+  <meta property="og:url" content="https://www.aoposagapi.org/en-news.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.aoposagapi.org/assets/gallery/fv-01-minnos-booth.jpg">
+  <link rel="canonical" href="https://www.aoposagapi.org/en-news.html">
+  <link rel="alternate" hreflang="el" href="https://www.aoposagapi.org/nea.html">
+  <link rel="alternate" hreflang="en" href="https://www.aoposagapi.org/en-news.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.aoposagapi.org/nea.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/site-en.css">
+  
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<nav>
+  <a class="nav-logo" href="english.html">
+    <img src="assets/logo-egxromo.svg" alt="A for Agapi" width="40" height="40">
+    <span>A for Agapi</span>
+  </a>
+  <div class="nav-links">
+    <a href="english.html">About Us</a>
+    <a href="en-journey.html">Journey & Board</a>
+    <a href="en-news.html" class="active" aria-current="page">News</a>
+    <a href="en-transparency.html">Transparency</a>
+    <a href="en-volunteer.html">Volunteer</a>
+    <a href="en-membership.html">Membership</a>
+    <a href="en-contact.html">Contact</a>
+    <button type="button" class="btn-intro-nav" onclick="showIntro()" aria-label="Watch the intro" title="Watch the intro">🎬</button>
+    <a href="nea.html" class="lang-switch" hreflang="el">ΕΛ</a>
+    <a href="en-donate.html" class="btn-donate-nav">❤ DONATE</a>
+  </div>
+  <button type="button" class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="english.html">About Us</a>
+  <a href="en-journey.html">Journey & Board</a>
+  <a href="en-news.html" class="active" aria-current="page">News</a>
+  <a href="en-transparency.html">Transparency</a>
+  <a href="en-volunteer.html">Volunteer</a>
+  <a href="en-membership.html">Membership</a>
+  <a href="en-contact.html">Contact</a>
+  <a href="nea.html" hreflang="el">🌐 Ελληνικά</a>
+  <a href="en-donate.html" class="btn-donate-nav">❤ DONATE</a>
+</div>
+
+<main id="main">
+<section id="news">
+  <div class="section-inner">
+    <h1 class="section-title">News & <span>Activities</span></h1>
+    <p class="section-sub">Our founder participates as a volunteer at the Athens Municipal Shelter — and this experience fuels our vision.</p>
+
+<!-- ΦΕΣΤΙΒΑΛ ΕΘΕΛΟΝΤΙΣΜΟΥ 2026 — carousel -->
+<style>
+  .fv-card{background:var(--card-bg,#fff);border-radius:16px;overflow:hidden;box-shadow:var(--shadow,0 4px 20px rgba(0,0,0,.08));margin-bottom:28px}
+  .fv-car{position:relative;background:#22352a;aspect-ratio:4/3;max-height:560px;width:100%;overflow:hidden;touch-action:pan-y}
+  .fv-track{display:flex;height:100%;transition:transform .5s ease}
+  .fv-slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden}
+  .fv-bg{position:absolute;inset:-30px;background-size:cover;background-position:center;filter:blur(24px) brightness(.55)}
+  .fv-slide img{position:relative;display:block;width:100%;height:100%;object-fit:contain}
+  .fv-cap{position:absolute;left:0;right:0;bottom:0;padding:28px 20px 40px;color:#fff;font-size:.92rem;line-height:1.45;background:linear-gradient(transparent,rgba(0,0,0,.72));text-align:center}
+  .fv-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:#1a1a2e;font-size:1.5rem;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:2}
+  .fv-btn:hover{background:#fff}
+  .fv-prev{left:12px}.fv-next{right:12px}
+  .fv-dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:7px;z-index:2}
+  .fv-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.5);cursor:pointer}
+  .fv-dots button.on{background:var(--orange,#e87722);width:22px;border-radius:5px}
+  .fv-body{padding:24px 28px 28px}
+  .fv-body h3{font-size:1.25rem;font-weight:800;color:var(--dark,#1a1a2e);margin:0 0 12px;line-height:1.35}
+  .fv-body p{font-size:.95rem;color:#444;line-height:1.7;margin:0 0 12px}
+  .fv-date{font-size:.78rem;color:var(--orange,#e87722);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+  .fv-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+  .fv-links a{display:inline-block;padding:11px 20px;border-radius:30px;font-weight:700;font-size:.9rem;text-decoration:none}
+  .fv-cta{background:var(--orange,#e87722);color:#fff}
+  .fv-sec{border:2px solid var(--orange,#e87722);color:var(--orange,#e87722)}
+  @media (max-width:600px){.fv-car{aspect-ratio:4/5}.fv-body{padding:20px}.fv-btn{width:38px;height:38px;font-size:1.25rem}.fv-cap{font-size:.84rem}}
+</style>
+<div class="fv-card">
+  <div class="fv-car">
+    <div class="fv-track">
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-01-minnos-booth.jpg')"></div><img src="assets/gallery/fv-01-minnos-booth.jpg" alt="Photo from the 1st Volunteering Festival – Minnoş “guarding” our booth — give love, take light" loading="lazy"><div class="fv-cap">Minnoş “guarding” our booth — give love, take light</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-02-hall.jpg')"></div><img src="assets/gallery/fv-02-hall.jpg" alt="Photo from the 1st Volunteering Festival – The 1st Volunteering Festival of the Attica Region, at the Tae Kwon Do Arena in Faliro" loading="lazy"><div class="fv-cap">The 1st Volunteering Festival of the Attica Region, at the Tae Kwon Do Arena in Faliro</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-03-visitors.jpg')"></div><img src="assets/gallery/fv-03-visitors.jpg" alt="Photo from the 1st Volunteering Festival – Visitors, dogs and lots of talk about strays" loading="lazy"><div class="fv-cap">Visitors, dogs and lots of talk about strays</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-04-hug.jpg')"></div><img src="assets/gallery/fv-04-hug.jpg" alt="Photo from the 1st Volunteering Festival – A hug that says it all" loading="lazy"><div class="fv-cap">A hug that says it all</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-05-joy.jpg')"></div><img src="assets/gallery/fv-05-joy.jpg" alt="Photo from the 1st Volunteering Festival – The bond between people and animals needs no words" loading="lazy"><div class="fv-cap">The bond between people and animals needs no words</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-06-cuddle.jpg')"></div><img src="assets/gallery/fv-06-cuddle.jpg" alt="Photo from the 1st Volunteering Festival – Minnoş found his spot…" loading="lazy"><div class="fv-cap">Minnoş found his spot…</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-07-friends.jpg')"></div><img src="assets/gallery/fv-07-friends.jpg" alt="Photo from the 1st Volunteering Festival – Friends and partners stopped by the booth" loading="lazy"><div class="fv-cap">Friends and partners stopped by the booth</div></div>
+      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-08-crowd.jpg')"></div><img src="assets/gallery/fv-08-crowd.jpg" alt="Photo from the 1st Volunteering Festival – Dozens of organisations and hundreds of visitors" loading="lazy"><div class="fv-cap">Dozens of organisations and hundreds of visitors</div></div>
+    </div>
+    <button class="fv-btn fv-prev" aria-label="Previous">&#8249;</button>
+    <button class="fv-btn fv-next" aria-label="Next">&#8250;</button>
+    <div class="fv-dots"></div>
+  </div>
+  <div class="fv-body">
+    <div class="fv-date">Saturday 24 October 2026 · Tae Kwon Do Arena, Faliro</div>
+    <h3>We were at the 1st Volunteering Festival of the Attica Region</h3>
+      <p>From 11 am to 5 pm, at our own booth, we talked with dozens of visitors about the three pillars of our work: caring for stray animals, integrating migrants and supporting people with disabilities. We handed out cards, explained our goals — and the chocolate bars were a big hit!</p>
+      <p>But the star of the day was Minnoş. The most moving moments were his cuddles with fellow citizens with disabilities — a reminder that the bond between people and animals opens hearts without words.</p>
+      <p>Warm thanks to Christos from the Shelter and to Jan for keeping us company all day, to the Attica Region for the initiative, and to everyone who visited our booth.</p>
+    <div class="fv-links">
+      <a class="fv-cta" href="https://forms.gle/q3dnbaDUQDnMTtkx8" target="_blank" rel="noopener">Become a volunteer</a>
+      <a class="fv-sec" href="https://www.patt.gov.gr/6-%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%83%CE%B7/6-1-%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%83%CE%B7-%CE%B3%CF%81%CE%B1%CF%86%CE%B5%CE%AF%CE%BF-%CF%84%CF%8D%CF%80%CE%BF%CF%85/dt-perifereiaw-attikhw/nikos-chardalias-apo-to-1o-festival-ethelontismou-tis-perifereias-attikis-ergazomaste-systimatika-gia-mia-attiki-anthropias-kai-allilengyis-opou-kaneis-den-perissevei-kai-kaneis-den-menei-mono/" target="_blank" rel="noopener">Attica Region press release (GR)</a>
+    </div>
+  </div>
+</div>
+<script>
+document.querySelectorAll('.fv-car').forEach(function(c){
+  if(c.dataset.fv)return;c.dataset.fv=1;
+  var t=c.querySelector('.fv-track'),n=t.children.length,i=0,d=c.querySelector('.fv-dots'),timer;
+  for(var k=0;k<n;k++){var b=document.createElement('button');b.setAttribute('aria-label',(k+1)+' / '+n);b.onclick=(function(k){return function(){go(k);rest()}})(k);d.appendChild(b)}
+  function go(k){i=(k+n)%n;t.style.transform='translateX('+(-100*i)+'%)';[].forEach.call(d.children,function(b,j){b.className=j===i?'on':''})}
+  function rest(){clearInterval(timer);timer=setInterval(function(){go(i+1)},5500)}
+  c.querySelector('.fv-prev').onclick=function(){go(i-1);rest()};
+  c.querySelector('.fv-next').onclick=function(){go(i+1);rest()};
+  var x0=null;c.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  c.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));rest()}x0=null});
+  c.addEventListener('mouseenter',function(){clearInterval(timer)});c.addEventListener('mouseleave',rest);
+  go(0);rest();
+});
+</script>
+<!-- /ΦΕΣΤΙΒΑΛ ΕΘΕΛΟΝΤΙΣΜΟΥ 2026 -->
+
+
+    <div class="news-card" style="margin-bottom:28px;">
+      <div class="news-card-body">
+        <div class="news-date">September 2025</div>
+        <h3>Iron Staircase Renovation — NGO Initiative</h3>
+        <p>Through the initiative of the NGO founder and the voluntary work of Mustafa Megis — NGO member and migrant from Turkey integrating into Greek society — the deteriorated iron staircase at the Shelter was fully renovated. Living proof that integration happens through action.</p>
+      </div>
+      <div style="padding:0 24px 24px;">
+        <div class="staircase-strip">
+          <div class="staircase-item">
+            <img src="assets/gallery/n15-staircase-before.jpg" alt="Staircase before" loading="lazy">
+            <div class="staircase-label">BEFORE</div>
+          </div>
+          <div class="staircase-item">
+            <img src="assets/gallery/n16-staircase-during.jpg" alt="Mustafa working" loading="lazy">
+            <div class="staircase-label">DURING WORK</div>
+          </div>
+          <div class="staircase-item">
+            <img src="assets/gallery/n17-staircase-after.jpg" alt="Staircase after" loading="lazy">
+            <div class="staircase-label">AFTER</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="assets/gallery/n02-school-kindergarten.jpg" alt="Kindergarten presentation" loading="lazy">
+        <div class="news-card-body">
+          <div class="news-date">2025–2026 | 44 Presentations</div>
+          <h3>School Awareness — Oreo Opens Hearts</h3>
+          <p>Georgios with Oreo — a hydrocephalic, epileptic dog adopted from the Shelter — visits kindergartens, primary and secondary schools.</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="assets/gallery/n03-official-meeting.jpg" alt="Official meeting" loading="lazy">
+        <div class="news-card-body">
+          <div class="news-date">Institutional Collaboration</div>
+          <h3>Meetings with Mayor of Athens & Deputy Mayor for Animal Welfare</h3>
+          <p>Volunteer visit to Athens City Hall to discuss Shelter operating issues, and collaboration with the Pan-Hellenic "Nemesis" Federation.</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="assets/gallery/n07-school-visit-shelter.jpg" alt="School visit at shelter" loading="lazy">
+        <div class="news-card-body">
+          <div class="news-date">Ongoing Activity</div>
+          <h3>Schools Visit the Shelter</h3>
+          <p>Students and teachers from primary and evening schools visit for hands-on experience. "We love strays — We adopt responsibly!"</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="assets/gallery/n05-mustafa-festival.jpg" alt="Mustafa at festival" loading="lazy">
+        <div class="news-card-body">
+          <div class="news-date">The Story of Mustafa</div>
+          <h3>From Migrant to Volunteer — Mustafa Megis</h3>
+          <p>Registered NGO member from Turkey — renovated the Shelter staircase, takes part in festivals. Living example of integration through action.</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="assets/gallery/n01-adoption-siblings.jpg" alt="Sibling puppies adoption" loading="lazy">
+        <div class="news-card-body">
+          <div class="news-date">Ongoing Adoptions</div>
+          <h3>Dozens of Dogs Found a Home</h3>
+          <p>Adoption of two sibling puppies by a foreign family in Greece. Every new home is a victory.</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="assets/gallery/n06-school-drawings.jpg" alt="Children's drawings" loading="lazy">
+        <div class="news-card-body">
+          <div class="news-date">Primary School Athens</div>
+          <h3>"We love animals and we will never hurt them"</h3>
+          <p>Primary school children gifted their drawings to the NGO after a presentation — with the theme "I Love Animals".</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="text-align:center;margin:32px 0 16px;font-size:1.2rem;color:var(--dark);">Photos from Our Activities</h3>
+    <div class="photo-gallery">
+      <img src="assets/gallery/n11-hearts-socrates.jpg" alt="Children and Socrates" loading="lazy">
+      <img src="assets/gallery/n12-adoption-adoption.jpg" alt="Adoption" loading="lazy">
+      <img src="assets/gallery/n08-adoption-family.jpg" alt="Family adoption" loading="lazy">
+      <img src="assets/gallery/n09-city-hall-visit.jpg" alt="Athens City Hall" loading="lazy">
+      <img src="assets/gallery/n10-volunteer-team.jpg" alt="Volunteer team" loading="lazy">
+      <img src="assets/gallery/n13-school-drawings-gift.jpg" alt="Drawings gift" loading="lazy">
+      <img src="assets/gallery/n04-shelter-nightschool.jpg" alt="Evening school" loading="lazy">
+      <img src="assets/gallery/n14-hearts-mural.jpg" alt="Hearts mural" loading="lazy">
+      <img src="assets/gallery/n15-staircase-before.jpg" alt="Staircase before" loading="lazy">
+      <img src="assets/gallery/n16-staircase-during.jpg" alt="Mustafa working" loading="lazy">
+      <img src="assets/gallery/n17-staircase-after.jpg" alt="Staircase after" loading="lazy">
+    </div>
+
+    <h3 style="text-align:center;margin:48px 0 24px;font-size:1.4rem;color:var(--dark);">Past Activities of the Group</h3>
+    <div class="past-grid">
+      <div class="past-card">
+        <h3>📚 Migrant Sunday School</h3>
+        <p>For many years, Greek lessons for refugees and migrants in junior and senior high school venues across Athens.</p>
+      </div>
+      <div class="past-card">
+        <h3>👴 Actions in Elderly Centers (KAPI)</h3>
+        <p>Visits to KAPI elderly centers for older people experiencing abandonment and loneliness — a little company makes a difference.</p>
+      </div>
+      <div class="past-card">
+        <h3>🎢 Children from institutions to amusement parks</h3>
+        <p>Organized trips for children from institutions and orphans to amusement parks — moments of joy and carefree play.</p>
+      </div>
+      <div class="past-card">
+        <h3>📐 METAdrasi — Mathematics</h3>
+        <p>Volunteer math teaching for migrant children through METAdrasi. There also began contact with the Deaf community.</p>
+      </div>
+      <div class="past-card">
+        <h3>🤟 Sign Language</h3>
+        <p>Learning Greek Sign Language at "Kratylos" School — the start of a new bridge with the deaf community.</p>
+      </div>
+      <div class="past-card">
+        <h3>🎭 "Black Board" Theatre & Festival</h3>
+        <p>Participation in a theatre piece with social message and the "Pets in Action" festival under the auspices of the City of Athens.</p>
+      </div>
+    </div>
+  
+    <!-- NEWSLETTER -->
+<style>
+  #newsletter{scroll-margin-top:96px;margin-top:56px}
+  .nl-wrap{background:#3D5E40;border-radius:20px;color:#fff;padding:40px 36px;display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;box-shadow:var(--shadow,0 4px 20px rgba(0,0,0,.08))}
+  .nl-cover{display:block;position:relative;aspect-ratio:1/1.414;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.35);transform:rotate(-2deg);transition:transform .25s;text-decoration:none}
+  .nl-cover:hover{transform:rotate(0) scale(1.03)}
+  .nl-cover img{width:100%;height:100%;object-fit:cover;display:block}
+  .nl-fallback{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:#fff;color:#3D5E40}
+  .nl-fallback b{font-size:1.1rem;letter-spacing:1px}.nl-fallback span{font-size:2rem;font-weight:800;color:#FB5B1D;margin-top:8px}
+  .nl-cover.noimg img{display:none}.nl-cover.noimg .nl-fallback{display:flex}
+  .nl-kicker{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ffb38f;margin-bottom:10px}
+  .nl-wrap h3{font-size:2rem;font-weight:800;line-height:1.15;margin:0 0 6px;color:#fff}
+  .nl-wrap h3 em{font-style:normal;color:#FB5B1D;background:#fff;padding:0 8px;border-radius:6px}
+  .nl-sub{font-size:.95rem;opacity:.85;margin:0 0 18px}
+  .nl-issue{font-size:1rem;font-weight:700;margin:0 0 8px}
+  .nl-wrap p.nl-text{font-size:.95rem;line-height:1.7;opacity:.95;margin:0 0 22px}
+  .nl-btns{display:flex;flex-wrap:wrap;gap:12px}
+  .nl-btns a{display:inline-block;padding:12px 22px;border-radius:30px;font-weight:700;font-size:.92rem;text-decoration:none}
+  .nl-read{background:#FB5B1D;color:#fff}.nl-read:hover{background:#e04a10}
+  .nl-sign{border:2px solid #fff;color:#fff}.nl-sign:hover{background:#fff;color:#3D5E40}
+  .nl-archive{margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.25);font-size:.85rem;opacity:.85}
+  .nl-archive a{color:#fff;font-weight:700}
+  .nav-links a,.nav-logo span{white-space:nowrap}
+  @media (max-width:1360px){.nav-links{gap:2px}.nav-links a{padding:6px 6px;font-size:.8rem}}
+  @media (max-width:1180px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}}
+  .nl-form{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25)}
+  .nl-form label.t{display:block;font-weight:700;font-size:.95rem;margin-bottom:10px}
+  .nl-row{display:flex;flex-wrap:wrap;gap:10px}
+  .nl-row input[type=text],.nl-row input[type=email]{flex:1 1 170px;min-width:0;padding:12px 16px;border-radius:30px;border:0;font:inherit;font-size:.92rem;color:#1a1a2e}
+  .nl-row button{padding:12px 24px;border-radius:30px;border:0;background:#FB5B1D;color:#fff;font:inherit;font-weight:700;font-size:.92rem;cursor:pointer}
+  .nl-row button:hover{background:#e04a10}
+  .nl-consent{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.8rem;opacity:.9;line-height:1.45;text-align:left}
+  .nl-consent input{margin-top:3px;flex:none}
+  .nl-err{margin-top:8px;font-size:.85rem;font-weight:700;color:#ffd2bf;min-height:1em}
+  .nl-thanks{display:none;margin-top:22px;padding:14px 18px;border-radius:12px;background:#fff;color:#3D5E40;font-weight:700}
+  #newsletter.ok .nl-thanks{display:block}#newsletter.ok .nl-form{display:none}
+  @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns,.nl-row{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
+</style>
+    <div id="newsletter">
+      <div class="nl-wrap">
+        <a class="nl-cover" href="https://heyzine.com/flip-book/50f76b5cad.html" target="_blank" rel="noopener" aria-label="Read the issue">
+          <img src="https://cdnm.heyzine.com/files/uploaded/50f76b5cadb2fafe615f94108d979ce4861f8958-1.pdf-thumb.jpg" alt="Cover of the newsletter To Love Means… To Meet, issue 01" loading="lazy" onerror="this.parentNode.classList.add('noimg')">
+          <div class="nl-fallback"><b>TO LOVE MEANS…</b><span>TO MEET</span><small style="margin-top:10px">Issue 01 · November 2026</small></div>
+        </a>
+        <div>
+          <div class="nl-kicker">Newsletter</div>
+          <h3>TO LOVE MEANS… <em>TO MEET</em></h3>
+          <p class="nl-sub">The monthly letter of A for Agapi — every month, one verb of love.</p>
+          <p class="nl-issue">Issue 01 · November 2026</p>
+          <p class="nl-text">Animals and people who meet and heal each other. In the first issue: the adoption walk at the Kypseli Municipal Market, the Shelter's new staircase built by our volunteer Mustafa, what research says about the power of a single day out for a shelter dog — and how you can become part of the story.</p>
+          <div class="nl-btns">
+            <a class="nl-read" href="https://heyzine.com/flip-book/50f76b5cad.html" target="_blank" rel="noopener">📖 Read the issue</a>
+          </div>
+          <div class="nl-archive">Archive: <a href="https://heyzine.com/flip-book/50f76b5cad.html" target="_blank" rel="noopener">01 · TO MEET</a></div>
+          <form class="nl-form" id="nlForm" action="https://docs.google.com/forms/d/e/1FAIpQLScdTjiBY2t2ztjAVoD5k5PFioy-sVVsioPmHTt43vlp3AGjpA/formResponse" method="POST" target="nl_hidden" novalidate>
+            <label class="t">✉ Get the newsletter by email</label>
+            <input type="hidden" name="entry.1148654699" value="English">
+            <input type="hidden" name="entry.1127898672" value="">
+            <div class="nl-row">
+              <input type="text" name="entry.1192506440" placeholder="Full name" autocomplete="name" maxlength="120">
+              <input type="email" name="entry.1967585507" placeholder="Email" autocomplete="email" maxlength="160">
+              <button type="submit">Subscribe</button>
+            </div>
+            <label class="nl-consent"><input type="checkbox" id="nlConsent"> <span>I agree to receive the monthly A for Agapi newsletter by email. I can unsubscribe at any time by replying “UNSUBSCRIBE”.</span></label>
+            <div class="nl-err" id="nlErr" role="alert"></div>
+          </form>
+          <iframe name="nl_hidden" id="nl_hidden" title="newsletter" style="display:none" aria-hidden="true"></iframe>
+          <div class="nl-thanks">💚 Thank you! You're subscribed — the next issue will arrive in your inbox.</div>
+        </div>
+      </div>
+    </div>
+    <!-- /NEWSLETTER -->
+<script>(function(){
+  var f=document.getElementById('nlForm'); if(!f) return;
+  var err=document.getElementById('nlErr'), sent=false;
+  f.addEventListener('submit',function(e){
+    var n=f.elements['entry.1192506440'].value.trim(), m=f.elements['entry.1967585507'].value.trim(), c=document.getElementById('nlConsent');
+    if(!n || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){ e.preventDefault(); err.textContent='Please enter your full name and a valid email address.'; return; }
+    if(!c.checked){ e.preventDefault(); err.textContent='Please tick the consent box to complete your subscription.'; c.focus(); return; }
+    err.textContent=''; f.elements['entry.1127898672'].value='Yes — '+new Date().toISOString().slice(0,16).replace('T',' ');
+    sent=true;
+  });
+  document.getElementById('nl_hidden').addEventListener('load',function(){
+    if(sent){ document.getElementById('newsletter').classList.add('ok'); sent=false; }
+  });
+})();</script>
+</div>
+</section>
+</main>
+
+<section class="cta-band">
+  <div class="section-inner">
+    <h2>Become part of the circle of love</h2>
+    <p>With your time, your membership or a donation — every bit of help counts.</p>
+    <div class="hero-btns"><a href="en-volunteer.html" class="btn-secondary">💪 Volunteer</a><a href="en-membership.html" class="btn-secondary">🤝 Become a Member</a><a href="en-donate.html" class="btn-primary">❤ Donate</a></div>
+  </div>
+</section>
+
+<footer>
+  <p><strong style="color:#fff;">A for Agapi NGO (Α Όπως Αγάπη ΑΜΚΕ)</strong></p>
+<p>25 Akadimias St., 106 71, Athens, Greece · VAT: 996560907 · GEMI: 192124501000</p>
+  <p style="font-size:0.8rem;opacity:0.75;">Public-Benefit Entity (Ministry of Interior) · Social Economy Reg. 000305512011 · Animal Welfare Register Code 5341</p>
+  <p style="font-style:italic;opacity:0.6;font-size:0.82rem;">"All together, no one alone. All different, all equal."</p>
+  <div style="margin-top:20px;display:flex;justify-content:center;gap:16px;">
+    <a href="https://www.instagram.com/a.opos.agapi/" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF);color:#fff;text-decoration:none;font-size:1.3rem;transition:transform 0.2s;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    </a>
+  </div>
+  <div class="footer-links" style="margin-top:16px;">
+    <a href="en-membership.html">🤝 Become Member</a>
+    <a href="en-volunteer.html">💪 Volunteer</a>
+    <a href="en-donate.html">❤ Donate</a>
+    <a href="en-transparency.html">Transparency</a>
+    <a href="en-privacy.html">Privacy Policy</a>
+    <a href="en-terms.html">Terms of Use</a>
+    <a href="index.html">Ελληνικά</a>
+  </div>
+  <p>© 2026 A for Agapi NGO. All rights reserved.</p>
+</footer>
+
+<div class="intro-overlay" id="introOverlay">
+  <canvas class="intro-canvas" id="introCanvas"></canvas>
+  <div class="intro-hearts" id="introHearts"></div>
+  <div class="intro-content">
+    <div class="intro-logo-wrap">
+      <img class="intro-logo" src="assets/logo-egxromo.svg" alt="A for Agapi">
+    </div>
+    <div class="intro-title">A for Agapi</div>
+    <div class="intro-typewriter" id="introTypewriter"></div>
+    <div class="intro-sub">"All together, no one alone. All different, all equal."</div>
+    <audio id="introAudio" preload="none">
+      <source src="assets/anthem.mp3" type="audio/mpeg">
+    </audio>
+    <button class="btn-skip" onclick="hideIntro()">✕ Close</button>
+  </div>
+</div>
+
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Α Όπως Αγάπη – ΑΜΚΕ | Ευάλωτες Ομάδες, Αδέσποτα, ΑμεΑ, Μετανάστες, Κωφοί</title>
-  <meta name="description" content="Η ΑΜΚΕ 'Α Όπως Αγάπη' δρα για ευάλωτες ομάδες — αδέσποτα ζώα, ΑμεΑ, μετανάστες, ηλικιωμένους, κωφούς, παιδιά. Κυκλική κοινωνία ανταποδοτικότητας. Αθήνα, Ελλάδα.">
-  <meta property="og:title" content="Α Όπως Αγάπη – ΑΜΚΕ">
-  <meta property="og:description" content="Όλοι μαζί, κανένας μόνος. Όλοι διαφορετικοί, όλοι ίσοι.">
-  <meta property="og:url" content="https://aoposagapi.org">
+  <title>Α Όπως Αγάπη – ΑΜΚΕ | Αδέσποτα, ΑμεΑ, Μετανάστες, Κωφοί, Ηλικιωμένοι</title>
+  <meta name="description" content="Η ΑΜΚΕ «Α Όπως Αγάπη» στηρίζει ευάλωτες ομάδες στην Αθήνα: αδέσποτα ζώα, ΑμεΑ, μετανάστες, κωφούς, ηλικιωμένους και παιδιά. Γίνε εθελοντής, μέλος ή κάνε δωρεά.">
+  <meta property="og:title" content="Α Όπως Αγάπη – ΑΜΚΕ | Αδέσποτα, ΑμεΑ, Μετανάστες, Κωφοί, Ηλικιωμένοι">
+  <meta property="og:description" content="Η ΑΜΚΕ «Α Όπως Αγάπη» στηρίζει ευάλωτες ομάδες στην Αθήνα: αδέσποτα ζώα, ΑμεΑ, μετανάστες, κωφούς, ηλικιωμένους και παιδιά. Γίνε εθελοντής, μέλος ή κάνε δωρεά.">
+  <meta property="og:url" content="https://www.aoposagapi.org/">
   <meta property="og:type" content="website">
-  <link rel="canonical" href="https://aoposagapi.org/">
+  <meta property="og:image" content="https://www.aoposagapi.org/assets/gallery/fv-01-minnos-booth.jpg">
+  <link rel="canonical" href="https://www.aoposagapi.org/">
+  <link rel="alternate" hreflang="el" href="https://www.aoposagapi.org/">
+  <link rel="alternate" hreflang="en" href="https://www.aoposagapi.org/english.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.aoposagapi.org/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/site.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "NGO",
     "name": "Α Όπως Αγάπη ΑΜΚΕ",
-    "url": "https://aoposagapi.org",
+    "url": "https://www.aoposagapi.org/",
     "email": "info@aoposagapi.org",
     "address": { "@type": "PostalAddress", "streetAddress": "Ακαδημίας 25", "addressLocality": "Αθήνα", "postalCode": "106 71", "addressCountry": "GR" },
     "description": "ΑΜΚΕ για ευάλωτες κοινωνικές ομάδες — αδέσποτα, ΑμεΑ, μετανάστες, κωφοί, ηλικιωμένοι",
@@ -29,326 +34,52 @@
     "sameAs": ["https://www.instagram.com/a.opos.agapi/"]
   }
   </script>
-  <style>
-    :root { --orange:#e87722; --dark:#1a1a2e; --light:#f8f8f8; --gray:#666; --card-bg:#fff; --shadow:0 4px 20px rgba(0,0,0,0.08); }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Segoe UI',Arial,sans-serif; background:var(--light); color:#333; }
-    nav { position:sticky; top:0; z-index:1000; background:var(--dark); display:flex; align-items:center; justify-content:space-between; padding:0 24px; height:84px; box-shadow:0 2px 12px rgba(0,0,0,0.3); }
-    .nav-logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
-    .nav-logo img { height:64px; width:64px; object-fit:contain; background:#fff; border-radius:50%; padding:4px; box-shadow:0 2px 12px rgba(232,119,34,0.4); }
-    .nav-logo span { color:#fff; font-size:1.1rem; font-weight:800; letter-spacing:0.3px; }
-    .nav-links { display:flex; align-items:center; gap:6px; }
-    .nav-links a { color:rgba(255,255,255,0.85); text-decoration:none; padding:6px 9px; border-radius:6px; font-size:0.85rem; transition:background 0.2s; }
-    .nav-links a:hover { background:rgba(255,255,255,0.1); color:#fff; }
-    .btn-donate-nav { background:var(--orange)!important; color:#fff!important; padding:7px 16px!important; border-radius:20px!important; font-weight:700!important; font-size:0.88rem!important; margin-left:6px; }
-    .btn-donate-nav:hover { background:#cf6a1a!important; }
-    .btn-intro-nav { font-size:1.3rem!important; background:rgba(232,119,34,0.15); border:1.5px solid var(--orange); border-radius:50%; width:42px; height:42px; display:inline-flex!important; align-items:center; justify-content:center; padding:0!important; transition:all 0.3s; }
-    .btn-intro-nav:hover { background:var(--orange); transform:scale(1.1) rotate(10deg); box-shadow:0 4px 12px rgba(232,119,34,0.5); }
-    .lang-switch { color:rgba(255,255,255,0.6)!important; font-size:0.78rem!important; }
-    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
-    .hamburger span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; }
-    .mobile-menu { display:none; flex-direction:column; gap:4px; background:var(--dark); padding:12px 16px; border-top:1px solid rgba(255,255,255,0.1); }
-    .mobile-menu a { color:rgba(255,255,255,0.85); text-decoration:none; padding:10px 8px; border-radius:6px; font-size:0.92rem; }
-    .mobile-menu .btn-donate-nav { background:var(--orange); color:#fff; font-weight:700; text-align:center; margin-top:4px; }
-    .hero { background:linear-gradient(135deg,var(--dark) 0%,#16213e 60%,#0f3460 100%); color:#fff; padding:80px 24px 100px; text-align:center; position:relative; overflow:hidden; }
-    .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 50%,rgba(232,119,34,0.15) 0%,transparent 70%); }
-    .hero-content { position:relative; max-width:760px; margin:0 auto; }
-    .hero img { width:200px; height:200px; object-fit:contain; margin-bottom:28px; background:#fff; border-radius:50%; padding:12px; box-shadow:0 12px 48px rgba(232,119,34,0.5); }
-    .hero h1 { font-size:2.4rem; font-weight:800; margin-bottom:12px; line-height:1.2; }
-    .hero h1 span { color:var(--orange); }
-    .hero-motto { font-size:1.1rem; font-weight:600; color:var(--orange); margin-bottom:18px; letter-spacing:0.5px; }
-    .hero p { font-size:1.05rem; opacity:0.85; max-width:600px; margin:0 auto 32px; line-height:1.7; }
-    .hero-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-    .btn-primary { background:var(--orange); color:#fff; padding:14px 28px; border-radius:28px; font-size:0.98rem; font-weight:700; text-decoration:none; transition:background 0.2s,transform 0.2s; border:none; cursor:pointer; }
-    .btn-primary:hover { background:#cf6a1a; transform:translateY(-2px); }
-    .btn-secondary { background:rgba(255,255,255,0.12); color:#fff; padding:14px 28px; border-radius:28px; font-size:0.98rem; font-weight:600; text-decoration:none; transition:background 0.2s; border:1px solid rgba(255,255,255,0.25); }
-    .btn-secondary:hover { background:rgba(255,255,255,0.2); }
-    section { padding:72px 24px; }
-    section:nth-child(even) { background:#fff; }
-    .section-inner { max-width:1100px; margin:0 auto; }
-    .section-title { font-size:2rem; font-weight:800; text-align:center; margin-bottom:12px; color:var(--dark); }
-    .section-title span { color:var(--orange); }
-    .section-sub { text-align:center; color:var(--gray); font-size:1rem; margin-bottom:48px; max-width:680px; margin-left:auto; margin-right:auto; line-height:1.6; }
-
-    /* ROOTS */
-    .roots-wrap { background:linear-gradient(135deg,#f5e6d3 0%,#fff 100%); border-radius:20px; padding:48px 40px; border-left:6px solid var(--orange); }
-    .roots-wrap h3 { font-size:1.4rem; color:var(--dark); margin-bottom:16px; font-weight:800; }
-    .roots-wrap p { font-size:1rem; line-height:1.8; color:#444; margin-bottom:14px; }
-    .roots-tribute { background:#fff; border-radius:12px; padding:20px 24px; margin-top:20px; box-shadow:var(--shadow); border-left:4px solid var(--dark); }
-    .roots-tribute h4 { font-size:0.85rem; color:var(--orange); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
-    .roots-tribute p { font-size:0.92rem; line-height:1.7; color:#333; margin-bottom:0; }
-    .roots-tribute em { color:var(--dark); font-weight:600; }
-
-    /* ABOUT */
-    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
-    .about-text h2 { font-size:1.8rem; font-weight:800; color:var(--dark); margin-bottom:16px; line-height:1.3; }
-    .about-text h2 span { color:var(--orange); }
-    .about-text p { line-height:1.8; color:#444; margin-bottom:16px; }
-    .pillars { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
-    .pillar { background:var(--orange); color:#fff; padding:7px 14px; border-radius:20px; font-size:0.82rem; font-weight:600; }
-    .about-quote { background:var(--dark); color:#fff; border-radius:16px; padding:36px; text-align:center; }
-    .about-quote blockquote { font-size:1.3rem; font-weight:700; line-height:1.5; margin-bottom:12px; }
-    .about-quote cite { color:var(--orange); font-size:0.88rem; font-style:normal; }
-
-    /* CIRCLE */
-    .circle-wrap { background:linear-gradient(135deg,#0f3460 0%,var(--dark) 100%); border-radius:20px; padding:52px 40px; color:#fff; text-align:center; }
-    .circle-wrap h2 { font-size:2rem; font-weight:800; margin-bottom:16px; }
-    .circle-wrap h2 span { color:var(--orange); }
-    .circle-wrap > p { font-size:1.05rem; line-height:1.8; max-width:680px; margin:0 auto 24px; opacity:0.9; }
-    .circle-quote { background:rgba(255,255,255,0.08); border-left:4px solid var(--orange); border-radius:8px; padding:20px 24px; margin:24px auto; max-width:620px; text-align:left; }
-    .circle-quote p { font-style:italic; font-size:1.02rem; opacity:1; }
-
-    /* STORY (Sotiris's group + Georgios's journey) */
-    .story-grid { display:grid; grid-template-columns:1fr 2fr; gap:48px; align-items:start; }
-    .story-timeline { border-left:3px solid var(--orange); padding-left:24px; }
-    .story-step { margin-bottom:28px; position:relative; }
-    .story-step::before { content:''; position:absolute; left:-31px; top:6px; width:14px; height:14px; border-radius:50%; background:var(--orange); border:3px solid #fff; box-shadow:0 0 0 2px var(--orange); }
-    .story-step h4 { font-size:0.82rem; color:var(--orange); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px; }
-    .story-step h5 { font-size:1rem; color:var(--dark); font-weight:700; margin-bottom:4px; }
-    .story-step p { font-size:0.92rem; color:#444; line-height:1.6; }
-    .story-aside { background:var(--dark); color:#fff; border-radius:16px; padding:32px; text-align:center; position:sticky; top:80px; }
-    .story-aside h3 { font-size:1.25rem; font-weight:700; margin-bottom:12px; }
-    .story-aside p { opacity:0.85; line-height:1.7; font-size:0.92rem; }
-
-    /* BOARD */
-    .board-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:24px; }
-    .board-card { background:var(--card-bg); border-radius:16px; padding:28px 20px; text-align:center; box-shadow:var(--shadow); transition:transform 0.2s; }
-    .board-card:hover { transform:translateY(-4px); }
-    .board-card img { width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:14px; border:3px solid var(--orange); }
-    .board-card h4 { font-size:0.95rem; font-weight:700; color:var(--dark); margin-bottom:4px; }
-    .board-card p { font-size:0.8rem; color:var(--gray); margin-bottom:4px; line-height:1.5; }
-    .board-card .role { color:var(--orange); font-weight:600; font-size:0.82rem; }
-    .board-badge { display:inline-block; background:#f5e6d3; color:var(--dark); font-size:0.72rem; padding:3px 8px; border-radius:10px; margin-top:6px; font-weight:600; }
-
-    /* IMPACT */
-    .impact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
-    .impact-card { background:var(--card-bg); border-radius:16px; padding:32px 20px; text-align:center; box-shadow:var(--shadow); border-top:4px solid var(--orange); }
-    .impact-number { font-size:2.6rem; font-weight:900; color:var(--orange); line-height:1; margin-bottom:8px; }
-    .impact-label { font-size:0.95rem; font-weight:700; color:var(--dark); margin-bottom:6px; }
-    .impact-sub { font-size:0.78rem; color:var(--gray); line-height:1.5; }
-
-    /* PARTICIPATION (3 tiers) */
-    .participate-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    .participate-card { background:var(--card-bg); border-radius:18px; padding:32px 26px; box-shadow:var(--shadow); display:flex; flex-direction:column; transition:transform 0.2s; }
-    .participate-card:hover { transform:translateY(-4px); }
-    .participate-icon { font-size:2.4rem; margin-bottom:14px; }
-    .participate-card h3 { font-size:1.25rem; font-weight:800; color:var(--dark); margin-bottom:8px; }
-    .participate-card .tagline { font-size:0.85rem; color:var(--orange); font-weight:700; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:14px; }
-    .participate-card .price { font-size:1.6rem; font-weight:800; color:var(--dark); margin-bottom:14px; }
-    .participate-card .price small { font-size:0.85rem; color:var(--gray); font-weight:500; }
-    .participate-card ul { list-style:none; margin-bottom:20px; flex-grow:1; }
-    .participate-card ul li { font-size:0.88rem; color:#444; padding:6px 0 6px 22px; position:relative; line-height:1.5; }
-    .participate-card ul li::before { content:'✓'; position:absolute; left:0; top:6px; color:var(--orange); font-weight:800; }
-    .participate-card .btn-card { background:var(--orange); color:#fff; border:none; padding:12px 24px; border-radius:24px; font-size:0.92rem; font-weight:700; cursor:pointer; text-decoration:none; text-align:center; transition:background 0.2s; display:block; }
-    .participate-card .btn-card:hover { background:#cf6a1a; }
-    .card-featured { border:2px solid var(--orange); position:relative; }
-    .featured-tag { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--orange); color:#fff; padding:4px 14px; border-radius:12px; font-size:0.72rem; font-weight:700; letter-spacing:0.5px; }
-
-    /* NEWS */
-    .news-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:28px; margin-bottom:40px; }
-    .news-card { background:var(--card-bg); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); transition:transform 0.2s; }
-    .news-card:hover { transform:translateY(-4px); }
-    .news-card img { width:100%; height:220px; object-fit:cover; display:block; }
-    .news-card-body { padding:24px; }
-    .news-date { font-size:0.78rem; color:var(--orange); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
-    .news-card-body h3 { font-size:1.08rem; font-weight:700; color:var(--dark); margin-bottom:10px; line-height:1.4; }
-    .news-card-body p { font-size:0.88rem; color:#555; line-height:1.6; }
-    .staircase-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:28px; }
-    .staircase-item { position:relative; border-radius:12px; overflow:hidden; }
-    .staircase-item img { width:100%; height:180px; object-fit:cover; display:block; }
-    .staircase-label { position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.65); color:#fff; font-size:0.78rem; font-weight:700; text-align:center; padding:6px; letter-spacing:0.5px; }
-    .photo-gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:10px; margin-top:16px; }
-    .photo-gallery img { width:100%; height:130px; object-fit:cover; border-radius:10px; cursor:pointer; transition:transform 0.2s; }
-    .photo-gallery img:hover { transform:scale(1.04); }
-    .past-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
-    .past-card { background:var(--card-bg); border-radius:16px; padding:28px; box-shadow:var(--shadow); border-left:4px solid var(--orange); }
-    .past-card h3 { font-size:1.05rem; font-weight:700; color:var(--dark); margin-bottom:10px; }
-    .past-card p { font-size:0.9rem; color:#555; line-height:1.6; }
-
-    /* CONTACT */
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
-    .contact-info h3 { font-size:1.3rem; font-weight:700; color:var(--dark); margin-bottom:20px; }
-    .contact-item { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
-    .contact-item .icon { font-size:1.3rem; margin-top:2px; }
-    .contact-item p { font-size:0.9rem; color:#444; line-height:1.5; }
-    .contact-form { background:#fff; border-radius:16px; padding:32px; box-shadow:var(--shadow); }
-    .contact-form h3 { font-size:1.2rem; font-weight:700; color:var(--dark); margin-bottom:20px; }
-    .form-group { margin-bottom:16px; }
-    .form-group label { display:block; font-size:0.85rem; font-weight:600; color:#444; margin-bottom:6px; }
-    .form-group input, .form-group textarea { width:100%; padding:10px 14px; border:1.5px solid #ddd; border-radius:8px; font-size:0.9rem; font-family:inherit; }
-    .form-group input:focus, .form-group textarea:focus { outline:none; border-color:var(--orange); }
-    .form-group textarea { resize:vertical; min-height:100px; }
-    .btn-submit { background:var(--orange); color:#fff; border:none; padding:12px 28px; border-radius:24px; font-size:0.95rem; font-weight:700; cursor:pointer; width:100%; }
-    .btn-submit:hover { background:#cf6a1a; }
-
-    /* TRUST & TRANSPARENCY */
-    .trust-strip { margin-top:34px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; align-items:center; }
-    .trust-chip { font-size:0.74rem; color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.22); border-radius:14px; padding:4px 11px; letter-spacing:0.3px; }
-    .trust-link { font-size:0.76rem; color:var(--orange); text-decoration:none; font-weight:600; margin-left:4px; }
-    .trust-link:hover { text-decoration:underline; }
-    .trust-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; }
-    .trust-card { background:var(--card-bg); border-radius:14px; padding:22px 24px; box-shadow:var(--shadow); border-top:3px solid var(--orange); }
-    .trust-card h4 { font-size:0.95rem; font-weight:700; color:var(--dark); margin-bottom:8px; }
-    .trust-card p { font-size:0.86rem; color:#555; line-height:1.6; }
-    .trust-card .trust-no { display:block; margin-top:8px; font-size:0.84rem; letter-spacing:0.2px; color:var(--dark); font-weight:700; }
-    .trust-note { text-align:center; font-size:0.85rem; color:var(--gray); margin-top:26px; }
-
-    /* MODALS */
-    .modal-overlay { display:none; position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; padding:16px; }
-    .modal-overlay.active { display:flex; }
-    .modal { background:#fff; border-radius:20px; padding:36px 32px; max-width:520px; width:100%; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-height:85vh; overflow-y:auto; }
-    .modal-close { position:absolute; top:14px; right:18px; font-size:1.5rem; cursor:pointer; color:#888; background:none; border:none; }
-    .modal h2 { font-size:1.5rem; font-weight:800; color:var(--dark); margin-bottom:6px; }
-    .modal .modal-intro { color:var(--gray); font-size:0.9rem; margin-bottom:24px; line-height:1.6; }
-    .modal-section { background:#f5f5f5; border-radius:12px; padding:18px 20px; margin-bottom:14px; border-left:4px solid var(--orange); }
-    .modal-section h4 { font-size:0.78rem; color:var(--orange); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; font-weight:700; }
-    .modal-section p { font-size:0.88rem; color:#444; line-height:1.6; margin-bottom:6px; }
-    .modal-section ul { list-style:none; padding:0; margin-top:6px; }
-    .modal-section ul li { font-size:0.85rem; color:#333; padding:4px 0 4px 18px; position:relative; line-height:1.5; }
-    .modal-section ul li::before { content:'•'; position:absolute; left:0; color:var(--orange); font-weight:800; }
-    .iban-row { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:6px; }
-    .iban-row span { font-family:monospace; font-size:1rem; font-weight:700; color:var(--dark); }
-    .btn-copy { background:var(--orange); color:#fff; border:none; padding:5px 12px; border-radius:8px; font-size:0.78rem; cursor:pointer; font-weight:600; white-space:nowrap; }
-    .btn-copy:hover { background:#cf6a1a; }
-    .iban-details { font-size:0.8rem; color:#555; line-height:1.6; margin-top:6px; }
-    .modal-note { font-size:0.8rem; color:var(--gray); text-align:center; margin-top:12px; line-height:1.5; }
-    .inline-form { display:flex; flex-direction:column; gap:10px; }
-    .form-input { width:100%; padding:11px 14px; border:1.5px solid #ddd; border-radius:8px; font-size:0.92rem; font-family:inherit; background:#fff; color:#333; }
-    .form-input:focus { outline:none; border-color:var(--orange); box-shadow:0 0 0 3px rgba(232,119,34,0.15); }
-    .form-input::placeholder { color:#999; }
-    select.form-input { cursor:pointer; }
-    textarea.form-input { resize:vertical; min-height:70px; }
-    .form-submit { background:var(--orange); color:#fff; border:none; padding:13px 24px; border-radius:24px; font-size:0.95rem; font-weight:700; cursor:pointer; margin-top:6px; transition:all 0.2s; letter-spacing:0.5px; }
-    .form-submit:hover { background:#cf6a1a; transform:translateY(-1px); box-shadow:0 4px 12px rgba(232,119,34,0.3); }
-
-    .privacy-modal { background:#fff; border-radius:20px; padding:36px 32px; max-width:600px; width:100%; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-height:80vh; overflow-y:auto; }
-    .privacy-modal h2 { font-size:1.4rem; font-weight:800; color:var(--dark); margin-bottom:20px; }
-    .privacy-modal h3 { font-size:1rem; font-weight:700; color:var(--dark); margin:16px 0 8px; }
-    .privacy-modal p { font-size:0.88rem; color:#444; line-height:1.7; margin-bottom:12px; }
-
-    .intro-overlay { display:none; position:fixed; inset:0; z-index:8000; background:radial-gradient(ellipse at center,#1a1a2e 0%,#000 100%); align-items:center; justify-content:center; flex-direction:column; overflow:hidden; }
-    .intro-overlay.active { display:flex; animation:introFadeIn 1.2s ease-out; }
-    @keyframes introFadeIn { from { opacity:0; } to { opacity:1; } }
-    .intro-canvas { position:absolute; inset:0; z-index:1; }
-    .intro-hearts { position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden; }
-    .heart-fall { position:absolute; top:-40px; font-size:1.8rem; animation:heartFall linear infinite; opacity:0; }
-    @keyframes heartFall {
-      0% { transform:translateY(-40px) rotate(0deg); opacity:0; }
-      10% { opacity:0.8; }
-      90% { opacity:0.8; }
-      100% { transform:translateY(110vh) rotate(360deg); opacity:0; }
-    }
-    .intro-content { position:relative; z-index:3; text-align:center; color:#fff; padding:0 20px; }
-    .intro-logo-wrap { position:relative; display:inline-block; margin-bottom:32px; animation:logoEnter 1.8s cubic-bezier(0.34,1.56,0.64,1) both; }
-    @keyframes logoEnter {
-      0% { transform:scale(0) rotate(-180deg); opacity:0; }
-      60% { transform:scale(1.15) rotate(10deg); opacity:1; }
-      100% { transform:scale(1) rotate(0deg); opacity:1; }
-    }
-    .intro-logo-wrap::before { content:''; position:absolute; inset:-20px; border-radius:50%; background:radial-gradient(circle,rgba(232,119,34,0.4) 0%,transparent 70%); animation:logoGlow 2.5s ease-in-out infinite; }
-    @keyframes logoGlow {
-      0%,100% { transform:scale(1); opacity:0.6; }
-      50% { transform:scale(1.3); opacity:1; }
-    }
-    .intro-logo { width:180px; height:180px; object-fit:contain; background:#fff; border-radius:50%; padding:12px; box-shadow:0 0 60px rgba(232,119,34,0.6),0 0 120px rgba(232,119,34,0.3); position:relative; z-index:2; animation:logoPulse 2s ease-in-out infinite; }
-    @keyframes logoPulse {
-      0%,100% { transform:scale(1); }
-      50% { transform:scale(1.05); box-shadow:0 0 80px rgba(232,119,34,0.8),0 0 160px rgba(232,119,34,0.4); }
-    }
-    .intro-title { font-size:2.8rem; font-weight:900; margin-bottom:14px; letter-spacing:2px; opacity:0; animation:titleReveal 1s ease-out 1.5s forwards; background:linear-gradient(135deg,#fff 0%,var(--orange) 50%,#fff 100%); background-size:200% 200%; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:titleReveal 1s ease-out 1.5s forwards,gradientShift 4s ease infinite 2.5s; }
-    @keyframes titleReveal {
-      from { opacity:0; transform:translateY(30px); letter-spacing:20px; }
-      to { opacity:1; transform:translateY(0); letter-spacing:2px; }
-    }
-    @keyframes gradientShift {
-      0%,100% { background-position:0% 50%; }
-      50% { background-position:100% 50%; }
-    }
-    .intro-typewriter { font-size:1.3rem; font-weight:600; color:var(--orange); margin-bottom:10px; min-height:1.5em; opacity:0; animation:fadeInUp 0.8s ease-out 2.2s forwards; }
-    .intro-typewriter::after { content:'|'; animation:blink 0.8s infinite; opacity:0.7; }
-    @keyframes blink { 50% { opacity:0; } }
-    .intro-sub { opacity:0; font-size:1.1rem; margin-bottom:36px; font-style:italic; color:rgba(255,255,255,0.85); animation:fadeInUp 1s ease-out 3.5s forwards; }
-    @keyframes fadeInUp {
-      from { opacity:0; transform:translateY(20px); }
-      to { opacity:1; transform:translateY(0); }
-    }
-    .btn-skip { background:rgba(232,119,34,0.15); color:#fff; border:2px solid var(--orange); padding:12px 32px; border-radius:24px; cursor:pointer; font-size:0.95rem; font-weight:600; opacity:0; animation:fadeInUp 0.8s ease-out 4.2s forwards; transition:all 0.3s; letter-spacing:1px; }
-    .btn-skip:hover { background:var(--orange); transform:translateY(-2px) scale(1.05); box-shadow:0 8px 20px rgba(232,119,34,0.4); }
-    @media(max-width:768px) {
-      .intro-logo { width:130px; height:130px; }
-      .intro-title { font-size:2rem; }
-      .intro-typewriter { font-size:1.05rem; }
-      .intro-sub { font-size:0.95rem; }
-    }
-
-    footer { background:var(--dark); color:rgba(255,255,255,0.7); padding:40px 24px; text-align:center; }
-    footer p { font-size:0.88rem; margin-bottom:8px; }
-    footer .footer-links { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:16px; }
-    footer .footer-links a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.85rem; cursor:pointer; }
-    footer .footer-links a:hover { color:#fff; }
-
-    @media(max-width:768px){
-      .nav-links { display:none; }
-      .hamburger { display:flex; }
-      .mobile-menu.open { display:flex; }
-      .hero h1 { font-size:1.7rem; }
-      .about-grid,.story-grid,.contact-grid { grid-template-columns:1fr; }
-      .staircase-strip { grid-template-columns:1fr; }
-      .participate-grid { grid-template-columns:1fr; }
-      .roots-wrap,.circle-wrap { padding:36px 24px; }
-      .story-aside { position:static; }
-    }
-  </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
 <nav>
-  <a class="nav-logo" href="#home">
-    <img src="assets/logo-egxromo.svg" alt="Α Όπως Αγάπη" loading="lazy">
+  <a class="nav-logo" href="index.html">
+    <img src="assets/logo-egxromo.svg" alt="Α Όπως Αγάπη" width="40" height="40">
     <span>Α Όπως Αγάπη</span>
   </a>
   <div class="nav-links">
-    <a href="#about">Ποιοι Είμαστε</a>
-    <a href="#circle">Φιλοσοφία</a>
-    <a href="#story">Διαδρομή</a>
-    <a href="#board">ΔΣ</a>
-    <a href="#impact">Αντίκτυπος</a>
-    <a href="#news">Νέα</a>
-    <a href="#newsletter">Newsletter</a>
-    <a href="#transparency">Διαφάνεια</a>
-    <a href="#participate">Συμμετοχή</a>
-    <a href="#contact">Επικοινωνία</a>
-    <a href="#" class="btn-intro-nav" onclick="showIntro();return false;">🎬</a>
-    <a href="english.html" class="lang-switch">EN</a>
-    <a href="#" class="btn-donate-nav" onclick="document.getElementById('donateModal').classList.add('active');return false;">❤ ΔΩΡΕΑ</a>
+    <a href="index.html" class="active" aria-current="page">Ποιοι Είμαστε</a>
+    <a href="diadromi.html">Διαδρομή & ΔΣ</a>
+    <a href="nea.html">Νέα</a>
+    <a href="diafaneia.html">Διαφάνεια</a>
+    <a href="ethelontismos.html">Εθελοντισμός</a>
+    <a href="melos.html">Γίνε Μέλος</a>
+    <a href="epikoinonia.html">Επικοινωνία</a>
+    <button type="button" class="btn-intro-nav" onclick="showIntro()" aria-label="Δες το βίντεο-εισαγωγή" title="Δες το βίντεο-εισαγωγή">🎬</button>
+    <a href="english.html" class="lang-switch" hreflang="en">EN</a>
+    <a href="dorea.html" class="btn-donate-nav">❤ ΔΩΡΕΑ</a>
   </div>
-  <div class="hamburger" onclick="toggleMobile()">
+  <button type="button" class="hamburger" onclick="toggleMobile()" aria-label="Μενού">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="toggleMobile()">Ποιοι Είμαστε</a>
-  <a href="#circle" onclick="toggleMobile()">Φιλοσοφία</a>
-  <a href="#story" onclick="toggleMobile()">Διαδρομή</a>
-  <a href="#board" onclick="toggleMobile()">ΔΣ</a>
-  <a href="#impact" onclick="toggleMobile()">Αντίκτυπος</a>
-  <a href="#news" onclick="toggleMobile()">Νέα</a>
-  <a href="#newsletter" onclick="toggleMobile()">Newsletter</a>
-  <a href="#transparency" onclick="toggleMobile()">Διαφάνεια</a>
-  <a href="#participate" onclick="toggleMobile()">Συμμετοχή</a>
-  <a href="#contact" onclick="toggleMobile()">Επικοινωνία</a>
-  <a href="english.html">🌐 English</a>
-  <a href="#" class="btn-donate-nav" onclick="toggleMobile();document.getElementById('donateModal').classList.add('active');return false;">❤ ΔΩΡΕΑ</a>
+  <a href="index.html" class="active" aria-current="page">Ποιοι Είμαστε</a>
+  <a href="diadromi.html">Διαδρομή & ΔΣ</a>
+  <a href="nea.html">Νέα</a>
+  <a href="diafaneia.html">Διαφάνεια</a>
+  <a href="ethelontismos.html">Εθελοντισμός</a>
+  <a href="melos.html">Γίνε Μέλος</a>
+  <a href="epikoinonia.html">Επικοινωνία</a>
+  <a href="english.html" hreflang="en">🌐 English</a>
+  <a href="dorea.html" class="btn-donate-nav">❤ ΔΩΡΕΑ</a>
 </div>
 
+<main id="main">
 <section id="home" class="hero">
   <div class="hero-content">
-    <img src="assets/logo-egxromo.svg" alt="Α Όπως Αγάπη λογότυπο" loading="lazy">
+    <img src="assets/logo-egxromo.svg" alt="Α Όπως Αγάπη λογότυπο" fetchpriority="high" width="200" height="200">
     <h1>Α <span>Όπως</span> Αγάπη</h1>
     <p class="hero-motto">«Όλοι μαζί, κανένας μόνος. Όλοι διαφορετικοί, όλοι ίσοι.»</p>
     <p>Αστική Μη Κερδοσκοπική Εταιρεία για ευάλωτες κοινωνικές ομάδες — αδέσποτα ζώα, ΑμεΑ, μετανάστες, κωφούς, ηλικιωμένους, παιδιά. Δρούμε με αγάπη, συνέπεια και πράξεις, σε μια κυκλική κοινωνία ανταποδοτικότητας.</p>
     <div class="hero-btns">
-      <a href="#" class="btn-primary" onclick="document.getElementById('donateModal').classList.add('active');return false;">❤ Δωρεά</a>
+      <a href="dorea.html" class="btn-primary">❤ Δωρεά</a>
       <a href="#participate" class="btn-secondary">🤝 Γίνε Μέλος / Εθελοντής</a>
     </div>
     <div class="trust-strip">
@@ -356,12 +87,11 @@
       <span class="trust-chip">Μητρώο Κ.Α.Λ.Ο.</span>
       <span class="trust-chip">Μητρώο Φιλοζωικών</span>
       <span class="trust-chip">Επιτροπή ν. 4830/2021</span>
-      <a href="#transparency" class="trust-link">Τα στοιχεία μας →</a>
+      <a href="diafaneia.html" class="trust-link">Τα στοιχεία μας →</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="about-grid">
@@ -401,7 +131,6 @@
   </div>
 </section>
 
-<!-- PHILOSOPHY / CIRCLE -->
 <section id="circle">
   <div class="section-inner">
     <div class="circle-wrap">
@@ -427,161 +156,6 @@
   </div>
 </section>
 
-<!-- STORY -->
-<section id="story">
-  <div class="section-inner">
-    <h2 class="section-title">Η <span>Διαδρομή</span> μας</h2>
-    <p class="section-sub">Από τις άτυπες ομαδικές δράσεις του Σωτήρη Περάκη και τη χρόνια εθελοντική προσφορά των μελών μας, μέχρι τη θεσμοθέτηση της ΑΜΚΕ και το όραμα του Φάρου Αγάπης.</p>
-    <div class="story-grid">
-      <div class="story-aside">
-        <h3>Το πρότυπο που χτίζουμε</h3>
-        <p>Κάθε μάθημα Ελληνικών σε πρόσφυγα, κάθε επίσκεψη σε ΚΑΠΗ, κάθε βόλτα με σκύλο, κάθε νοηματική λέξη που μαθαίνεται — είναι ένα τούβλο του Φάρου Αγάπης που χτίζεται σιγά-σιγά.</p>
-      </div>
-      <div class="story-timeline">
-        <div class="story-step">
-          <h4>Πριν το 2018 · Οι Ρίζες</h4>
-          <h5>Άτυπη ομάδα «Α Όπως Αγάπη» – Σωτήρης Περάκης</h5>
-          <p>Η ομάδα γεννιέται με όραμα τη στήριξη ευάλωτων κοινωνικών ομάδων. Ο Σωτήρης Περάκης τη συντονίζει και αποτυπώνει το έργο της σε ομώνυμο βιβλίο.</p>
-        </div>
-        <div class="story-step">
-          <h4>Επί σειρά ετών · Κυριακάτικο Σχολείο Μεταναστών</h4>
-          <h5>Μαθήματα Ελληνικών σε πρόσφυγες & μετανάστες</h5>
-          <p>Ο Γεώργιος Γκόλιας διδάσκει εθελοντικά Ελληνικά σε χώρους γυμνασίων και λυκείων στην Αθήνα, μέσω του Κυριακάτικου Σχολείου Μεταναστών.</p>
-        </div>
-        <div class="story-step">
-          <h4>Παράλληλες δράσεις</h4>
-          <h5>ΚΑΠΗ & Παιδιά από δομές</h5>
-          <p>Επισκέψεις σε ΚΑΠΗ για ηλικιωμένους που βιώνουν εγκατάλειψη και μοναξιά. Οργανωμένες εκδρομές παιδιών από δομές και ορφανών σε λούνα παρκ — στιγμές χαράς για όσους τις χρειάζονται περισσότερο.</p>
-        </div>
-        <div class="story-step">
-          <h4>Μετάδραση · Εθελοντική Διδασκαλία</h4>
-          <h5>Μαθηματικά σε παιδιά μεταναστών</h5>
-          <p>Συμμετοχή ως εθελοντής στη Μετάδραση. Εκεί ξεκινά και κάτι ακόμα — η πρώτη επαφή με τον κόσμο των Κωφών.</p>
-        </div>
-        <div class="story-step">
-          <h4>Ένα νέο ταξίδι · Νοηματική Γλώσσα</h4>
-          <h5>Επάρκεια ΕΝΓ από τη Σχολή «Κράτυλος»</h5>
-          <p>Ο Γεώργιος ξεκινά την εκμάθηση Ελληνικής Νοηματικής Γλώσσας — έναν διαφορετικό, μαγευτικό κόσμο. Αποκτά επάρκεια ΕΝΓ. Ένας από τους καθηγητές του είναι ο <strong>Χρήστος Δαγρές</strong>, ιδρυτής της Σχολής ΕΝΓ «Κράτυλος» — σήμερα ταμίας και ισχυρό μέλος του ΔΣ της ΑΜΚΕ.</p>
-        </div>
-        <div class="story-step">
-          <h4>2018 · Δημοτικό Καταφύγιο Αθηναίων</h4>
-          <h5>Πρώτη εθελοντική παρουσία στα αδέσποτα</h5>
-          <p>Πρώτη παρουσία στο Δημοτικό Καταφύγιο Αδέσποτων Ζώων Αστικής Πανίδας του Δήμου Αθηναίων. Ξεκινά μια χρόνια συνεχής εθελοντική σχέση — που συνεχίζεται μέχρι σήμερα.</p>
-        </div>
-        <div class="story-step">
-          <h4>2019–2024 · Συνεχής Δράση</h4>
-          <h5>Προαυλισμοί, υιοθεσίες, παρουσιάσεις</h5>
-          <p>Ο Όρεο και η Ζωή — αδέσποτα από το Καταφύγιο — γίνονται οι «πρεσβευτές» που ταξιδεύουν σε σχολεία.</p>
-        </div>
-        <div class="story-step">
-          <h4>2023 · Θεσμοθέτηση</h4>
-          <h5>Ίδρυση της ΑΜΚΕ «Α Όπως Αγάπη»</h5>
-          <p>Όλες αυτές οι παράλληλες διαδρομές — Σωτήρης, μετανάστες, ηλικιωμένοι, παιδιά, κωφοί, ζώα — ενσαρκώνονται σε μία θεσμοθετημένη οντότητα. Η ομάδα ανθρώπων γίνεται ΑΜΚΕ.</p>
-        </div>
-        <div class="story-step">
-          <h4>Σεπτέμβριος 2025 · Πρωτοβουλία ΑΜΚΕ</h4>
-          <h5>Ανακαίνιση σιδερένιας σκάλας Καταφυγίου</h5>
-          <p>Με πρωτοβουλία της ΑΜΚΕ και εργασία του Mustafa Megis, μετανάστη και μέλους μας.</p>
-        </div>
-        <div class="story-step">
-          <h4>2025–2026 · Ευαισθητοποίηση</h4>
-          <h5>44 παρουσιάσεις σε σχολεία Αθήνας</h5>
-          <p>Από νηπιαγωγεία μέχρι λύκεια. 26 το 2025, 18 το 2026 (έως Απρίλιο).</p>
-        </div>
-        <div class="story-step">
-          <h4>2026 → · Το Όραμα</h4>
-          <h5>Ο Φάρος Αγάπης</h5>
-          <p>Δρομολόγηση συνεργασιών με φορείς, ιδρύματα και Δήμους για την υλοποίηση του Φάρου — όπου όλες οι ομάδες θα συναντιούνται.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOARD -->
-<section id="board">
-  <div class="section-inner">
-    <h2 class="section-title">Διοικητικό <span>Συμβούλιο</span></h2>
-    <p class="section-sub">Πέντε άνθρωποι με χρόνια προσφοράς, ο καθένας με τη δική του διαδρομή στις ευάλωτες ομάδες</p>
-    <div class="board-grid">
-      <div class="board-card">
-        <img src="assets/ds-georgios.jpg" alt="Γεώργιος Γκόλιας" loading="lazy">
-        <h4>Γεώργιος Γκόλιας</h4>
-        <p class="role">Πρόεδρος & Ιδρυτής</p>
-        <p>Εθελοντής 7+ ετών στο Δημοτικό Καταφύγιο Αδέσποτων Ζώων του Δήμου Αθηναίων. Διδασκαλία Ελληνικών σε πρόσφυγες & μετανάστες με το Κυριακάτικο Σχολείο, μαθηματικά μέσω Μετάδρασης, επάρκεια στην Ελληνική Νοηματική Γλώσσα. Συντονιστής δράσεων ευαισθητοποίησης σε σχολεία, ιδρυτής και πρόεδρος της ΑΜΚΕ.</p>
-      </div>
-      <div class="board-card">
-        <img src="assets/ds-athanasios.jpg" alt="Αθανάσιος Τέτορος" loading="lazy">
-        <h4>Αθανάσιος Τετώρος</h4>
-        <p class="role">Αντιπρόεδρος</p>
-        <p>Συνιδρυτής και αντιπρόεδρος της ΑΜΚΕ. Υποστηρίζει τον στρατηγικό σχεδιασμό, τις θεσμικές συνεργασίες και την εξέλιξη του οράματος του Φάρου Αγάπης.</p>
-      </div>
-      <div class="board-card">
-        <img src="assets/ds-dimitra.jpg" alt="Δήμητρα Λεξουρίτη" loading="lazy">
-        <h4>Δήμητρα Λεχουρίτη</h4>
-        <p class="role">Γραμματέας</p>
-        <p>Διαχειρίζεται τη διοικητική λειτουργία, τις επικοινωνίες και την οργάνωση των δράσεων της ΑΜΚΕ. Σημαντική γέφυρα μεταξύ των μελών και των συνεργαζόμενων φορέων.</p>
-      </div>
-      <div class="board-card">
-        <img src="assets/ds-christos.jpg" alt="Χρήστος Δαγρές" loading="lazy">
-        <h4>Χρήστος Δαγρές</h4>
-        <p class="role">Ταμίας</p>
-        <p>Ιδρυτής της Σχολής Ελληνικής Νοηματικής Γλώσσας «Κράτυλος» και ζωντανή γέφυρα της ΑΜΚΕ με την κωφή κοινότητα. Διαχειρίζεται τα οικονομικά της ΑΜΚΕ με πλήρη διαφάνεια. Συνέβαλε αποφασιστικά στο νέο ταξίδι του ιδρυτή στον κόσμο της νοηματικής.</p>
-        <span class="board-badge">🤟 Ιδρυτής Σχολής ΕΝΓ Κράτυλος</span>
-      </div>
-      <div class="board-card">
-        <img src="assets/ds-lazaros.jpg" alt="Λάζαρος Γκόλιας" loading="lazy">
-        <h4>Λάζαρος Γκόλιας</h4>
-        <p class="role">Μέλος ΔΣ</p>
-        <p>Συμβάλλει ενεργά στις δράσεις και τις πρωτοβουλίες της ΑΜΚΕ, με συνεχή υποστήριξη στις καθημερινές ανάγκες και την υλοποίηση του οράματος.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRANSPARENCY -->
-<section id="transparency">
-  <div class="section-inner">
-    <h2 class="section-title">Διαφάνεια & <span>Θεσμική Λειτουργία</span></h2>
-    <p class="section-sub">Όποιος μας εμπιστεύεται τον χρόνο ή τη δωρεά του έχει δικαίωμα να ξέρει ποιοι είμαστε. Γι' αυτό παραθέτουμε τις επίσημες εγγραφές μας, ώστε να μπορεί ο καθένας να τις ελέγξει.</p>
-    <div class="trust-grid">
-      <div class="trust-card">
-        <h4>⚖️ Νομική υπόσταση</h4>
-        <p>Αστική Μη Κερδοσκοπική Εταιρεία, με έτος ίδρυσης 2023. Καταχωρισμένη στα βιβλία εταιρειών του Πρωτοδικείου Αθηνών και στο ΓΕΜΗ.</p>
-        <span class="trust-no">Πρωτοδικείο Αθηνών Α.Μ. 489887 · ΓΕΜΗ 192124501000 · ΑΦΜ 996560907</span>
-      </div>
-      <div class="trust-card">
-        <h4>🏛️ Κοινωφελής Φορέας</h4>
-        <p>Καταχωρισμένη στη Δημόσια Βάση Δεδομένων Ο.Κοι.Π. και Κοινωφελών Φορέων του Υπουργείου Εσωτερικών.</p>
-        <span class="trust-no">Καταχώριση 31/03/2026</span>
-      </div>
-      <div class="trust-card">
-        <h4>🤝 Φορέας Κοινωνικής & Αλληλέγγυας Οικονομίας</h4>
-        <p>Εγγεγραμμένη στο Γενικό Μητρώο Φορέων Κ.Α.Λ.Ο. (ν. 4430/2016) του Υπουργείου Κοινωνικής Συνοχής και Οικογένειας.</p>
-        <span class="trust-no">Α.Γε.Μ.Κ.Ο. 000305512011</span>
-      </div>
-      <div class="trust-card">
-        <h4>🐾 Φιλοζωική Οργάνωση</h4>
-        <p>Εγγεγραμμένη στο Υπομητρώο Φιλοζωικών Σωματείων και Οργανώσεων του Εθνικού Μητρώου Ζώων Συντροφιάς (ν. 4830/2021).</p>
-        <span class="trust-no">Κωδικός 5341</span>
-      </div>
-      <div class="trust-card">
-        <h4>🏘️ Θεσμική συμμετοχή</h4>
-        <p>Μέλος της Επιτροπής Παρακολούθησης του Προγράμματος Διαχείρισης Αδέσποτων Ζώων Συντροφιάς του Δήμου Τριφυλίας (άρθρο 10 ν. 4830/2021).</p>
-        <span class="trust-no">Απόφαση Δημάρχου, αρ. πρωτ. 15909/19-10-2026</span>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:36px;">
-      <a href="assets/documents/katastatiko.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:var(--orange);color:#fff;padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1.05rem;box-shadow:0 8px 24px rgba(232,119,34,0.4);transition:transform 0.2s;">
-        📄 Κατέβασε το Καταστατικό (PDF)
-      </a>
-      <p style="margin-top:14px;font-size:0.85rem;opacity:0.7;">Κωδικοποιημένο καταστατικό · Τελευταία τροποποίηση 20/03/2026 · Επίσημα δημοσιευμένο στο ΓΕΜΗ</p>
-    </div>
-    <p class="trust-note">Τα σχετικά πιστοποιητικά διατίθενται κατόπιν αιτήματος στο info@aoposagapi.org · Η γνησιότητα των στοιχείων ΓΕΜΗ μπορεί να επιβεβαιωθεί στο <a href="https://www.businessregistry.gr/publicity.aspx" target="_blank" rel="noopener" style="color:var(--orange);">businessregistry.gr</a></p>
-  </div>
-</section>
-
-<!-- IMPACT -->
 <section id="impact">
   <div class="section-inner">
     <h2 class="section-title">Ο <span>Αντίκτυπός</span> μας</h2>
@@ -621,297 +195,6 @@
   </div>
 </section>
 
-<!-- NEWS -->
-<section id="news">
-  <div class="section-inner">
-    <h2 class="section-title">Νέα & <span>Δράσεις</span></h2>
-    <p class="section-sub">Ο ιδρυτής της ΑΜΚΕ συμμετέχει ως εθελοντής στο Δημοτικό Καταφύγιο Δήμου Αθηναίων — και αυτή η εμπειρία τροφοδοτεί το όραμά μας.</p>
-
-<!-- ΦΕΣΤΙΒΑΛ ΕΘΕΛΟΝΤΙΣΜΟΥ 2026 — carousel -->
-<style>
-  .fv-card{background:var(--card-bg,#fff);border-radius:16px;overflow:hidden;box-shadow:var(--shadow,0 4px 20px rgba(0,0,0,.08));margin-bottom:28px}
-  .fv-car{position:relative;background:#22352a;aspect-ratio:4/3;max-height:560px;width:100%;overflow:hidden;touch-action:pan-y}
-  .fv-track{display:flex;height:100%;transition:transform .5s ease}
-  .fv-slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden}
-  .fv-bg{position:absolute;inset:-30px;background-size:cover;background-position:center;filter:blur(24px) brightness(.55)}
-  .fv-slide img{position:relative;display:block;width:100%;height:100%;object-fit:contain}
-  .fv-cap{position:absolute;left:0;right:0;bottom:0;padding:28px 20px 40px;color:#fff;font-size:.92rem;line-height:1.45;background:linear-gradient(transparent,rgba(0,0,0,.72));text-align:center}
-  .fv-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:#1a1a2e;font-size:1.5rem;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:2}
-  .fv-btn:hover{background:#fff}
-  .fv-prev{left:12px}.fv-next{right:12px}
-  .fv-dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:7px;z-index:2}
-  .fv-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.5);cursor:pointer}
-  .fv-dots button.on{background:var(--orange,#e87722);width:22px;border-radius:5px}
-  .fv-body{padding:24px 28px 28px}
-  .fv-body h3{font-size:1.25rem;font-weight:800;color:var(--dark,#1a1a2e);margin:0 0 12px;line-height:1.35}
-  .fv-body p{font-size:.95rem;color:#444;line-height:1.7;margin:0 0 12px}
-  .fv-date{font-size:.78rem;color:var(--orange,#e87722);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
-  .fv-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-  .fv-links a{display:inline-block;padding:11px 20px;border-radius:30px;font-weight:700;font-size:.9rem;text-decoration:none}
-  .fv-cta{background:var(--orange,#e87722);color:#fff}
-  .fv-sec{border:2px solid var(--orange,#e87722);color:var(--orange,#e87722)}
-  @media (max-width:600px){.fv-car{aspect-ratio:4/5}.fv-body{padding:20px}.fv-btn{width:38px;height:38px;font-size:1.25rem}.fv-cap{font-size:.84rem}}
-</style>
-<div class="fv-card">
-  <div class="fv-car">
-    <div class="fv-track">
-      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-01-minnos-booth.jpg')"></div><img src="assets/gallery/fv-01-minnos-booth.jpg" alt="Φωτογραφία από το 1ο Φεστιβάλ Εθελοντισμού – Ο Minnoş «φυλάει» το περίπτερό μας — δώσε αγάπη, πάρε φως" loading="lazy"><div class="fv-cap">Ο Minnoş «φυλάει» το περίπτερό μας — δώσε αγάπη, πάρε φως</div></div>
-      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-02-hall.jpg')"></div><img src="assets/gallery/fv-02-hall.jpg" alt="Φωτογραφία από το 1ο Φεστιβάλ Εθελοντισμού – Το 1ο Φεστιβάλ Εθελοντισμού της Περιφέρειας Αττικής, στο Κλειστό Tae Kwon Do στο Φάληρο" loading="lazy"><div class="fv-cap">Το 1ο Φεστιβάλ Εθελοντισμού της Περιφέρειας Αττικής, στο Κλειστό Tae Kwon Do στο Φάληρο</div></div>
-      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-03-visitors.jpg')"></div><img src="assets/gallery/fv-03-visitors.jpg" alt="Φωτογραφία από το 1ο Φεστιβάλ Εθελοντισμού – Επισκέπτες, σκύλοι και πολλή κουβέντα για τα αδέσποτα" loading="lazy"><div class="fv-cap">Επισκέπτες, σκύλοι και πολλή κουβέντα για τα αδέσποτα</div></div>
-      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-04-hug.jpg')"></div><img src="assets/gallery/fv-04-hug.jpg" alt="Φωτογραφία από το 1ο Φεστιβάλ Εθελοντισμού – Μια αγκαλιά που τα λέει όλα" loading="lazy"><div class="fv-cap">Μια αγκαλιά που τα λέει όλα</div></div>
-      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-05-joy.jpg')"></div><img src="assets/gallery/fv-05-joy.jpg" alt="Φωτογραφία από το 1ο Φεστιβάλ Εθελοντισμού – Η σύνδεση ανθρώπου και ζώου δεν χρειάζεται λόγια" loading="lazy"><div class="fv-cap">Η σύνδεση ανθρώπου και ζώου δεν χρειάζεται λόγια</div></div>
-      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-06-cuddle.jpg')"></div><img src="assets/gallery/fv-06-cuddle.jpg" alt="Φωτογραφία από το 1ο Φεστιβάλ Εθελοντισμού – Ο Minnoş βρήκε τη θέση του…" loading="lazy"><div class="fv-cap">Ο Minnoş βρήκε τη θέση του…</div></div>
-      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-07-friends.jpg')"></div><img src="assets/gallery/fv-07-friends.jpg" alt="Φωτογραφία από το 1ο Φεστιβάλ Εθελοντισμού – Φίλοι και συνεργάτες πέρασαν από το περίπτερο" loading="lazy"><div class="fv-cap">Φίλοι και συνεργάτες πέρασαν από το περίπτερο</div></div>
-      <div class="fv-slide"><div class="fv-bg" style="background-image:url('assets/gallery/fv-08-crowd.jpg')"></div><img src="assets/gallery/fv-08-crowd.jpg" alt="Φωτογραφία από το 1ο Φεστιβάλ Εθελοντισμού – Δεκάδες φορείς και εκατοντάδες επισκέπτες" loading="lazy"><div class="fv-cap">Δεκάδες φορείς και εκατοντάδες επισκέπτες</div></div>
-    </div>
-    <button class="fv-btn fv-prev" aria-label="Προηγούμενη">&#8249;</button>
-    <button class="fv-btn fv-next" aria-label="Επόμενη">&#8250;</button>
-    <div class="fv-dots"></div>
-  </div>
-  <div class="fv-body">
-    <div class="fv-date">Σάββατο 24 Οκτωβρίου 2026 · Κλειστό Tae Kwon Do, Φάληρο</div>
-    <h3>Ήμασταν στο 1ο Φεστιβάλ Εθελοντισμού της Περιφέρειας Αττικής</h3>
-      <p>Με δικό μας περίπτερο, από τις 11 το πρωί έως τις 5 το απόγευμα, μιλήσαμε με δεκάδες επισκέπτες για τους τρεις πυλώνες της δράσης μας: τη φροντίδα των αδέσποτων, την ένταξη των μεταναστών και τη στήριξη των ατόμων με αναπηρία. Μοιράσαμε κάρτες, εξηγήσαμε τους στόχους μας — και οι σοκοφρέτες έκαναν θραύση!</p>
-      <p>Τον πρώτο ρόλο όμως τον έκλεψε ο Minnoş. Οι πιο συγκινητικές στιγμές της ημέρας ήταν οι αγκαλιές του με συμπολίτες μας με αναπηρία — μια υπενθύμιση ότι η σύνδεση ανθρώπου και ζώου ανοίγει καρδιές χωρίς να χρειάζονται λόγια.</p>
-      <p>Ευχαριστούμε θερμά τον Χρήστο από το Καταφύγιο και τον Τζαν που μας κράτησαν παρέα όλη μέρα, την Περιφέρεια Αττικής για την πρωτοβουλία, και όλους όσοι πέρασαν από το περίπτερό μας.</p>
-    <div class="fv-links">
-      <a class="fv-cta" href="https://forms.gle/q3dnbaDUQDnMTtkx8" target="_blank" rel="noopener">Γίνε εθελοντής</a>
-      <a class="fv-sec" href="https://www.patt.gov.gr/6-%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%83%CE%B7/6-1-%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%83%CE%B7-%CE%B3%CF%81%CE%B1%CF%86%CE%B5%CE%AF%CE%BF-%CF%84%CF%8D%CF%80%CE%BF%CF%85/dt-perifereiaw-attikhw/nikos-chardalias-apo-to-1o-festival-ethelontismou-tis-perifereias-attikis-ergazomaste-systimatika-gia-mia-attiki-anthropias-kai-allilengyis-opou-kaneis-den-perissevei-kai-kaneis-den-menei-mono/" target="_blank" rel="noopener">Η ανακοίνωση της Περιφέρειας</a>
-    </div>
-  </div>
-</div>
-<script>
-document.querySelectorAll('.fv-car').forEach(function(c){
-  if(c.dataset.fv)return;c.dataset.fv=1;
-  var t=c.querySelector('.fv-track'),n=t.children.length,i=0,d=c.querySelector('.fv-dots'),timer;
-  for(var k=0;k<n;k++){var b=document.createElement('button');b.setAttribute('aria-label',(k+1)+' / '+n);b.onclick=(function(k){return function(){go(k);rest()}})(k);d.appendChild(b)}
-  function go(k){i=(k+n)%n;t.style.transform='translateX('+(-100*i)+'%)';[].forEach.call(d.children,function(b,j){b.className=j===i?'on':''})}
-  function rest(){clearInterval(timer);timer=setInterval(function(){go(i+1)},5500)}
-  c.querySelector('.fv-prev').onclick=function(){go(i-1);rest()};
-  c.querySelector('.fv-next').onclick=function(){go(i+1);rest()};
-  var x0=null;c.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
-  c.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));rest()}x0=null});
-  c.addEventListener('mouseenter',function(){clearInterval(timer)});c.addEventListener('mouseleave',rest);
-  go(0);rest();
-});
-</script>
-<!-- /ΦΕΣΤΙΒΑΛ ΕΘΕΛΟΝΤΙΣΜΟΥ 2026 -->
-
-
-    <div class="news-card" style="margin-bottom:28px;">
-      <div class="news-card-body">
-        <div class="news-date">Σεπτέμβριος 2025</div>
-        <h3>Ανακαίνιση σιδερένιας σκάλας — Πρωτοβουλία ΑΜΚΕ</h3>
-        <p>Με πρωτοβουλία του ιδρυτή της ΑΜΚΕ και εθελοντική εργασία του Mustafa Megis — μέλους της ΑΜΚΕ και μετανάστη από Τουρκία που εντάσσεται στην ελληνική κοινωνία — ανακαινίστηκε η φθαρμένη σιδερένια σκάλα του Καταφυγίου. Ζωντανή απόδειξη ότι η ένταξη γίνεται με πράξεις.</p>
-      </div>
-      <div style="padding:0 24px 24px;">
-        <div class="staircase-strip">
-          <div class="staircase-item">
-            <img src="assets/gallery/n15-staircase-before.jpg" alt="Σκάλα πριν" loading="lazy">
-            <div class="staircase-label">ΠΡΙΝ</div>
-          </div>
-          <div class="staircase-item">
-            <img src="assets/gallery/n16-staircase-during.jpg" alt="Ο Mustafa εργάζεται" loading="lazy">
-            <div class="staircase-label">ΚΑΤΑ ΤΗΝ ΕΡΓΑΣΙΑ</div>
-          </div>
-          <div class="staircase-item">
-            <img src="assets/gallery/n17-staircase-after.jpg" alt="Σκάλα μετά" loading="lazy">
-            <div class="staircase-label">ΜΕΤΑ</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="news-grid">
-      <div class="news-card">
-        <img src="assets/gallery/n02-school-kindergarten.jpg" alt="Παρουσίαση νηπιαγωγείο" loading="lazy">
-        <div class="news-card-body">
-          <div class="news-date">2025–2026 | 44 Παρουσιάσεις</div>
-          <h3>Ευαισθητοποίηση σε σχολεία — ο Όρεο ανοίγει καρδιές</h3>
-          <p>Ο Γεώργιος με τον Όρεο — υδροκέφαλο επιληπτικό σκύλο που υιοθέτησε από το Καταφύγιο — επισκέπτεται νηπιαγωγεία, δημοτικά και γυμνάσια.</p>
-        </div>
-      </div>
-
-      <div class="news-card">
-        <img src="assets/gallery/n03-official-meeting.jpg" alt="Συνάντηση φορέων" loading="lazy">
-        <div class="news-card-body">
-          <div class="news-date">Θεσμικές Συνεργασίες</div>
-          <h3>Συναντήσεις με Δήμαρχο Αθηναίων & Αντιδήμαρχο Ζωοφιλίας</h3>
-          <p>Επίσκεψη εθελοντών στο Δημαρχείο Αθηνών για τα προβλήματα λειτουργίας του Καταφυγίου, και συνεργασία με την Πανελλήνια Ομοσπονδία «Νέμεσις».</p>
-        </div>
-      </div>
-
-      <div class="news-card">
-        <img src="assets/gallery/n07-school-visit-shelter.jpg" alt="Επίσκεψη σχολείου στο καταφύγιο" loading="lazy">
-        <div class="news-card-body">
-          <div class="news-date">Συνεχής Δράση</div>
-          <h3>Σχολεία επισκέπτονται το Καταφύγιο</h3>
-          <p>Μαθητές και καθηγητές από δημοτικά και νυχτερινά σχολεία έρχονται στο Καταφύγιο για βιωματική εμπειρία. «Αγαπάμε αδέσποτα — Υιοθετούμε υπεύθυνα!»</p>
-        </div>
-      </div>
-
-      <div class="news-card">
-        <img src="assets/gallery/n05-mustafa-festival.jpg" alt="Mustafa στο φεστιβάλ" loading="lazy">
-        <div class="news-card-body">
-          <div class="news-date">Η Ιστορία του Mustafa</div>
-          <h3>Από μετανάστης εθελοντής — ο Mustafa Megis</h3>
-          <p>Εγγεγραμμένο μέλος της ΑΜΚΕ από Τουρκία — ανακαίνισε τη σκάλα του Καταφυγίου, συμμετέχει σε φεστιβάλ. Ζωντανό παράδειγμα ένταξης μέσα από πράξεις.</p>
-        </div>
-      </div>
-
-      <div class="news-card">
-        <img src="assets/gallery/n01-adoption-siblings.jpg" alt="Υιοθεσία αδερφών κουταβιών" loading="lazy">
-        <div class="news-card-body">
-          <div class="news-date">Συνεχείς Υιοθεσίες</div>
-          <h3>Δεκάδες σκύλοι βρήκαν σπίτι</h3>
-          <p>Υιοθεσία δύο αδερφών κουταβιών από οικογένεια αλλοδαπών στην Ελλάδα. Κάθε νέο σπίτι είναι μια νίκη.</p>
-        </div>
-      </div>
-
-      <div class="news-card">
-        <img src="assets/gallery/n06-school-drawings.jpg" alt="Ζωγραφιές παιδιών" loading="lazy">
-        <div class="news-card-body">
-          <div class="news-date">Δημοτικό Σχολείο Αθήνας</div>
-          <h3>«Αγαπάμε τα ζωάκια και δεν τους κάνουμε ποτέ κακό»</h3>
-          <p>Παιδιά δημοτικού χάρισαν τις ζωγραφιές τους στην ΑΜΚΕ μετά από παρουσίαση — με θέμα «Αγαπώ τα Ζώα».</p>
-        </div>
-      </div>
-    </div>
-
-    <h3 style="text-align:center;margin:32px 0 16px;font-size:1.2rem;color:var(--dark);">Φωτογραφίες από τις Δράσεις</h3>
-    <div class="photo-gallery">
-      <img src="assets/gallery/n11-hearts-socrates.jpg" alt="Παιδιά και Σωκράτης" loading="lazy">
-      <img src="assets/gallery/n12-adoption-adoption.jpg" alt="Υιοθεσία" loading="lazy">
-      <img src="assets/gallery/n08-adoption-family.jpg" alt="Υιοθεσία οικογένειας" loading="lazy">
-      <img src="assets/gallery/n09-city-hall-visit.jpg" alt="Δημαρχείο Αθηνών" loading="lazy">
-      <img src="assets/gallery/n10-volunteer-team.jpg" alt="Ομάδα εθελοντών" loading="lazy">
-      <img src="assets/gallery/n13-school-drawings-gift.jpg" alt="Ζωγραφιές δώρο" loading="lazy">
-      <img src="assets/gallery/n04-shelter-nightschool.jpg" alt="Νυχτερινό σχολείο" loading="lazy">
-      <img src="assets/gallery/n14-hearts-mural.jpg" alt="Καρδιές τοιχογραφία" loading="lazy">
-      <img src="assets/gallery/n15-staircase-before.jpg" alt="Σκάλα πριν" loading="lazy">
-      <img src="assets/gallery/n16-staircase-during.jpg" alt="Mustafa εργασία" loading="lazy">
-      <img src="assets/gallery/n17-staircase-after.jpg" alt="Σκάλα μετά" loading="lazy">
-    </div>
-
-    <!-- PAST -->
-    <h3 style="text-align:center;margin:48px 0 24px;font-size:1.4rem;color:var(--dark);">Παλαιότερες Δράσεις της Ομάδας</h3>
-    <div class="past-grid">
-      <div class="past-card">
-        <h3>📚 Κυριακάτικο Σχολείο Μεταναστών</h3>
-        <p>Επί σειρά ετών, μαθήματα Ελληνικών σε πρόσφυγες και μετανάστες σε χώρους γυμνασίων και λυκείων Αθήνας.</p>
-      </div>
-      <div class="past-card">
-        <h3>👴 Δράσεις σε ΚΑΠΗ</h3>
-        <p>Επισκέψεις σε ΚΑΠΗ για ηλικιωμένους που βιώνουν εγκατάλειψη και μοναξιά — λίγη συντροφιά κάνει τη διαφορά.</p>
-      </div>
-      <div class="past-card">
-        <h3>🎢 Παιδιά από δομές σε λούνα παρκ</h3>
-        <p>Οργανωμένες εκδρομές παιδιών από δομές και ορφανών σε λούνα παρκ — στιγμές χαράς και ανέμελου παιχνιδιού.</p>
-      </div>
-      <div class="past-card">
-        <h3>📐 Μετάδραση — Μαθηματικά</h3>
-        <p>Εθελοντική διδασκαλία μαθηματικών σε παιδιά μεταναστών μέσω της Μετάδρασης. Εκεί ξεκίνησε και η επαφή με τους Κωφούς.</p>
-      </div>
-      <div class="past-card">
-        <h3>🤟 Νοηματική Γλώσσα</h3>
-        <p>Εκμάθηση Ελληνικής Νοηματικής Γλώσσας στη Σχολή «Κράτυλος» — η αρχή μιας νέας γέφυρας με την κωφή κοινότητα.</p>
-      </div>
-      <div class="past-card">
-        <h3>🎭 Θεατρική «Μαύρος Πίνακας» & Φεστιβάλ</h3>
-        <p>Συμμετοχή σε θεατρική παράσταση με κοινωνικό μήνυμα και στο φεστιβάλ «Κατοικίδια εν Δράσει» υπό την αιγίδα Δήμου Αθηναίων.</p>
-      </div>
-    </div>
-  
-    <!-- NEWSLETTER -->
-<style>
-  #newsletter{scroll-margin-top:96px;margin-top:56px}
-  .nl-wrap{background:#3D5E40;border-radius:20px;color:#fff;padding:40px 36px;display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;box-shadow:var(--shadow,0 4px 20px rgba(0,0,0,.08))}
-  .nl-cover{display:block;position:relative;aspect-ratio:1/1.414;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.35);transform:rotate(-2deg);transition:transform .25s;text-decoration:none}
-  .nl-cover:hover{transform:rotate(0) scale(1.03)}
-  .nl-cover img{width:100%;height:100%;object-fit:cover;display:block}
-  .nl-fallback{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:#fff;color:#3D5E40}
-  .nl-fallback b{font-size:1.1rem;letter-spacing:1px}.nl-fallback span{font-size:2rem;font-weight:800;color:#FB5B1D;margin-top:8px}
-  .nl-cover.noimg img{display:none}.nl-cover.noimg .nl-fallback{display:flex}
-  .nl-kicker{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ffb38f;margin-bottom:10px}
-  .nl-wrap h3{font-size:2rem;font-weight:800;line-height:1.15;margin:0 0 6px;color:#fff}
-  .nl-wrap h3 em{font-style:normal;color:#FB5B1D;background:#fff;padding:0 8px;border-radius:6px}
-  .nl-sub{font-size:.95rem;opacity:.85;margin:0 0 18px}
-  .nl-issue{font-size:1rem;font-weight:700;margin:0 0 8px}
-  .nl-wrap p.nl-text{font-size:.95rem;line-height:1.7;opacity:.95;margin:0 0 22px}
-  .nl-btns{display:flex;flex-wrap:wrap;gap:12px}
-  .nl-btns a{display:inline-block;padding:12px 22px;border-radius:30px;font-weight:700;font-size:.92rem;text-decoration:none}
-  .nl-read{background:#FB5B1D;color:#fff}.nl-read:hover{background:#e04a10}
-  .nl-sign{border:2px solid #fff;color:#fff}.nl-sign:hover{background:#fff;color:#3D5E40}
-  .nl-archive{margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.25);font-size:.85rem;opacity:.85}
-  .nl-archive a{color:#fff;font-weight:700}
-  .nav-links a,.nav-logo span{white-space:nowrap}
-  @media (max-width:1360px){.nav-links{gap:2px}.nav-links a{padding:6px 6px;font-size:.8rem}}
-  @media (max-width:1180px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}}
-  .nl-form{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25)}
-  .nl-form label.t{display:block;font-weight:700;font-size:.95rem;margin-bottom:10px}
-  .nl-row{display:flex;flex-wrap:wrap;gap:10px}
-  .nl-row input[type=text],.nl-row input[type=email]{flex:1 1 170px;min-width:0;padding:12px 16px;border-radius:30px;border:0;font:inherit;font-size:.92rem;color:#1a1a2e}
-  .nl-row button{padding:12px 24px;border-radius:30px;border:0;background:#FB5B1D;color:#fff;font:inherit;font-weight:700;font-size:.92rem;cursor:pointer}
-  .nl-row button:hover{background:#e04a10}
-  .nl-consent{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.8rem;opacity:.9;line-height:1.45;text-align:left}
-  .nl-consent input{margin-top:3px;flex:none}
-  .nl-err{margin-top:8px;font-size:.85rem;font-weight:700;color:#ffd2bf;min-height:1em}
-  .nl-thanks{display:none;margin-top:22px;padding:14px 18px;border-radius:12px;background:#fff;color:#3D5E40;font-weight:700}
-  #newsletter.ok .nl-thanks{display:block}#newsletter.ok .nl-form{display:none}
-  @media (max-width:720px){.nl-wrap{grid-template-columns:1fr;padding:28px 20px;gap:24px;text-align:center}.nl-cover{width:200px;margin:0 auto}.nl-btns,.nl-row{justify-content:center}.nl-wrap h3{font-size:1.6rem}}
-</style>
-    <div id="newsletter">
-      <div class="nl-wrap">
-        <a class="nl-cover" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener" aria-label="Διάβασε το τεύχος">
-          <img src="https://cdnm.heyzine.com/files/uploaded/bf983d5d1c33051767ece3cf67c47aeb854e6465.pdf-thumb.jpg" alt="Εξώφυλλο newsletter ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ… ΣΥΝΑΝΤΩ, τεύχος 01" loading="lazy" onerror="this.parentNode.classList.add('noimg')">
-          <div class="nl-fallback"><b>ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ…</b><span>ΣΥΝΑΝΤΩ</span><small style="margin-top:10px">Τεύχος 01 · Νοέμβριος 2026</small></div>
-        </a>
-        <div>
-          <div class="nl-kicker">Newsletter</div>
-          <h3>ΑΓΑΠΩ ΣΗΜΑΙΝΕΙ… <em>ΣΥΝΑΝΤΩ</em></h3>
-          <p class="nl-sub">Το μηνιαίο γράμμα του Α Όπως Αγάπη — κάθε μήνα, ένα ρήμα της αγάπης.</p>
-          <p class="nl-issue">Τεύχος 01 · Νοέμβριος 2026</p>
-          <p class="nl-text">Ζώα και άνθρωποι που συναντιούνται και θεραπεύουν ο ένας τον άλλον. Στο πρώτο τεύχος: η βόλτα υιοθεσίας στη Δημοτική Αγορά Κυψέλης, η νέα σκάλα του Καταφυγίου από τον εθελοντή μας Mustafa, τι δείχνει η έρευνα για τη δύναμη μιας μέρας έξω για έναν σκύλο του καταφυγίου — και πώς μπορείς να γίνεις κι εσύ μέρος της ιστορίας.</p>
-          <div class="nl-btns">
-            <a class="nl-read" href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">📖 Διάβασε το τεύχος</a>
-          </div>
-          <div class="nl-archive">Αρχείο τευχών: <a href="https://heyzine.com/flip-book/bf983d5d1c.html" target="_blank" rel="noopener">01 · ΣΥΝΑΝΤΩ</a></div>
-          <form class="nl-form" id="nlForm" action="https://docs.google.com/forms/d/e/1FAIpQLScdTjiBY2t2ztjAVoD5k5PFioy-sVVsioPmHTt43vlp3AGjpA/formResponse" method="POST" target="nl_hidden" novalidate>
-            <label class="t">✉ Θέλω να λαμβάνω το newsletter</label>
-            <input type="hidden" name="entry.1148654699" value="Ελληνικά">
-            <input type="hidden" name="entry.1127898672" value="">
-            <div class="nl-row">
-              <input type="text" name="entry.1192506440" placeholder="Ονοματεπώνυμο" autocomplete="name" maxlength="120">
-              <input type="email" name="entry.1967585507" placeholder="Email" autocomplete="email" maxlength="160">
-              <button type="submit">Εγγραφή</button>
-            </div>
-            <label class="nl-consent"><input type="checkbox" id="nlConsent"> <span>Συμφωνώ να λαμβάνω το μηνιαίο newsletter της Α Όπως Αγάπη στο email μου. Μπορώ να διαγραφώ όποτε θέλω, απαντώντας «ΔΙΑΓΡΑΦΗ».</span></label>
-            <div class="nl-err" id="nlErr" role="alert"></div>
-          </form>
-          <iframe name="nl_hidden" id="nl_hidden" title="newsletter" style="display:none" aria-hidden="true"></iframe>
-          <div class="nl-thanks">💚 Ευχαριστούμε! Η εγγραφή σου καταχωρίστηκε — το επόμενο τεύχος θα έρθει στο email σου.</div>
-        </div>
-      </div>
-    </div>
-    <!-- /NEWSLETTER -->
-<script>(function(){
-  var f=document.getElementById('nlForm'); if(!f) return;
-  var err=document.getElementById('nlErr'), sent=false;
-  f.addEventListener('submit',function(e){
-    var n=f.elements['entry.1192506440'].value.trim(), m=f.elements['entry.1967585507'].value.trim(), c=document.getElementById('nlConsent');
-    if(!n || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){ e.preventDefault(); err.textContent='Συμπλήρωσε ονοματεπώνυμο και ένα σωστό email.'; return; }
-    if(!c.checked){ e.preventDefault(); err.textContent='Παρακαλώ επιβεβαίωσε τη συγκατάθεση για να ολοκληρωθεί η εγγραφή.'; c.focus(); return; }
-    err.textContent=''; f.elements['entry.1127898672'].value='Ναι — '+new Date().toISOString().slice(0,16).replace('T',' ');
-    sent=true;
-  });
-  document.getElementById('nl_hidden').addEventListener('load',function(){
-    if(sent){ document.getElementById('newsletter').classList.add('ok'); sent=false; }
-  });
-})();</script>
-</div>
-</section>
-
-<!-- PARTICIPATE: 3 tiers -->
 <section id="participate">
   <div class="section-inner">
     <h2 class="section-title">Πώς να <span>Συμμετέχεις</span></h2>
@@ -933,7 +216,7 @@ document.querySelectorAll('.fv-car').forEach(function(c){
           <li>Newsletter με ιστορίες & ενημερώσεις</li>
           <li>Συμμετοχή στη Γενική Συνέλευση</li>
         </ul>
-        <a href="#" class="btn-card" onclick="document.getElementById('memberModal').classList.add('active');return false;">Γίνε Μέλος</a>
+        <a href="melos.html" class="btn-card">Γίνε Μέλος</a>
       </div>
 
       <!-- VOLUNTEER -->
@@ -949,7 +232,7 @@ document.querySelectorAll('.fv-car').forEach(function(c){
           <li>Δράσεις σε ΚΑΠΗ & δομές</li>
           <li>Διοικητική υποστήριξη</li>
         </ul>
-        <a href="#" class="btn-card" onclick="document.getElementById('volunteerModal').classList.add('active');return false;">Γίνε Εθελοντής</a>
+        <a href="ethelontismos.html" class="btn-card">Γίνε Εθελοντής</a>
       </div>
 
       <!-- DONATE -->
@@ -965,59 +248,19 @@ document.querySelectorAll('.fv-car').forEach(function(c){
           <li>Στήριξη του Φάρου Αγάπης</li>
           <li>Πλήρης διαφάνεια στη χρήση</li>
         </ul>
-        <a href="#" class="btn-card" onclick="document.getElementById('donateModal').classList.add('active');return false;">Δωρίστε Τώρα</a>
+        <a href="dorea.html" class="btn-card">Δωρίστε Τώρα</a>
       </div>
 
     </div>
   </div>
 </section>
+</main>
 
-<!-- CONTACT -->
-<section id="contact">
+<section class="cta-band">
   <div class="section-inner">
-    <h2 class="section-title">Επι<span>κοινωνία</span></h2>
-    <p class="section-sub">Είμαστε εδώ για εσάς — ερωτήσεις, συνεργασίες, εθελοντισμός</p>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Στοιχεία Επικοινωνίας</h3>
-        <div class="contact-item">
-          <span class="icon">📍</span>
-          <p>Ακαδημίας 25, 106 71, Αθήνα</p>
-        </div>
-        <div class="contact-item">
-          <span class="icon">📞</span>
-          <p>+30 210 3608948<br>+30 694 8985340</p>
-        </div>
-        <div class="contact-item">
-          <span class="icon">✉️</span>
-          <p id="emailDisplay">info@aoposagapi.org</p>
-        </div>
-        <div class="contact-item">
-          <span class="icon">🌐</span>
-          <p>aoposagapi.org</p>
-        </div>
-        <div class="contact-item">
-          <span class="icon">📸</span>
-          <p><a href="https://www.instagram.com/a.opos.agapi/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">@a.opos.agapi</a></p>
-        </div>
-      </div>
-      <div class="contact-form">
-        <h3>Στείλτε μας μήνυμα</h3>
-        <div class="form-group">
-          <label>Ονοματεπώνυμο</label>
-          <input type="text" placeholder="Το όνομά σας">
-        </div>
-        <div class="form-group">
-          <label>Email Επικοινωνίας</label>
-          <input type="email" placeholder="email@example.com">
-        </div>
-        <div class="form-group">
-          <label>Το μήνυμά σας</label>
-          <textarea placeholder="Πώς μπορούμε να σας βοηθήσουμε;"></textarea>
-        </div>
-        <button class="btn-submit" onclick="submitForm()">ΑΠΟΣΤΟΛΗ</button>
-      </div>
-    </div>
+    <h2>Γίνε κι εσύ μέρος της κυκλικής διαδρομής αγάπης</h2>
+    <p>Με τον χρόνο σου, τη συνδρομή σου ή μια δωρεά — κάθε βοήθεια μετράει.</p>
+    <div class="hero-btns"><a href="ethelontismos.html" class="btn-secondary">💪 Γίνε Εθελοντής</a><a href="melos.html" class="btn-secondary">🤝 Γίνε Μέλος</a><a href="dorea.html" class="btn-primary">❤ Κάνε Δωρεά</a></div>
   </div>
 </section>
 
@@ -1032,168 +275,17 @@ document.querySelectorAll('.fv-car').forEach(function(c){
     </a>
   </div>
   <div class="footer-links" style="margin-top:16px;">
-    <a onclick="document.getElementById('memberModal').classList.add('active')">🤝 Γίνε Μέλος</a>
-    <a onclick="document.getElementById('volunteerModal').classList.add('active')">💪 Εθελοντισμός</a>
-    <a onclick="document.getElementById('donateModal').classList.add('active')">❤ Δωρεά</a>
-    <a href="#transparency">Διαφάνεια & Μητρώα</a>
-    <a onclick="document.getElementById('privacyModal').classList.add('active')">Πολιτική Απορρήτου</a>
-    <a onclick="document.getElementById('termsModal').classList.add('active')">Όροι Χρήσης</a>
+    <a href="melos.html">🤝 Γίνε Μέλος</a>
+    <a href="ethelontismos.html">💪 Εθελοντισμός</a>
+    <a href="dorea.html">❤ Δωρεά</a>
+    <a href="diafaneia.html">Διαφάνεια & Μητρώα</a>
+    <a href="aporrito.html">Πολιτική Απορρήτου</a>
+    <a href="oroi.html">Όροι Χρήσης</a>
     <a href="english.html">English</a>
   </div>
   <p>© 2026 Α Όπως Αγάπη ΑΜΚΕ. Όλα τα δικαιώματα διατηρούνται.</p>
 </footer>
 
-<!-- MEMBER MODAL -->
-<div class="modal-overlay" id="memberModal">
-  <div class="modal">
-    <button class="modal-close" onclick="document.getElementById('memberModal').classList.remove('active')">×</button>
-    <h2>🤝 Γίνε Μέλος</h2>
-    <p class="modal-intro">Η ιδιότητα μέλους είναι η πιο άμεση μορφή στήριξης — με ετήσιο συμβολικό αντίτιμο <strong>20€</strong> εντάσσεσαι ενεργά στην ΑΜΚΕ και απολαμβάνεις ανταποδοτικά οφέλη.</p>
-
-    <div class="modal-section">
-      <h4>💰 Ετήσιο Αντίτιμο</h4>
-      <p style="font-size:1.4rem;font-weight:800;color:var(--dark);">20€ / έτος</p>
-      <p style="font-size:0.82rem;color:var(--gray);">Συμβολικό ποσό που καλύπτει διοικητικές ανάγκες & επενδύεται στον Φάρο Αγάπης.</p>
-    </div>
-
-    <div class="modal-section">
-      <h4>✨ Ανταποδοτικά Οφέλη</h4>
-      <ul>
-        <li><strong>Ετήσια αναφορά</strong> πώς αξιοποιήθηκαν οι συνδρομές</li>
-        <li><strong>Πρόσκληση</strong> σε εκδηλώσεις & εργαστήρια της ΑΜΚΕ</li>
-        <li><strong>Συμβολικό δώρο</strong> (κάρτα ή μπρελόκ με λογότυπο)</li>
-        <li><strong>Newsletter</strong> με ιστορίες, ενημερώσεις & επιτυχίες</li>
-        <li><strong>Συμμετοχή</strong> στη Γενική Συνέλευση των μελών</li>
-      </ul>
-    </div>
-
-    <div class="modal-section">
-      <h4>🌟 Πώς γίνομαι μέλος;</h4>
-           <p style="margin-bottom:14px;">Συμπλήρωσε τη φόρμα και θα σου απαντήσουμε με τα στοιχεία πληρωμής. Στην πρώτη ερώτηση διάλεξε <strong>«Μέλος»</strong> ή <strong>«Και τα δύο»</strong>:</p>
-      <a href="https://forms.gle/GbF9FeTy78QsKJft5" target="_blank" rel="noopener" class="form-submit" style="display:inline-block;text-decoration:none;">📝 Συμπλήρωσε τη φόρμα μέλους</a>
-    </div>
-
-    <p class="modal-note">Τα έσοδα από τις συνδρομές δημοσιεύονται στην ετήσια αναφορά μας — με πλήρη διαφάνεια.</p>
-  </div>
-</div>
-
-<!-- VOLUNTEER MODAL -->
-<div class="modal-overlay" id="volunteerModal">
-  <div class="modal">
-    <button class="modal-close" onclick="document.getElementById('volunteerModal').classList.remove('active')">×</button>
-    <h2>💪 Γίνε Εθελοντής</h2>
-    <p class="modal-intro">Ο εθελοντισμός είναι η ψυχή της ΑΜΚΕ. Δεν ζητάμε χρήματα — ζητάμε τον χρόνο και την καρδιά σου.</p>
-
-    <div class="modal-section">
-      <h4>🎯 Πεδία Εθελοντισμού</h4>
-      <ul>
-        <li><strong>Καταφύγιο:</strong> προαυλισμοί, φροντίδα, υιοθεσίες</li>
-        <li><strong>Σχολεία:</strong> συνοδεία σε παρουσιάσεις ευαισθητοποίησης</li>
-        <li><strong>Φεστιβάλ:</strong> στήριξη εκδηλώσεων & φεστιβάλ</li>
-        <li><strong>ΚΑΠΗ:</strong> δράσεις για ηλικιωμένους</li>
-        <li><strong>Διοικητική:</strong> γραφειοκρατία, social media, μετάφραση</li>
-        <li><strong>Νοηματική:</strong> γέφυρα με την κωφή κοινότητα (αν γνωρίζεις ΕΝΓ)</li>
-      </ul>
-    </div>
-
-    <div class="modal-section">
-      <h4>📋 Τι περιλαμβάνει;</h4>
-      <p>Δεν υπάρχει ελάχιστος χρόνος δέσμευσης — μπορείς να δίνεις όσο χρόνο σου επιτρέπει η ζωή σου. Οι δράσεις στο Καταφύγιο γίνονται σε συντονισμό με το Δήμο Αθηναίων.</p>
-    </div>
-
-    <div class="modal-section">
-      <h4>📞 Πώς ξεκινώ;</h4>
-      <p style="margin-bottom:14px;">Συμπλήρωσε τη φόρμα εθελοντή (2 λεπτά) και θα σε καλέσουμε σε μια γνωριμία, online ή δια ζώσης:</p>
-      <a href="https://forms.gle/q3dnbaDUQDnMTtkx8" target="_blank" rel="noopener" class="form-submit" style="display:inline-block;text-decoration:none;">📝 Συμπλήρωσε τη φόρμα εθελοντή</a>
-      <p style="margin-top:10px;font-size:0.8rem;color:#666;">Η φόρμα είναι στα ελληνικά και στα αγγλικά.</p>
-    </div>
-
-    <p class="modal-note">Ο εθελοντισμός σου είναι το πολυτιμότερο δώρο — γιατί ο χρόνος δεν επιστρέφει.</p>
-  </div>
-</div>
-
-<!-- DONATE MODAL -->
-<div class="modal-overlay" id="donateModal">
-  <div class="modal">
-    <button class="modal-close" onclick="document.getElementById('donateModal').classList.remove('active')">×</button>
-    <h2>❤ Κάνε Δωρεά</h2>
-    <p class="modal-intro">Κάθε δωρεά — εφάπαξ ή τακτική — πηγαίνει απευθείας στις δράσεις μας. Πλήρης διαφάνεια.</p>
-
-    <div class="modal-section">
-      <h4>🏦 Viva Wallet (Ελλάδα)</h4>
-      <div class="iban-row">
-        <span>GR03 0570 0000 0009 9471 2594 162</span>
-        <button class="btn-copy" onclick="copyText('GR0305700000000994712594162',this)">Αντιγραφή</button>
-      </div>
-      <div class="iban-details">
-        Δικαιούχος: Α ΟΠΩΣ ΑΓΑΠΗ ΑΣΤΙΚΗ ΜΗ ΚΕΡΔΟΣΚΟΠΙΚΗ ΕΤΑΙΡΕΙΑ<br>
-        BIC/SWIFT: PRXBGRAA
-      </div>
-    </div>
-
-    <div class="modal-section">
-      <h4>🌍 Wise (Διεθνείς Μεταφορές)</h4>
-      <div class="iban-row">
-        <span>BE67 9676 2536 1487</span>
-        <button class="btn-copy" onclick="copyText('BE67967625361487',this)">Αντιγραφή</button>
-      </div>
-      <div class="iban-details">
-        Δικαιούχος: Α ΟΠΩΣ ΑΓΑΠΗ<br>
-        BIC/SWIFT: TRWIBEB1XXX<br>
-        Wise, Avenue Louise 54, 1050 Brussels, Belgium
-      </div>
-    </div>
-
-<div class="modal-section">
-  <h4>🏦 Eurobank (Ελλάδα)</h4>
-  <div class="iban-row">
-    <span>GR22 0260 2070 0006 1020 2286 095</span>
-    <button class="btn-copy" onclick="copyText('GR2202602070000610202286095',this)">Αντιγραφή</button>
-  </div>
-  <div class="iban-details">
-    Δικαιούχος: Α ΟΠΩΣ ΑΓΑΠΗ ΑΣΤΙΚΗ ΜΗ ΚΕΡΔΟΣΚΟΠΙΚΗ ΕΤΑΙΡΕΙΑ<br>
-    BIC/SWIFT: ERBKGRAAXXX
-  </div>
-</div>
-
-<p class="modal-note">Αιτία πληρωμής: «Δωρεά ΑΜΚΕ Α Όπως Αγάπη»<br>Σας ευχαριστούμε από καρδιάς ❤</p>
-  </div>
-</div>
-
-<!-- PRIVACY -->
-<div class="modal-overlay" id="privacyModal">
-  <div class="privacy-modal">
-    <button class="modal-close" onclick="document.getElementById('privacyModal').classList.remove('active')">×</button>
-    <h2>Πολιτική Απορρήτου</h2>
-    <p>Τελευταία ενημέρωση: Μάιος 2026</p>
-    <h3>1. Συλλογή Δεδομένων</h3>
-    <p>Συλλέγουμε μόνο τα δεδομένα που παρέχετε εθελοντικά (όνομα, email) μέσω της φόρμας επικοινωνίας. Δεν χρησιμοποιούμε cookies παρακολούθησης.</p>
-    <h3>2. Χρήση Δεδομένων</h3>
-    <p>Τα δεδομένα σας χρησιμοποιούνται αποκλειστικά για την απάντηση στο μήνυμά σας ή τη διαχείριση της ιδιότητας μέλους. Δεν τα μοιραζόμαστε με τρίτους.</p>
-    <h3>3. Φωτογραφίες</h3>
-    <p>Οι φωτογραφίες στη σελίδα χρησιμοποιούνται με τη συγκατάθεση των απεικονιζόμενων.</p>
-    <h3>4. Επικοινωνία</h3>
-    <p>Για οποιοδήποτε ζήτημα απορρήτου: info@aoposagapi.org</p>
-  </div>
-</div>
-
-<!-- TERMS -->
-<div class="modal-overlay" id="termsModal">
-  <div class="privacy-modal">
-    <button class="modal-close" onclick="document.getElementById('termsModal').classList.remove('active')">×</button>
-    <h2>Όροι Χρήσης</h2>
-    <h3>1. Αποδοχή Όρων</h3>
-    <p>Χρησιμοποιώντας αυτή τη σελίδα αποδέχεστε τους παρόντες όρους.</p>
-    <h3>2. Περιεχόμενο</h3>
-    <p>Το περιεχόμενο της σελίδας ανήκει στην ΑΜΚΕ «Α Όπως Αγάπη» και προστατεύεται από το νόμο περί πνευματικής ιδιοκτησίας.</p>
-    <h3>3. Δωρεές & Συνδρομές</h3>
-    <p>Οι δωρεές και οι συνδρομές μελών είναι εθελοντικές. Η ΑΜΚΕ δεσμεύεται για πλήρη διαφάνεια στη χρήση τους μέσω ετήσιας αναφοράς.</p>
-    <h3>4. Επικοινωνία</h3>
-<p>info@aoposagapi.org · Ακαδημίας 25, 106 71, Αθήνα · ΑΦΜ: 996560907 · ΓΕΜΗ: 192124501000</p>
-  </div>
-</div>
-
-<!-- INTRO -->
 <div class="intro-overlay" id="introOverlay">
   <canvas class="intro-canvas" id="introCanvas"></canvas>
   <div class="intro-hearts" id="introHearts"></div>
@@ -1211,146 +303,7 @@ document.querySelectorAll('.fv-car').forEach(function(c){
   </div>
 </div>
 
-<script>
-function toggleMobile(){ document.getElementById('mobileMenu').classList.toggle('open'); }
-function showIntro(){
-  document.getElementById('introOverlay').classList.add('active');
-  startCanvasAnimation();
-  startHeartsRain();
-  startTypewriter('Δώσε αγάπη, πάρε φως ✨');
-  const audio = document.getElementById('introAudio');
-  if(audio){ audio.currentTime=0; audio.volume=0.7; audio.play().catch(()=>{}); }
-}
-function hideIntro(){
-  document.getElementById('introOverlay').classList.remove('active');
-  const audio = document.getElementById('introAudio');
-  if(audio){ audio.pause(); audio.currentTime=0; }
-  stopCanvas = true;
-  const heartsBox = document.getElementById('introHearts');
-  if(heartsBox) heartsBox.innerHTML='';
-}
-let stopCanvas = false;
-let typewriterTimer = null;
-function startTypewriter(text){
-  const el = document.getElementById('introTypewriter');
-  if(!el) return;
-  el.textContent='';
-  if(typewriterTimer) clearInterval(typewriterTimer);
-  let i = 0;
-  setTimeout(()=>{
-    typewriterTimer = setInterval(()=>{
-      if(i < text.length){
-        el.textContent += text.charAt(i);
-        i++;
-      } else {
-        clearInterval(typewriterTimer);
-      }
-    }, 90);
-  }, 2400);
-}
-function startHeartsRain(){
-  const box = document.getElementById('introHearts');
-  if(!box) return;
-  box.innerHTML='';
-  const hearts = ['❤️','🧡','💛','💖','💗'];
-  for(let i=0; i<22; i++){
-    const h = document.createElement('span');
-    h.className = 'heart-fall';
-    h.textContent = hearts[Math.floor(Math.random()*hearts.length)];
-    h.style.left = (Math.random()*100)+'%';
-    h.style.animationDuration = (5+Math.random()*5)+'s';
-    h.style.animationDelay = (Math.random()*8)+'s';
-    h.style.fontSize = (1.2+Math.random()*1.4)+'rem';
-    box.appendChild(h);
-  }
-}
-function startCanvasAnimation(){
-  stopCanvas = false;
-  const canvas = document.getElementById('introCanvas');
-  if(!canvas) return;
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-  const particles = Array.from({length:140},()=>({
-    x:Math.random()*canvas.width, y:Math.random()*canvas.height,
-    r:Math.random()*2.5+0.5, dx:(Math.random()-0.5)*0.6, dy:(Math.random()-0.5)*0.6,
-    color:Math.random()>0.5?'rgba(232,119,34,':'rgba(255,255,255,',
-    twinkle:Math.random()*Math.PI*2
-  }));
-  function draw(){
-    if(stopCanvas) return;
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    particles.forEach(p=>{
-      p.twinkle+=0.05;
-      const alpha = 0.3 + Math.abs(Math.sin(p.twinkle))*0.5;
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=p.color+alpha+')'; ctx.fill();
-      p.x+=p.dx; p.y+=p.dy;
-      if(p.x<0||p.x>canvas.width) p.dx*=-1;
-      if(p.y<0||p.y>canvas.height) p.dy*=-1;
-    });
-    requestAnimationFrame(draw);
-  }
-  draw();
-}
-function copyText(text,btn){
-  navigator.clipboard.writeText(text).then(()=>{
-    const orig=btn.textContent; btn.textContent='✓ Αντιγράφηκε'; btn.style.background='#2ecc71';
-    setTimeout(()=>{ btn.textContent=orig; btn.style.background=''; },2000);
-  });
-}
-document.querySelectorAll('.modal-overlay').forEach(el=>{
-  el.addEventListener('click',e=>{ if(e.target===el) el.classList.remove('active'); });
-});
-document.getElementById('emailDisplay').innerHTML=
-  '<a href="mailto:info&#64;aoposagapi.org" style="color:inherit">info&#64;aoposagapi.org</a>';
-function submitForm(){ alert('Ευχαριστούμε για το μήνυμά σας! Θα επικοινωνήσουμε σύντομα.'); }
 
-const W3F_KEY = '61381c9f-32ae-4e39-9417-38b7d6b44988';
-
-async function submitMemberForm(){
-  const name = document.getElementById('memberName').value.trim();
-  const email = document.getElementById('memberEmail').value.trim();
-  const phone = document.getElementById('memberPhone').value.trim();
-  const message = document.getElementById('memberMessage').value.trim();
-  if(!name || !email){ alert('Παρακαλώ συμπλήρωσε τουλάχιστον το ονοματεπώνυμο και το email σου.'); return; }
-
-  const btn = event.target;
-  const originalText = btn.textContent;
-  btn.textContent = '⏳ Αποστολή...';
-  btn.disabled = true;
-
-  try {
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        access_key: W3F_KEY,
-        subject: 'Αίτηση Μέλους ΑΜΚΕ - ' + name,
-        from_name: 'A Όπως Αγάπη - Φόρμα Μέλους',
-        name: name,
-        email: email,
-        phone: phone || '-',
-        message: 'ΑΙΤΗΣΗ ΜΕΛΟΥΣ\n\nΟνοματεπώνυμο: ' + name + '\nEmail: ' + email + '\nΤηλέφωνο: ' + (phone||'-') + '\n\nΜήνυμα: ' + (message||'-')
-      })
-    });
-    const result = await response.json();
-    if(result.success){
-      alert('✅ Η αίτησή σου στάλθηκε επιτυχώς! Θα επικοινωνήσουμε σύντομα στο ' + email);
-      document.getElementById('memberName').value='';
-      document.getElementById('memberEmail').value='';
-      document.getElementById('memberPhone').value='';
-      document.getElementById('memberMessage').value='';
-      document.getElementById('memberModal').classList.remove('active');
-    } else {
-      alert('❌ Κάτι πήγε στραβά. Δοκίμασε ξανά ή στείλε email στο info@aoposagapi.org');
-    }
-  } catch(err){
-    alert('❌ Σφάλμα σύνδεσης. Έλεγξε τη σύνδεση internet και δοκίμασε ξανά.');
-  } finally {
-    btn.textContent = originalText;
-    btn.disabled = false;
-  }
-}
-</script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Επικοινωνία | Α Όπως Αγάπη</title>
+  <meta name="description" content="Επικοινώνησε με την ΑΜΚΕ «Α Όπως Αγάπη»: Ακαδημίας 25, Αθήνα, τηλ. 210 3608948, info@aoposagapi.org.">
+  <meta property="og:title" content="Επικοινωνία | Α Όπως Αγάπη">
+  <meta property="og:description" content="Επικοινώνησε με την ΑΜΚΕ «Α Όπως Αγάπη»: Ακαδημίας 25, Αθήνα, τηλ. 210 3608948, info@aoposagapi.org.">
+  <meta property="og:url" content="https://www.aoposagapi.org/epikoinonia.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.aoposagapi.org/assets/gallery/fv-01-minnos-booth.jpg">
+  <link rel="canonical" href="https://www.aoposagapi.org/epikoinonia.html">
+  <link rel="alternate" hreflang="el" href="https://www.aoposagapi.org/epikoinonia.html">
+  <link rel="alternate" hreflang="en" href="https://www.aoposagapi.org/en-contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.aoposagapi.org/epikoinonia.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/site.css">
+  
+</head>
+<body>
+
+<a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="assets/logo-egxromo.svg" alt="Α Όπως Αγάπη" width="40" height="40">
+    <span>Α Όπως Αγάπη</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Ποιοι Είμαστε</a>
+    <a href="diadromi.html">Διαδρομή & ΔΣ</a>
+    <a href="nea.html">Νέα</a>
+    <a href="diafaneia.html">Διαφάνεια</a>
+    <a href="ethelontismos.html">Εθελοντισμός</a>
+    <a href="melos.html">Γίνε Μέλος</a>
+    <a href="epikoinonia.html" class="active" aria-current="page">Επικοινωνία</a>
+    <button type="button" class="btn-intro-nav" onclick="showIntro()" aria-label="Δες το βίντεο-εισαγωγή" title="Δες το βίντεο-εισαγωγή">🎬</button>
+    <a href="en-contact.html" class="lang-switch" hreflang="en">EN</a>
+    <a href="dorea.html" class="btn-donate-nav">❤ ΔΩΡΕΑ</a>
+  </div>
+  <button type="button" class="hamburger" onclick="toggleMobile()" aria-label="Μενού">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Ποιοι Είμαστε</a>
+  <a href="diadromi.html">Διαδρομή & ΔΣ</a>
+  <a href="nea.html">Νέα</a>
+  <a href="diafaneia.html">Διαφάνεια</a>
+  <a href="ethelontismos.html">Εθελοντισμός</a>
+  <a href="melos.html">Γίνε Μέλος</a>
+  <a href="epikoinonia.html" class="active" aria-current="page">Επικοινωνία</a>
+  <a href="en-contact.html" hreflang="en">🌐 English</a>
+  <a href="dorea.html" class="btn-donate-nav">❤ ΔΩΡΕΑ</a>
+</div>
+
+<main id="main">
+<section id="contact">
+  <div class="section-inner">
+    <h1 class="section-title">Επι<span>κοινωνία</span></h1>
+    <p class="section-sub">Είμαστε εδώ για εσάς — ερωτήσεις, συνεργασίες, εθελοντισμός</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Στοιχεία Επικοινωνίας</h3>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <p>Ακαδημίας 25, 106 71, Αθήνα</p>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <p>+30 210 3608948<br>+30 694 8985340</p>
+        </div>
+        <div class="contact-item">
+          <span class="icon">✉️</span>
+          <p id="emailDisplay">info@aoposagapi.org</p>
+        </div>
+        <div class="contact-item">
+          <span class="icon">🌐</span>
+          <p>aoposagapi.org</p>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📸</span>
+          <p><a href="https://www.instagram.com/a.opos.agapi/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">@a.opos.agapi</a></p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Στείλτε μας μήνυμα</h3>
+        <form id="contactForm" action="https://formspree.io/f/mvzwaddw" method="POST">
+          <input type="hidden" name="_subject" value="Μήνυμα από το aoposagapi.org">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form-group">
+            <label for="cf-name">Ονοματεπώνυμο</label>
+            <input id="cf-name" type="text" name="name" placeholder="Το όνομά σας" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email Επικοινωνίας</label>
+            <input id="cf-email" type="email" name="email" placeholder="email@example.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="cf-msg">Το μήνυμά σας</label>
+            <textarea id="cf-msg" name="message" placeholder="Πώς μπορούμε να σας βοηθήσουμε;" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">ΑΠΟΣΤΟΛΗ</button>
+          <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="cta-band">
+  <div class="section-inner">
+    <h2>Γίνε κι εσύ μέρος της κυκλικής διαδρομής αγάπης</h2>
+    <p>Με τον χρόνο σου, τη συνδρομή σου ή μια δωρεά — κάθε βοήθεια μετράει.</p>
+    <div class="hero-btns"><a href="ethelontismos.html" class="btn-secondary">💪 Γίνε Εθελοντής</a><a href="melos.html" class="btn-secondary">🤝 Γίνε Μέλος</a><a href="dorea.html" class="btn-primary">❤ Κάνε Δωρεά</a></div>
+  </div>
+</section>
+
+<footer>
+  <p><strong style="color:#fff;">Α Όπως Αγάπη ΑΜΚΕ</strong></p>
+<p>Ακαδημίας 25, 106 71, Αθήνα · ΑΦΜ: 996560907 · ΓΕΜΗ: 192124501000</p>
+  <p style="font-size:0.8rem;opacity:0.75;">Κοινωφελής Φορέας ΥΠΕΣ · Μητρώο Κ.Α.Λ.Ο. 000305512011 · Μητρώο Φιλοζωικών κωδ. 5341</p>
+  <p style="font-style:italic;opacity:0.6;font-size:0.82rem;">«Όλοι μαζί, κανένας μόνος. Όλοι διαφορετικοί, όλοι ίσοι.»</p>
+  <div style="margin-top:20px;display:flex;justify-content:center;gap:16px;">
+    <a href="https://www.instagram.com/a.opos.agapi/" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF);color:#fff;text-decoration:none;font-size:1.3rem;transition:transform 0.2s;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    </a>
+  </div>
+  <div class="footer-links" style="margin-top:16px;">
+    <a href="melos.html">🤝 Γίνε Μέλος</a>
+    <a href="ethelontismos.html">💪 Εθελοντισμός</a>
+    <a href="dorea.html">❤ Δωρεά</a>
+    <a href="diafaneia.html">Διαφάνεια & Μητρώα</a>
+    <a href="aporrito.html">Πολιτική Απορρήτου</a>
+    <a href="oroi.html">Όροι Χρήσης</a>
+    <a href="english.html">English</a>
+  </div>
+  <p>© 2026 Α Όπως Αγάπη ΑΜΚΕ. Όλα τα δικαιώματα διατηρούνται.</p>
+</footer>
+
+<div class="intro-overlay" id="introOverlay">
+  <canvas class="intro-canvas" id="introCanvas"></canvas>
+  <div class="intro-hearts" id="introHearts"></div>
+  <div class="intro-content">
+    <div class="intro-logo-wrap">
+      <img class="intro-logo" src="assets/logo-egxromo.svg" alt="Α Όπως Αγάπη">
+    </div>
+    <div class="intro-title">Α Όπως Αγάπη</div>
+    <div class="intro-typewriter" id="introTypewriter"></div>
+    <div class="intro-sub">«Όλοι μαζί, κανένας μόνος. Όλοι διαφορετικοί, όλοι ίσοι.»</div>
+    <audio id="introAudio" preload="none">
+      <source src="assets/anthem.mp3" type="audio/mpeg">
+    </audio>
+    <button class="btn-skip" onclick="hideIntro()">✕ Κλείσιμο</button>
+  </div>
+</div>
+
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
